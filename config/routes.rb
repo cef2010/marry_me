@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   root 'couples#show'
+  devise_for :vendors, :controllers => {  :registrations => 'vendors/registrations', :sessions => 'vendors/sessions' }
 
-  devise_for :couples, :controllers => { :omniauth_callbacks => 'couples/omniauth_callbacks' }
+  devise_for :couples, :controllers => { :omniauth_callbacks => 'couples/omniauth_callbacks', :registrations => 'couples/registrations', :sessions => 'couples/sessions' }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

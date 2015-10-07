@@ -11,10 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151006223706) do
+ActiveRecord::Schema.define(version: 20151007215500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "contracts", force: :cascade do |t|
+    t.float    "total"
+    t.integer  "couple_id"
+    t.integer  "vendor_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "couples", force: :cascade do |t|
     t.text     "description"
@@ -45,5 +53,29 @@ ActiveRecord::Schema.define(version: 20151006223706) do
   add_index "couples", ["provider"], name: "index_couples_on_provider", using: :btree
   add_index "couples", ["reset_password_token"], name: "index_couples_on_reset_password_token", unique: true, using: :btree
   add_index "couples", ["uid"], name: "index_couples_on_uid", using: :btree
+
+  create_table "vendors", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.string   "type"
+    t.string   "address"
+    t.string   "website"
+    t.string   "phone"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+  end
+
+  add_index "vendors", ["email"], name: "index_vendors_on_email", unique: true, using: :btree
+  add_index "vendors", ["reset_password_token"], name: "index_vendors_on_reset_password_token", unique: true, using: :btree
 
 end
