@@ -7,3 +7,17 @@
 
 	= f.label :wedding_date, class: 'active'
 	= f.date_field :wedding_date
+
+	= f.label :time, class: 'active'
+	= f.datetime_field :time, placeholder '6:00'
+
+	= f.label :budget, class: 'active'
+	= f.text_field :budget, placeholder '$8,000.00'
+
+	= f.label :ceremony_location, class 'active'
+	= f.text_field :ceremony_location, placeholder 'Wasatch State Park'
+
+	= f.label :reception_location, class 'active'
+	= f.text_field :reception_location, placeholder 'Porcupine Grill'
+
+	= f.submit, class 'btn'
