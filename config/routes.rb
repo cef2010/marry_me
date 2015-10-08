@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
 
+
   root 'static_pages#home'
   devise_for :vendors, :controllers => {  :registrations => 'vendors/registrations', :sessions => 'vendors/sessions' }
   devise_for :couples, :controllers => { :omniauth_callbacks => 'couples/omniauth_callbacks', :registrations => 'couples/registrations', :sessions => 'couples/sessions' }
   
+  resources :contracts
   resources :couples
   resources :vendors
   resources :attires, controller: 'vendors', type: 'Attire'
