@@ -1,0 +1,2 @@
+class Videographer < Vendor
+end

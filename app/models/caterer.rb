@@ -1,0 +1,2 @@
+class Caterer < Vendor
+end

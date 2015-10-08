@@ -7,7 +7,7 @@ class Vendor < ActiveRecord::Base
   has_many :couples, through: :contracts
 
   def self.types
-    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Other']
+    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Rentals', 'Attire', 'Other']
   end
 
   def self.musics
@@ -45,6 +45,13 @@ class Vendor < ActiveRecord::Base
   def self.invitations
     where(type: 'Invitations')
   end
+
+  def self.attires
+    where(type: 'Attire')
+  end
+
+  def self.rentals
+    where(type: 'Rentals')
 
   def self.others
     where(type: 'Other')
