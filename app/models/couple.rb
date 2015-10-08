@@ -6,6 +6,7 @@ class Couple < ActiveRecord::Base
 
   has_many :contracts
   has_many :vendors, through: :contracts
+  delegate :musics, :venues, :florists, :bakers, :caterers, :photographers, :videographers, :photobooths, :invitations, :others, to: :vendors
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |couple|
