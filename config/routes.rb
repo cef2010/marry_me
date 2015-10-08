@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'vendors/index'
+
+  get 'vendors/show'
+
   root 'static_pages#home'
 
 

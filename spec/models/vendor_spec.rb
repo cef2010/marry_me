@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Vendor, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe "tests model attributes" do
+    it { should respond_to :name }
+    it { should respond_to :description }
+    it { should respond_to :type }
+    it { should respond_to :address }
+    it { should respond_to :website }
+    it { should respond_to :phone }
+  end
 end
