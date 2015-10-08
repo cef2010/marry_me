@@ -6,6 +6,13 @@ class Vendor < ActiveRecord::Base
   has_many :contracts
   has_many :couples, through: :contracts
 
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |vendor|
+      vendor.email = auth.info.email
+      vendor.password = Devise.friendly_token[0,20]
+    end
+  end
+
   def self.types
     ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Other']
   end
