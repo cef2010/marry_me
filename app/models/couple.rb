@@ -2,7 +2,7 @@ class Couple < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:facebook]
+  :recoverable, :rememberable, :trackable, :validatable
 
   has_many :contracts
   has_many :vendors, through: :contracts
@@ -15,3 +15,6 @@ class Couple < ActiveRecord::Base
     end
   end
 end
+
+
+# , :omniauthable, :omniauth_providers => [:facebook]
