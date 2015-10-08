@@ -10,6 +10,7 @@ module StiHelper
 	end
 
 	def format_action(action)
-		action ? "#{action}_"
+		if action "#{action}_"
+		end
 	end
 end

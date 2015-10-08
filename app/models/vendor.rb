@@ -52,6 +52,7 @@ class Vendor < ActiveRecord::Base
 
   def self.rentals
     where(type: 'Rentals')
+  end
 
   def self.others
     where(type: 'Other')
