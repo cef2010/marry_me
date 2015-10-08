@@ -1,0 +1,9 @@
+= form_for @couple do |f|
+	= f.label :name, class: 'active'
+	= f.text_field :name, placeholder 'Brad & Bill'
+
+	= f.label :description, class: 'active'
+	= f.text_area :description, placeholder 'Tell us about you!'
+
+	= f.label :wedding_date, class: 'active'
+	= f.date_field :wedding_date
