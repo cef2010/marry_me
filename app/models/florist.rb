@@ -1,0 +1,2 @@
+class Florist < Vendor
+end

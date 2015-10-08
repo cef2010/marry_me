@@ -1,0 +1,2 @@
+class Rental < Vendor
+end

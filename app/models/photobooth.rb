@@ -1,0 +1,2 @@
+class Photobooth < Vendor
+end

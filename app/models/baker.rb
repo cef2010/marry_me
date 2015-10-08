@@ -1,0 +1,2 @@
+class Baker < Vendor
+end
