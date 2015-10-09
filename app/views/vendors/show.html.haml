@@ -1,2 +1,28 @@
-%h1 Vendors#show
-%p Find me in app/views/vendors/show.html.haml
+%h1
+	Vendor Show Page
+
+- if @vendor.id = current_vendor.id
+	= "Welcome, #{current_vendor.email}"
+	%br
+	- if @vendor.couples.any?
+		%hr
+		%h3
+			These Need Your Approval
+		- @need_approval_contracts.each do |contract|
+			= contract.couple.name
+			= contract.couple.wedding_date
+		%h3
+			These Are Pending
+		- @pending_contracts.each do |contract|
+			= contract.couple.name
+			= contract.couple.wedding_date
+		%h3
+			These Are Your Approved Contracts
+		- @need_approval_contracts.each do |contract|
+			= contract.couple.name
+			= contract.couple.wedding_date
+	- else 
+		= "No couples yet!"
+- else 
+	%h1
+		Other Vendor
