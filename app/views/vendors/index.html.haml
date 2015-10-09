@@ -1,2 +1,5 @@
 = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
-%h1 VENDOR INDEX
+%h1
+	All Vendors
+- @vendors.each do |vendor|
+	= vendor.email

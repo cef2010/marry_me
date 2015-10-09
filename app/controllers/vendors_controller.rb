@@ -1,12 +1,15 @@
 class VendorsController < ApplicationController
-  before_action :authenticate_vendor!, except: [:home, :about]
+  before_action :authenticate_vendor!
 
   def index
     @vendors = Vendor.all
   end
 
   def show
-    @vendors = Vendor.find(params[:id])
+    @vendor = Vendor.find(params[:id])
+    @vendor_active = @vendor.approved_contracts
+    @vendor_requests = @vendor.need_approval_contracts
+    @vendor_pending = @vendor.pending_contracts
   end
 
   private

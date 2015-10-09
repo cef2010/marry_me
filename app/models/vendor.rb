@@ -6,6 +6,20 @@ class Vendor < ActiveRecord::Base
   has_many :contracts
   has_many :couples, through: :contracts
 
+  # Contract methods
+  def pending_contracts
+    self.contracts.where(couples_pending: true)
+  end
+
+  def need_approval_contracts
+    self.contracts.where(vendor_pending: true)
+  end
+
+  def approved_contracts
+    self.contracts.where(vendor_pending: false)
+  end
+
+  # Omniauth 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |vendor|
       vendor.email = auth.info.email
@@ -13,6 +27,7 @@ class Vendor < ActiveRecord::Base
     end
   end
 
+  # STI stuff
   def self.types
     ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Rentals', 'Attire', 'Other']
   end

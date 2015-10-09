@@ -1,5 +1,5 @@
 class CouplesController < ApplicationController
-  before_action :authenticate_couple!, except: [:home, :about]
+	before_action :authenticate_couple!
 
   def index
     @couples = Couple.all
