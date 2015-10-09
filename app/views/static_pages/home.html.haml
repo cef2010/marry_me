@@ -1,5 +1,9 @@
-- if current_couple || current_vendor
-  YAY SIGNED IN
+- if current_couple
+  = link_to 'Logout', destroy_couple_session_path, method: 'delete'
+- elsif current_vendor
+  = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
 - else
-  = link_to 'Vendor Sign Up', new_vendor_registration_path, class: 'btn'
-  = link_to 'Couple Sign Up', new_couple_registration_path, class: 'btn'
+  = link_to 'Vendor Sign In', new_vendor_session_path, class: 'btn'
+  = link_to 'Couple Sign In', new_couple_session_path, class: 'btn'
+
+%hr

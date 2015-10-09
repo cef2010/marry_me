@@ -1,4 +1,6 @@
 class VendorsController < ApplicationController
+  before_action :authenticate_vendor!, except: [:home, :about]
+
   def index
     @vendors = Vendor.all
   end
