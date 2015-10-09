@@ -1,2 +1,2 @@
-%h1 Vendors#show
-%p Find me in app/views/vendors/show.html.haml
+= link_to 'Logout', destroy_vendor_session_path, method: 'delete'
+%h1 SHOW #{@vendor.name}

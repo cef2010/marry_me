@@ -1,1 +1,8 @@
-= render '/views/couples/info_form'
+= link_to 'Logout', destroy_couple_session_path, method: 'delete'
+%hr
+- if @couples.any?
+  - @couples.each do |couple|
+    = link_to couple.email, couple_path(couple)
+    %br
+- else
+  %h3 There are currently no couples.
