@@ -1,5 +1,8 @@
 - if current_couple || current_vendor
-  YAY SIGNED IN
+	YAY SIGNED IN
+	= link_to 'Your Profile', vendor_path(current_vendor) 
 - else
-  = link_to 'Vendor Sign Up', new_vendor_registration_path, class: 'btn'
-  = link_to 'Couple Sign Up', new_couple_registration_path, class: 'btn'
+	= link_to 'Vendor Sign Up', new_vendor_registration_path, class: 'btn'
+	= link_to 'Couple Sign Up', new_couple_registration_path, class: 'btn'
+
+

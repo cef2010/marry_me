@@ -1,2 +1,4 @@
-%h1 Vendors#index
-%p Find me in app/views/vendors/index.html.haml
+%h1 
+	All Vendors
+- @vendors.each do |vendor|
+	= vendor.email
