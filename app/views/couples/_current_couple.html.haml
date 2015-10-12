@@ -29,4 +29,23 @@
     %br
   %hr
 - else
-  = "No vendors yet!"
+  %p No vendors yet!
+- if @couple.families.any?
+  %h3
+    These Are Your Family Vendors
+  - @couple.families.each do |family|
+    .family_div
+      = family.name
+      |
+      = family.relation
+      |
+      = family.role
+      %br
+      = family.description
+      %br
+      = family.contact
+      %br
+      = link_to 'Edit Role', edit_couple_family_path(current_couple, family.id)
+- else
+  %p No Family Roles Yet!
+= link_to 'New Family Role', new_couple_family_path(current_couple)
