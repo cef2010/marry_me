@@ -16,6 +16,9 @@ RSpec.describe Couple, type: :model do
     it { should respond_to :budget}
     it { should respond_to :ceremony_location}
     it { should respond_to :reception_location}
+    it { should respond_to :name }
+    it { should have_many :contracts }
+    it { should have_many :vendors }
   end
 
   describe 'model methods' do
