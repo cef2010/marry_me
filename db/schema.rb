@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151009204515) do
+ActiveRecord::Schema.define(version: 20151012185232) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,6 +55,17 @@ ActiveRecord::Schema.define(version: 20151009204515) do
   add_index "couples", ["provider"], name: "index_couples_on_provider", using: :btree
   add_index "couples", ["reset_password_token"], name: "index_couples_on_reset_password_token", unique: true, using: :btree
   add_index "couples", ["uid"], name: "index_couples_on_uid", using: :btree
+
+  create_table "families", force: :cascade do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "contact"
+    t.string   "role"
+    t.string   "relation"
+    t.integer  "couple_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "vendors", force: :cascade do |t|
     t.string   "name"

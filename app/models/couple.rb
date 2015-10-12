@@ -5,6 +5,7 @@ class Couple < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   has_many :contracts
+  has_many :families
   has_many :vendors, through: :contracts
   delegate :musics, :venues, :florists, :bakers, :caterers, :photographers, :videographers, :photobooths, :invitations, :others, to: :vendors
 
