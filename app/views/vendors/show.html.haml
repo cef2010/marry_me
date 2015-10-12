@@ -1,5 +1,20 @@
 .container
-	%h1	Vendor Show Page
+	%h1
+		- if @vendor.name == nil
+			Vendor
+		- else
+			= @vendor.name
+	%hr
+	= @vendor.try(:description)
+	%br
+	= @vendor.try(:type)
+	%br
+	= @vendor.try(:address)
+	%br
+	= @vendor.try(:website)
+	%br
+	= @vendor.try(:phone)
+
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
 		= render(partial: 'current_vendor')

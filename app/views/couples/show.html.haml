@@ -1,5 +1,17 @@
 .container
-  %h1 Couple Show Page
+  %h1
+    - if @couple.name == nil
+      Couple
+    - else
+      = @couple.name
+  %hr
+  = @couple.try(:description)
+  %br
+  = @couple.try(:wedding_date)
+  %br
+  = @couple.try(:ceremony_location)
+  %br
+  = @couple.try(:reception_location)
   %hr
   -if current_couple && current_couple.id == @couple.id
     = render(partial: 'current_couple')
