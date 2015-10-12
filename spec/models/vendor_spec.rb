@@ -12,7 +12,6 @@ RSpec.describe Vendor, type: :model do
     it { should have_many :contracts }
   end
 
-
   describe "model methods" do
     let(:vendor) { FactoryGirl.create(:vendor) }
     let(:couple) { FactoryGirl.create(:couple) }
