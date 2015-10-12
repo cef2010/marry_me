@@ -5,13 +5,18 @@ Rails.application.routes.draw do
   devise_for :couples, controllers: {registrations: 'couples/registrations', sessions: 'couples/sessions'}
 
   # GET Routes
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
+  get '/faq', to: 'static_pages#faq'
   get "/auth/:provider/callback", to: 'authentications#create'
   get "/add_contract", to: 'contracts#add_contract'
   get "/add_approval", to: 'contracts#add_approval'
 
 
   # resources :contracts
-  resources :couples
+  resources :couples do
+    resources :families  
+  end
   resources :vendors
   resources :contracts
   resources :attires, controller: 'vendors', type: 'Attire'
