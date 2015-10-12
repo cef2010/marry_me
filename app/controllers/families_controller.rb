@@ -8,7 +8,6 @@ class FamiliesController < ApplicationController
   def create
     @couple = Couple.find(params[:couple_id])
     @family = @couple.families.new(family_params)
-    binding.pry
     if @family.save
       redirect_to couple_path(current_couple)
     end
