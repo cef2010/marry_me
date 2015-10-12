@@ -11,11 +11,12 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback", to: 'authentications#create'
   get "/add_contract", to: 'contracts#add_contract'
   get "/add_approval", to: 'contracts#add_approval'
+  get "/sort_by_type", to: 'vendors#sort_by_type'
 
 
   # resources :contracts
   resources :couples do
-    resources :families  
+    resources :families
   end
   resources :vendors
   resources :contracts

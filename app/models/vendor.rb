@@ -19,6 +19,11 @@ class Vendor < ActiveRecord::Base
     self.contracts.where(vendor_pending: false,couple_pending: false)
   end
 
+  # Sort methods
+  def self.by_type(sort_type)
+    where(type: sort_type)
+  end
+
   # Omniauth
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |vendor|
