@@ -46,6 +46,8 @@
       = family.contact
       %br
       = link_to 'Edit Role', edit_couple_family_path(current_couple, family.id)
+      |
+      = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
 - else
   %p No Family Roles Yet!
 = link_to 'New Family Role', new_couple_family_path(current_couple)
