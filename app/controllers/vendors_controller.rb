@@ -1,5 +1,4 @@
 class VendorsController < ApplicationController
-  before_action :authenticate_vendor!
 
   def index
     @vendors = Vendor.all
@@ -7,8 +6,8 @@ class VendorsController < ApplicationController
 
   def show
     @vendor = Vendor.find(params[:id])
-    @vendor_active = @vendor.approved_contracts
-    @vendor_requests = @vendor.need_approval_contracts
+    @vendor_active = @vendor.active_contracts
+    @vendor_requests = @vendor.request_contracts
     @vendor_pending = @vendor.pending_contracts
   end
 

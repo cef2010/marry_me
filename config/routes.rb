@@ -6,12 +6,14 @@ Rails.application.routes.draw do
 
   # GET Routes
   get "/auth/:provider/callback", to: 'authentications#create'
-  get 'vendors/index'
-  get 'vendors/show'
-  
-  resources :contracts
+  get "/add_contract", to: 'contracts#add_contract'
+  get "/add_approval", to: 'contracts#add_approval'
+
+
+  # resources :contracts
   resources :couples
   resources :vendors
+  resources :contracts
   resources :attires, controller: 'vendors', type: 'Attire'
   resources :bakers, controller: 'vendors', type: 'Baker'
   resources :caterers, controller: 'vendors', type: 'Caterer'

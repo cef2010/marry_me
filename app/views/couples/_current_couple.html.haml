@@ -1,0 +1,32 @@
+= render(partial: 'info_form')
+
+- if @couple.vendors.any?
+  %hr
+  %h3
+    These Need Your Approval
+  - @couple_requests.each do |contract|
+    = contract.vendor.email
+    |
+    = link_to 'Approve', add_approval_path(contract_id: contract.id)
+    |
+    = link_to 'Remove', contract_path(contract), method: :delete
+    %br
+  %hr
+  %h3
+    These Are Pending
+  - @couple_pending.each do |contract|
+    = contract.vendor.email
+    |
+    = link_to 'Remove', contract_path(contract), method: :delete
+    %br
+  %hr
+  %h3
+    These Are Your Approved Contracts
+  - @couple_active.each do |contract|
+    = contract.vendor.email
+    |
+    = link_to 'Remove', contract_path(contract), method: :delete
+    %br
+  %hr
+- else
+  = "No vendors yet!"
