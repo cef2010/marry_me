@@ -1,20 +1,22 @@
-= form_for @vendor do |f|
-	= f.label :name, class 'active'
-	= f.text_field :name, placeholder 'Company Name'
+#vendor_form.hide
+	= form_for @vendor do |f|
+		= f.label :name, class: 'active'
+		= f.text_field :name, placeholder: 'Company Name'
 
-	= f.label :description, class 'active'
-	= f.text_area :description, placeholder 'Tell us about you'
+		= f.label :description, class: 'active'
+		= f.text_area :description, placeholder: 'Tell us about you'
 
-	= f.label :type
-	= f.select :type, options_for_select(['Attire', 'Baker', 'Caterer', 'Florist', 'Invitation', 'Music', 'Photobooth', 'Photographer', 'Rental', 'Venue', 'Videographer', 'Other'])
+		= f.label :type
+		= f.select :type, options_for_select(['Attire', 'Baker', 'Caterer', 'Florist', 'Invitation', 'Music', 'Photobooth', 'Photographer', 'Rental', 'Venue', 'Videographer', 'Other'])
 
-	= f.label :address, class 'active'
-	= f.text_field :address, placeholder '123 My Street, Salt Lake City, UT 84111'
+		= f.label :address, class: 'active'
+		= f.text_field :address, placeholder: '123 My Street, Salt Lake City, UT 84111'
 
-	= f.label :website, class 'active'
-	= f.text_field :website, placeholder 'www.mywebsite.com'
+		= f.label :website, class: 'active'
+		= f.text_field :website, placeholder: 'www.mywebsite.com'
 
-	= f.label :phone, class 'active'
-	= f.text_field :phone, placeholder '888-888-8888'
+		= f.label :phone, class: 'active'
+		= f.text_field :phone, placeholder: '888-888-8888'
 
-	= f.submit, class 'btn'
+		= f.submit 'Update', class: 'btn', id: 'vendor_update'
+	%p#close_vendor_form.btn Close Form
