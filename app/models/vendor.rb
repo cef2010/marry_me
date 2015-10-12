@@ -8,18 +8,18 @@ class Vendor < ActiveRecord::Base
 
   # Contract methods
   def pending_contracts
-    self.contracts.where(couples_pending: true)
+    self.contracts.where(vendor_pending: false, couple_pending: true)
   end
 
-  def need_approval_contracts
-    self.contracts.where(vendor_pending: true)
+  def request_contracts
+    self.contracts.where(vendor_pending: true, couple_pending: false)
   end
 
-  def approved_contracts
-    self.contracts.where(vendor_pending: false)
+  def active_contracts
+    self.contracts.where(vendor_pending: false,couple_pending: false)
   end
 
-  # Omniauth 
+  # Omniauth
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |vendor|
       vendor.email = auth.info.email

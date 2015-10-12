@@ -1,11 +1,3 @@
-- if current_couple
-  = link_to 'Logout', destroy_couple_session_path, method: 'delete'
-  = link_to 'Your Profile', couple_path(current_couple)
-- elsif current_vendor
-  = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
-  = link_to 'Your Profile', vendor_path(current_vendor)
-- else
-  = link_to 'Vendor Sign In', new_vendor_session_path, class: 'btn'
-  = link_to 'Couple Sign In', new_couple_session_path, class: 'btn'
-
-%hr
+.container
+  %h1 MARRY ME
+  %p babysit me

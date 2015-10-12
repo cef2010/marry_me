@@ -1,0 +1,8 @@
+- if current_vendor
+  = @couple.email
+  -if current_vendor.contracts.find_by(couple_id: @couple.id)
+    Pending
+  -else
+    = link_to "Add Couple", add_contract_path(couple_id: @couple.id, vendor_id: current_vendor.id)
+- else
+  = @couple.email
