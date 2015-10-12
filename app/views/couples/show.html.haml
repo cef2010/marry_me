@@ -1,3 +1,7 @@
-= link_to 'Logout', destroy_couple_session_path, method: 'delete'
-%p #{@couple.email}
-= render(partial: 'info_form')
+.container
+  %h1 Couple Show Page
+  %hr
+  -if current_couple && current_couple.id == @couple.id
+    = render(partial: 'current_couple')
+  -else
+    = render(partial: 'not_current')

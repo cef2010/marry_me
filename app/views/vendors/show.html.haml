@@ -1,28 +1,7 @@
-%h1
-	Vendor Show Page
-
-- if @vendor.id = current_vendor.id
-	= "Welcome, #{current_vendor.email}"
-	%br
-	- if @vendor.couples.any?
-		%hr
-		%h3
-			These Need Your Approval
-		- @vendor_requests.each do |contract|
-			= contract.couple.name
-			= contract.couple.wedding_date
-		%h3
-			These Are Pending
-		- @vendor_pending.each do |contract|
-			= contract.couple.name
-			= contract.couple.wedding_date
-		%h3
-			These Are Your Approved Contracts
-		- @vendor_active.each do |contract|
-			= contract.couple.name
-			= contract.couple.wedding_date
-	- else
-		= "No couples yet!"
-- else
-	%h1
-		Other Vendor
+.container
+	%h1	Vendor Show Page
+	%hr
+	-if current_vendor && current_vendor.id == @vendor.id
+		= render(partial: 'current_vendor')
+	-else
+		=render(partial: 'not_current')

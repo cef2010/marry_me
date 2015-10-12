@@ -1,0 +1,15 @@
+- if current_couple
+  %p Welcome #{current_couple.email}:
+  = link_to 'Logout', destroy_couple_session_path, method: 'delete'
+- elsif current_vendor
+  %p Welcome #{current_vendor.email}:
+  = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
+- else
+  = link_to 'Couple Sign In', new_couple_session_path
+  |
+  = link_to 'Vendor Sign In', new_vendor_session_path
+|
+= link_to 'Couples Index', couples_path
+|
+= link_to 'Vendors Index', vendors_path
+%hr
