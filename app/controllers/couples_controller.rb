@@ -1,22 +1,24 @@
 class CouplesController < ApplicationController
-	before_action :authenticate_couple!
 
   def index
     @couples = Couple.all
   end
 
   def show
-    @couple = Couple.find(current_couple)
+    @couple = Couple.find(params[:id])
+    @couple_active = @couple.active_contracts
+    @couple_requests = @couple.request_contracts
+    @couple_pending = @couple.pending_contracts
   end
 
   def edit
-    @couple = Couple.find(current_couple)
+    @couple = Couple.find(params[:id])
   end
 
   def update
-    @couple = Couple.find(current_couple)
+    @couple = Couple.find(params[:id])
     if @couple.update(couple_params)
-      redirect_to couple_path(current_couple)
+      redirect_to couple_path(@couple)
     end
   end
 

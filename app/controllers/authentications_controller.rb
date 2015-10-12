@@ -1,6 +1,4 @@
 class AuthenticationsController < ApplicationController
-  skip_before_action :authenticate_couple!
-  skip_before_action :authenticate_vendor!
 
   def create
     # You need to implement the method below in your model (e.g. app/models/user.rb)
