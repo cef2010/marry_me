@@ -1,6 +1,7 @@
 require 'rails_helper'
-
 RSpec.describe Vendor, type: :model do
+
+
   describe "tests model attributes" do
     it { should respond_to :name }
     it { should respond_to :description }
@@ -9,4 +10,5 @@ RSpec.describe Vendor, type: :model do
     it { should respond_to :website }
     it { should respond_to :phone }
   end
+
 end
