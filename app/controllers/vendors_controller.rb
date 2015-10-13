@@ -22,6 +22,10 @@ class VendorsController < ApplicationController
     end
   end
 
+  def sort_by_type(vendor_type)
+    
+  end
+
   private
 
   def type
