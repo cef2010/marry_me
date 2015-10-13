@@ -13,3 +13,95 @@ $(document).ready ->
   $('#open_couple_form').on 'click', ->
     $('#open_couple_form').addClass 'hide'
     $('#couple_form').removeClass 'hide'
+
+  $('.test-button').click ->
+    valuesToSubmit = $('.edit_couple').serialize()
+    $.ajax '/couples/3', #make dynamic
+      type: 'PUT'
+      data: valuesToSubmit
+      success: (data) ->
+        console.log data
+        $('.the_name').html(data.couple.name)
+      error: (data) ->
+        console.log data
+  $('.florists').click ->
+    $.ajax ''
+
+      # success: (data) ->
+      #   alert('Something went right')
+      # error: (data) ->
+      #   alert('Something went wrong')
+
+    #       $('form').submit ->
+    # valuesToSubmit = $(this).serialize()
+    # $.ajax(
+    #   type: 'POST'
+    #   url: $(this).attr('action')
+    #   data: valuesToSubmit
+    #   dataType: 'JSON').success (json) ->
+    #   console.log 'success', json
+    #   return
+    # false
+
+
+  #  $('.edit').on('click', function() {
+  #  var first = $('#first_name').val();
+  #  var last = $('#last_name').val();
+  #  var phone = $('#phone_number').val();
+  #  var user = { user: {first_name: first, last_name: last, phone_number: phone }};
+  #  $.ajax(baseUrl + $(this).data('user-id'),
+  #         {
+  #           type: 'PUT',
+  #           data: user,
+  #           success: function(data) {
+  #             $('#edit_user').addClass('hide');
+  #           }
+  #         });
+  #       $('#add_user').removeClass('hide');
+  #       $('#edit_user').addClass('hide');
+  # });
+
+
+
+# $(document).ready(function(){
+#   $(document).on('click', '.populate', function(){
+#     $.ajax({
+#       url: '/populator',
+#       type: 'GET',
+#       success: function(data){
+#         $('#gem_demo_first_name').val(data.first_name)
+#         $('#gem_demo_last_name').val(data.last_name)
+#         $('#gem_demo_birthdate').val(data.birth_date)
+#         $('#gem_demo_address').val(data.address)
+#         $('#gem_demo_city').val(data.city)
+#         $('#gem_demo_state').val(data.state)
+#         $('#gem_demo_zip').val(data.zip)
+#       },
+#       error: function(data){
+#       }
+#     })
+#   });
+#
+# });
+
+# $(document).ready ->
+#   $('.vote_button').click ->
+#     $voteButton = $(this)
+#     $.ajax $voteButton.data('url'),
+#       type: 'PUT'
+#       success: (data) ->
+#         $('#' + $voteButton.data('element-id')).html(data.value)
+#       error: (data) ->
+#         alert('Something went wrong')
+#
+#
+# <h1> Votes </h1>
+# <h3> Number of Up Votes:
+#   <span id="upvotes"> <%= @upvotes %> </span>
+# </h3>
+# <h3> Number of Down Votes:
+#   <span id="downvotes"> <%= @downvotes %> </span>
+# </h3>
+# <hr>
+# <button class="vote_button" data-url="/upvote" data-element-id="upvotes">Up Vote</button>
+# <button class="vote_button" data-url="/downvote" data-element-id="downvotes"> Down Vote</button>
