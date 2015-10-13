@@ -27,6 +27,7 @@ RSpec.describe CouplesController, type: :controller do
   #   end
   # end
 
+  # cannot test update without edit
   # describe "PUT #update" do
   #   it 'updates a couple' do
   #     couple
