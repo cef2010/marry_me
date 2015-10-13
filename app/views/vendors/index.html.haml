@@ -1,6 +1,8 @@
 .container
 	%h1 All Vendors
 	%hr
+	= ('Music')
+	%hr
 	- if @vendors.any?
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
