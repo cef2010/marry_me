@@ -5,5 +5,7 @@
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
 			%br
+		%button.btn.florists Show all Florists
+
 	- else
 		%h3 There are currently no vendors.
