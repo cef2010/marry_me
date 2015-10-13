@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe CouplesController, type: :controller do
+  
+  before(:each) do
 
   let(:couple) { FactoryGirl.create(:couple) }
 
@@ -16,6 +18,9 @@ RSpec.describe CouplesController, type: :controller do
       get :show, {id: couple.id}
       expect(response).to have_http_status(:success)
     end
+
+    it 'gets couples with active contracts' do
+      get :show
   end
 
   # need an edit view to test function
