@@ -3,6 +3,7 @@
 	%hr
 	= ('Music')
 	%hr
+	.vendor_display
 	- if @vendors.any?
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
@@ -11,8 +12,8 @@
 			Florists
 		%button.attire{data: { category: "Attire"}}
 			Attire
-		%h3.all-florists
-		%h3.all-attire
+		-# %h3.all-florists
+		-# %h3.all-attire
 	- else
 		%h3 There are currently no vendors.
 	%hr

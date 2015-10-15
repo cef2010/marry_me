@@ -34,27 +34,27 @@ $(document).ready ->
 
     #AJAX requests for vendor types
   $('.florists').click ->
-    florist = $(this).data('type')
+    vendor_category = $(this).data('category')
     $.ajax '/sort_by_type',
       type: 'GET'
-      data:
-        vendorType: florist
+      data: vendor_category
       success: (data) ->
+        $('.vendor_display').empty()
         for i in [0...(data.vendor.length)]
-          $('.all-florists').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
+          $('.vendor_display').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
       error: (data) ->
       # need to add  class disabled on click
 
-  $('.attire').click ->
-    attire = $(this).data('type')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        vendorType: attire
-      success: (data) ->
-        for i in [0...(data.vendor.length)]
-          $('.all-attire').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
-      error: (data) ->
+  # $('.attire').click ->
+  #   attire = $(this).data('type')
+  #   $.ajax '/sort_by_type',
+  #     type: 'GET'
+  #     data:
+  #       vendorType: attire
+  #     success: (data) ->
+  #       for i in [0...(data.vendor.length)]
+  #         $('.all-attire').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
+  #     error: (data) ->
 
 
 
