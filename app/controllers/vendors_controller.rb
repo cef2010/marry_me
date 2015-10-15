@@ -38,10 +38,11 @@ class VendorsController < ApplicationController
   end
   # params[:type] = params[:type].to_sym
   # render json: { vendor: @vendor }
-  # def sort_by_type
-  #   vendor = Vendor.where(type: params[:vendorType])
-  #   render json: { vendor: vendor }
-  # end
+
+  def sort_by_type
+    vendor = Vendor.where(category: params[:category])
+    render json: { vendor: vendor }
+  end
 
   private
 
