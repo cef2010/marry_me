@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012185232) do
+ActiveRecord::Schema.define(version: 20151014221612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,21 +34,25 @@ ActiveRecord::Schema.define(version: 20151012185232) do
     t.float    "budget"
     t.string   "ceremony_location"
     t.string   "reception_location"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                      default: "", null: false
+    t.string   "encrypted_password",         default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",              default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.string   "couple_avatar_file_name"
+    t.string   "couple_avatar_content_type"
+    t.integer  "couple_avatar_file_size"
+    t.datetime "couple_avatar_updated_at"
   end
 
   add_index "couples", ["email"], name: "index_couples_on_email", unique: true, using: :btree
@@ -74,20 +78,26 @@ ActiveRecord::Schema.define(version: 20151012185232) do
     t.string   "address"
     t.string   "website"
     t.string   "phone"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "email",                      default: "", null: false
+    t.string   "encrypted_password",         default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",              default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.string   "provider"
     t.string   "uid"
+    t.string   "vendor_avatar_file_name"
+    t.string   "vendor_avatar_content_type"
+    t.integer  "vendor_avatar_file_size"
+    t.datetime "vendor_avatar_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "vendors", ["email"], name: "index_vendors_on_email", unique: true, using: :btree

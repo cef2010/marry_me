@@ -24,7 +24,7 @@ class CouplesController < ApplicationController
 
 	private
 		def couple_params
-			params.require(:couple).permit(:name, :description, :player1, :player2, :wedding_date, :budget, :ceremony_location, :reception_location, :email)
+			params.require(:couple).permit(:name, :description, :player1, :player2, :wedding_date, :budget, :ceremony_location, :reception_location, :email, :couple_avatar)
 		end
 
 end
