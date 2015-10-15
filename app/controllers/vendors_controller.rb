@@ -36,9 +36,11 @@ class VendorsController < ApplicationController
       redirect_to vendor_path(@vendor)
     end
   end
-
-  def sort_by_type(vendor_type)
-
+  # params[:type] = params[:type].to_sym
+  # render json: { vendor: @vendor }
+  def sort_by_type
+    vendor = Vendor.where(type: params[:vendorType])
+    render json: { vendor: vendor }
   end
 
   private
