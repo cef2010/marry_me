@@ -1,5 +1,5 @@
 .container
-	%h1 Get paperclip set up to work with STI before doing anything else
+	%h1 Send STI to hell before doing anything else
 	%img{src: @vendor.vendor_avatar.url(:thumb)}
 	%h1.the_name
 		- if @vendor.name == nil
@@ -9,8 +9,8 @@
 	%hr
 	%p.vendor_desc
 	= @vendor.try(:description)
-	%p.vendor_type
-	= @vendor.try(:type)
+	%p.vendor_category
+	= @vendor.try(:category)
 	%p.vendor_address
 	= @vendor.try(:address)
 	%p.vendor_website

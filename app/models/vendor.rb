@@ -45,7 +45,7 @@ class Vendor < ActiveRecord::Base
     end
   end
 
-  # STI stuff
+  # ex-STI stuff
   def self.categories
     ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitation', 'Rental', 'Attire', 'Other']
   end
