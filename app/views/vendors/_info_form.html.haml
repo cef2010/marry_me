@@ -6,8 +6,8 @@
 		= f.label :description, class: 'active'
 		= f.text_area :description, placeholder: 'Tell us about you'
 
-		= f.label :type
-		= f.select :type, options_for_select(['Attire', 'Baker', 'Caterer', 'Florist', 'Invitation', 'Music', 'Photobooth', 'Photographer', 'Rental', 'Venue', 'Videographer', 'Other'])
+		= f.label :category
+		= f.select :category, options_for_select(Vendor.categories)
 
 		= f.label :address, class: 'active'
 		= f.text_field :address, placeholder: '123 My Street, Salt Lake City, UT 84111'

@@ -7,9 +7,9 @@
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
 			%br
-		%button.florists{data: { type: "Florist"}}
+		%button.florists{data: { category: "Florist"}}
 			Florists
-		%button.attire{data: { type: "Attire"}}
+		%button.attire{data: { category: "Attire"}}
 			Attire
 		%h3.all-florists
 		%h3.all-attire
