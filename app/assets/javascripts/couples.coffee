@@ -3,7 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
-
+  baseUrl = '/couples/'
   # $('#couple_update').on 'click', ->
 
   $('#close_couple_form').on 'click', ->
@@ -14,18 +14,21 @@ $(document).ready ->
     $('#open_couple_form').addClass 'hide'
     $('#couple_form').removeClass 'hide'
 
-  $('.test-button').click ->
+  $('.couple_update').on 'click', ->
     valuesToSubmit = $('.edit_couple').serialize()
-    $.ajax '/couples/3', #make dynamic
+    $.ajax baseUrl + $(this).data('id'), #make dynamic
       type: 'PUT'
       data: valuesToSubmit
       success: (data) ->
         console.log data
         $('.the_name').html(data.couple.name)
+        $('.couple_desc').html(data.couple.description)
+        $('.couple_date').html(data.couple.wedding_date)
+        $('.ceremony_location').html(data.couple.ceremony_location)
+        $('.reception_location').html(data.couple.reception_location)
+        $('.budget').html(data.couple.budget)
       error: (data) ->
         console.log data
-  $('.florists').click ->
-    $.ajax ''
 
       # success: (data) ->
       #   alert('Something went right')

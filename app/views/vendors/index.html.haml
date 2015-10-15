@@ -7,7 +7,11 @@
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
 			%br
-		%button.btn.florists Show all Florists
-
+		%button.florists{data: { type: "Florist"}}
+			Florists
+		%button.attire{data: { type: "Attire"}}
+			Attire
+		%h3.all-florists
+		%h3.all-attire
 	- else
 		%h3 There are currently no vendors.

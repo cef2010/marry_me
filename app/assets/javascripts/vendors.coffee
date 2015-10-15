@@ -3,8 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+  baseUrl = '/vendors/'
 
-  # $('#vendor_update').on 'click', ->
+  #update vendor
 
   $('#open_vendor_form').on 'click', ->
     $('#open_vendor_form').addClass 'hide'
@@ -13,6 +14,49 @@ $(document).ready ->
   $('#close_vendor_form').on 'click', ->
     $('#vendor_form').addClass 'hide'
     $('#open_vendor_form').removeClass 'hide'
+
+  # $('.vendor_update').on 'click', ->
+  #   valuesToSubmit = $('.form_for_vendor').serialize()
+  #   debugger
+  #   $.ajax baseUrl + $(this).data('id'),
+  #     type: 'PUT'
+  #     data: valuesToSubmit
+  #     success: (data) ->
+  #       $('.vendor_name').html(data.vendor.name)
+  #       $('.vendor_desc').html(data.vendor.description)
+  #       $('.vendor_type').html(data.vendor.type)
+  #       $('.vendor_address').html(data.vendor.address)
+  #       $('.vendor_website').html(data.vendor.website)
+  #       $('.vendor_phone').html(data.vendor.phone)
+  #     error: (data) ->
+  #       console.log data
+        #how to convert data.vendor.type to symbol b/c vendor params is expecting symbol in require
+
+    #AJAX requests for vendor types
+  $('.florists').click ->
+    florist = $(this).data('type')
+    $.ajax '/sort_by_type',
+      type: 'GET'
+      data:
+        vendorType: florist
+      success: (data) ->
+        for i in [0...(data.vendor.length)]
+          $('.all-florists').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
+      error: (data) ->
+      # need to add  class disabled on click
+
+  $('.attire').click ->
+    attire = $(this).data('type')
+    $.ajax '/sort_by_type',
+      type: 'GET'
+      data:
+        vendorType: attire
+      success: (data) ->
+        for i in [0...(data.vendor.length)]
+          $('.all-attire').append(data.vendor[i].name, data.vendor[i].description, data.vendor[i].address ,data.vendor[i].website, data.vendor[i].phone)
+      error: (data) ->
+
+
 
 
   $('select').material_select()
