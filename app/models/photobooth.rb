@@ -1,2 +1,0 @@
-class Photobooth < Vendor
-end
