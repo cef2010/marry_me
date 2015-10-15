@@ -18,5 +18,9 @@
 		= f.label :phone, class: 'active'
 		= f.text_field :phone, placeholder: '888-888-8888'
 
-		= f.submit 'Update', class: 'btn', id: 'vendor_update'
+		= f.submit 'Update', class: 'btn'
+
 	%p#close_vendor_form.btn Close Form
+	-# .btn.vendor_update{data: {id: @vendor.id}} Test
+
+-# vendor, html: {class: 'form_for_vendor'}, remote: true

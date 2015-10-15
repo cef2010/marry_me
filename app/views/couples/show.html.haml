@@ -5,13 +5,16 @@
     - else
       = @couple.name
   %hr
-  = @couple.try(:description)
-  %br
-  = @couple.try(:wedding_date)
-  %br
-  = @couple.try(:ceremony_location)
-  %br
-  = @couple.try(:reception_location)
+  %p.couple_desc
+    = @couple.try(:description)
+  %p.couple_date
+    = @couple.try(:wedding_date)
+  %p.budget
+    = @couple.try(:budget)
+  %p.ceremony_location
+    = @couple.try(:ceremony_location)
+  %p.reception_location
+    = @couple.try(:reception_location)
   %hr
   -if current_couple && current_couple.id == @couple.id
     = render(partial: 'current_couple')
