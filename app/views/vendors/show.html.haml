@@ -1,20 +1,21 @@
 .container
 	%h1 Get paperclip set up to work with STI before doing anything else
 	%img{src: @vendor.vendor_avatar.url(:thumb)}
-	%h1
+	%h1.the_name
 		- if @vendor.name == nil
 			Vendor
 		- else
 			= @vendor.name
 	%hr
+	%p.vendor_desc
 	= @vendor.try(:description)
-	%br
+	%p.vendor_type
 	= @vendor.try(:type)
-	%br
+	%p.vendor_address
 	= @vendor.try(:address)
-	%br
+	%p.vendor_website
 	= @vendor.try(:website)
-	%br
+	%p.vendor_phone
 	= @vendor.try(:phone)
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
