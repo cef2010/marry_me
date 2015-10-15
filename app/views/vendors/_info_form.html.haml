@@ -18,5 +18,8 @@
 		= f.label :phone, class: 'active'
 		= f.text_field :phone, placeholder: '888-888-8888'
 
+		= f.label :vendor_avatar
+		= f.file_field :vendor_avatar
+
 		= f.submit 'Update', class: 'btn', id: 'vendor_update'
 	%p#close_vendor_form.btn Close Form

@@ -3,8 +3,21 @@ class Vendor < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # paperclip
+  has_attached_file :vendor_avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" } # ADD DEFAULT URL FOR ICON
+  validates_attachment_content_type :vendor_avatar, :content_type => /\Aimage\/.*\Z/
+
   has_many :contracts
   has_many :couples, through: :contracts
+
+  # geocoder
+  geocoded_by :full_address
+  after_validation :geocode
+
+  def full_address
+    self.address
+  end
 
   # Contract methods
   def pending_contracts
@@ -34,7 +47,7 @@ class Vendor < ActiveRecord::Base
 
   # STI stuff
   def self.types
-    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Rentals', 'Attire', 'Other']
+    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitation', 'Rental', 'Attire', 'Other']
   end
 
   def self.musics
@@ -70,7 +83,7 @@ class Vendor < ActiveRecord::Base
   end
 
   def self.invitations
-    where(type: 'Invitations')
+    where(type: 'Invitation')
   end
 
   def self.attires
@@ -78,7 +91,7 @@ class Vendor < ActiveRecord::Base
   end
 
   def self.rentals
-    where(type: 'Rentals')
+    where(type: 'Rental')
   end
 
   def self.others

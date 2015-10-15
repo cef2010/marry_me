@@ -1,4 +1,6 @@
 .container
+	%h1 Get paperclip set up to work with STI before doing anything else
+	%img{src: @vendor.vendor_avatar.url(:thumb)}
 	%h1
 		- if @vendor.name == nil
 			Vendor
@@ -14,9 +16,25 @@
 	= @vendor.try(:website)
 	%br
 	= @vendor.try(:phone)
-
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
 		= render(partial: 'current_vendor')
 	-else
 		=render(partial: 'not_current')
+	%hr
+	-# MAP
+	- if @vendor.latitude
+		%div{style: 'width: 800px;'}
+			#map{style: 'width: 800px; height: 400px;'}
+	- else
+		%p Add An Address Ya Goof!
+	%hr
+
+
+
+%script{type: 'text/javascript'}
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
+	handler.bounds.extendWith(markers);
+	handler.fitMapToBounds();
+	handler.getMap().setZoom(14);});
