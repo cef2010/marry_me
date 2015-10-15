@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20151014221612) do
   enable_extension "plpgsql"
 
   create_table "contracts", force: :cascade do |t|
-    t.float    "total"
+    t.float    "cost"
     t.integer  "couple_id"
     t.integer  "vendor_id"
     t.datetime "created_at",                    null: false
@@ -28,9 +28,7 @@ ActiveRecord::Schema.define(version: 20151014221612) do
 
   create_table "couples", force: :cascade do |t|
     t.text     "description"
-    t.string   "player1"
-    t.string   "player2"
-    t.string   "wedding_date"
+    t.date     "wedding_date"
     t.float    "budget"
     t.string   "ceremony_location"
     t.string   "reception_location"
@@ -62,10 +60,10 @@ ActiveRecord::Schema.define(version: 20151014221612) do
 
   create_table "families", force: :cascade do |t|
     t.string   "name"
+    t.string   "relation"
+    t.string   "role"
     t.string   "description"
     t.string   "contact"
-    t.string   "role"
-    t.string   "relation"
     t.integer  "couple_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -74,8 +72,11 @@ ActiveRecord::Schema.define(version: 20151014221612) do
   create_table "vendors", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "type"
+    t.string   "category"
     t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
     t.string   "website"
     t.string   "phone"
     t.datetime "created_at",                              null: false
