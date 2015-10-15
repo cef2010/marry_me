@@ -38,18 +38,14 @@ class VendorsController < ApplicationController
   end
   # params[:type] = params[:type].to_sym
   # render json: { vendor: @vendor }
-  def sort_by_type
-    vendor = Vendor.where(type: params[:vendorType])
-    render json: { vendor: vendor }
-  end
+  # def sort_by_type
+  #   vendor = Vendor.where(type: params[:vendorType])
+  #   render json: { vendor: vendor }
+  # end
 
   private
 
-  def type
-    Vendor.types.include?(params[:type]) ? params[:type] : "Vendor"
-  end
-
   def vendor_params
-    params.require(type.underscore.to_sym).permit(:name, :description, :type, :address, :website, :phone, :email, :password, :vendor_avatar)
+    params.require(:vendor).permit(:name, :description, :category, :address, :website, :phone, :email, :password, :vendor_avatar)
   end
 end
