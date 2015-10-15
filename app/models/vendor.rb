@@ -33,8 +33,8 @@ class Vendor < ActiveRecord::Base
   end
 
   # Sort methods
-  def self.by_type(sort_type)
-    where(type: sort_type)
+  def self.by_category(sort_category)
+    where(category: sort_category)
   end
 
   # Omniauth
@@ -46,56 +46,56 @@ class Vendor < ActiveRecord::Base
   end
 
   # STI stuff
-  def self.types
+  def self.categories
     ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitation', 'Rental', 'Attire', 'Other']
   end
 
   def self.musics
-    where(type: 'Music')
+    where(category: 'Music')
   end
 
   def self.venues
-    where(type: 'Venue')
+    where(category: 'Venue')
   end
 
   def self.florists
-    where(type: 'Florist')
+    where(category: 'Florist')
   end
 
   def self.bakers
-    where(type: 'Baker')
+    where(category: 'Baker')
   end
 
   def self.caterers
-    where(type: 'Caterer')
+    where(category: 'Caterer')
   end
 
   def self.photographers
-    where(type: 'Photographer')
+    where(category: 'Photographer')
   end
 
   def self.videographers
-    where(type: 'Videographer')
+    where(category: 'Videographer')
   end
 
   def self.photobooths
-    where(type: 'Photobooth')
+    where(category: 'Photobooth')
   end
 
   def self.invitations
-    where(type: 'Invitation')
+    where(category: 'Invitation')
   end
 
   def self.attires
-    where(type: 'Attire')
+    where(category: 'Attire')
   end
 
   def self.rentals
-    where(type: 'Rental')
+    where(category: 'Rental')
   end
 
   def self.others
-    where(type: 'Other')
+    where(category: 'Other')
   end
 
 end

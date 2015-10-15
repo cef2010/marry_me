@@ -1,2 +1,0 @@
-class Photographer < Vendor
-end
