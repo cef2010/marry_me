@@ -16,7 +16,7 @@ class Vendor < ActiveRecord::Base
   after_validation :geocode
 
   def full_address
-    self.address
+    "#{self.address}, #{self.city}, #{self.state}"
   end
 
   # Contract methods
