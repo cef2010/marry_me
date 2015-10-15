@@ -2,9 +2,7 @@ class DeviseCreateCouples < ActiveRecord::Migration
   def change
     create_table(:couples) do |t|
       t.text :description
-      t.string :player1
-      t.string :player2
-      t.string :wedding_date
+      t.date :wedding_date
       t.float :budget
       t.string :ceremony_location
       t.string :reception_location

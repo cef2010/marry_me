@@ -1,7 +1,7 @@
 class CreateContracts < ActiveRecord::Migration
   def change
     create_table :contracts do |t|
-      t.float :total
+      t.float :cost
       t.belongs_to :couple
       t.belongs_to :vendor
       t.timestamps null: false
