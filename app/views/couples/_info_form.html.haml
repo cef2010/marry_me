@@ -7,10 +7,10 @@
 		= f.text_area :description, placeholder: 'Tell us about you!'
 
 		= f.label :wedding_date, class: 'active'
-		= f.text_area :wedding_date
+		= f.date_field :wedding_date, class: 'datepicker'
 
 		= f.label :budget, class: 'active'
-		= f.text_field :budget, placeholder: '$8,000.00'
+		= f.text_field :budget, placeholder: '8000'
 
 		= f.label :ceremony_location, class: 'active'
 		= f.text_field :ceremony_location, placeholder: 'Wasatch State Park'

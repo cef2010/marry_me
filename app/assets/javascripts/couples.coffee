@@ -3,6 +3,11 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 $(document).ready ->
+  $('.datepicker').pickadate({
+    selectMonths: true, 
+    selectYears: 15
+  });
+
   baseUrl = '/couples/'
   # $('#couple_update').on 'click', ->
 
