@@ -19,6 +19,9 @@ class Vendor < ActiveRecord::Base
     self.address
   end
 
+  def self.search(query)
+    where("name like ?", "%#{query}%") || where("category like ?", "%#{query}%")
+  end
   # Contract methods
   def pending_contracts
     self.contracts.where(vendor_pending: false, couple_pending: true)

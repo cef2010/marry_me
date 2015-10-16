@@ -13,6 +13,9 @@ class VendorsController < ApplicationController
         @hash.delete(h)
       end
     end
+    if params[:search]
+      @vendors = Vendor.search(params[:search]).order("name DESC")
+    end
   end
 
   def show
