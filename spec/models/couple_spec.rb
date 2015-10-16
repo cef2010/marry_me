@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+
 RSpec.describe Couple, type: :model do
   let(:couple) { FactoryGirl.create(:couple) }
   let(:contract) { FactoryGirl.create(:contract, couple_pending: false, vendor_pending: false) }
