@@ -119,5 +119,4 @@ RSpec.describe Vendor, type: :model do
       expect(Vendor.videographers.count).to eq(1)
     end
   end
-
 end

@@ -12,5 +12,8 @@
 !/log/.keep
 /tmp
 /config/facebook_secrets.yml
+<<<<<<< HEAD
 /temp
+=======
+>>>>>>> 85d6a07efc503f868a23c729d0e7d3f129610ebb
 /coverage
