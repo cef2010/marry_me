@@ -1,22 +1,17 @@
 require 'rails_helper'
 
-
 RSpec.describe Couple, type: :model do
   let(:couple) { FactoryGirl.create(:couple) }
   let(:contract) { FactoryGirl.create(:contract, couple_pending: false, vendor_pending: false) }
   let(:vendor) { FactoryGirl.create (:vendor) }
 
-
-
   describe 'model attributes' do
-    it { should respond_to :description}
-    it { should respond_to :player1}
-    it { should respond_to :player2}
-    it { should respond_to :wedding_date}
-    it { should respond_to :budget}
-    it { should respond_to :ceremony_location}
-    it { should respond_to :reception_location}
+    it { should respond_to :description }
     it { should respond_to :name }
+    it { should respond_to :wedding_date }
+    it { should respond_to :budget }
+    it { should respond_to :ceremony_location }
+    it { should respond_to :reception_location }
     it { should have_many :contracts }
     it { should have_many :vendors }
   end
@@ -49,7 +44,5 @@ RSpec.describe Couple, type: :model do
       expect(pending.count).to eq(1)
       expect(pending.last[:couple_pending]).to be(false)
     end
-
-
   end
 end
