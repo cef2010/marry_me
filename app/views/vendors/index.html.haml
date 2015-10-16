@@ -1,7 +1,5 @@
 .container
-	%h1 All Vendors
-	%hr
-	= ('Music')
+	%h1.headline All Vendors	
 	%hr
 	.vendor_display
 	- if @vendors.any?
@@ -15,6 +13,28 @@
 			Florists
 		%button.attire{data: { category: "Attire"}}
 			Attire
+		%button.music{data: { category: "Music"}}
+			Music
+		%button.venue{data: { category: "Venue"}}
+			Venue
+		%button.baker{data: { category: "Baker"}}
+			Baker
+		%button.caterer{data: { category: "Caterer"}}
+			Caterer
+		%button.photographer{data: { category: "Photographer"}}
+			Photographer
+		%button.videographer{data: { category: "Videographer"}}
+			Videographer
+		%button.photobooth{data: { category: "Photobooth"}}
+			Photobooth
+		%button.invitation{data: { category: "Invitation"}}
+			Invitation
+		%button.rental{data: { category: "Rental"}}
+			Rental
+		%button.other{data: { category: "Other"}}
+			Other
+
+
 		-# %h3.all-florists
 		-# %h3.all-attire
 	- else

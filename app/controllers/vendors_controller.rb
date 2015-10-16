@@ -15,6 +15,17 @@ class VendorsController < ApplicationController
     end
     if params[:search]
       @vendors = Vendor.search(params[:search]).order("name DESC")
+      @hash = Gmaps4rails.build_markers(@vendors) do |vendor, marker|
+        if vendor.latitude != nil
+          marker.lat vendor.latitude
+          marker.lng vendor.longitude
+        end
+      end
+      @hash.each do |h|
+        if h = {}
+          @hash.delete(h)
+        end
+      end
     end
   end
 
