@@ -7,6 +7,9 @@
 	- if @vendors.any?
 		- @vendors.each do |vendor|
 			= link_to vendor.email, vendor_path(vendor)
+			.article
+				%h1.name
+					= link_to vendor.name, vendor_path(vendor)
 			%br
 		%button.florists{data: { category: "Florist"}}
 			Florists
