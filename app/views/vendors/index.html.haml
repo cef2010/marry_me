@@ -1,25 +1,17 @@
 .container
 	%h1 All Vendors
 	%hr
-	= ('Music')
-	%hr
 	.vendor_display
 	- if @vendors.any?
-		- @vendors.each do |vendor|
-			= link_to vendor.email, vendor_path(vendor)
+		- @vendors.each do |vendor_card|
+			= render(partial: 'vendor_card', object: vendor_card)
 			%br
-		%button.florists{data: { category: "Florist"}}
-			Florists
-		%button.attire{data: { category: "Attire"}}
-			Attire
-		-# %h3.all-florists
-		-# %h3.all-attire
 	- else
 		%h3 There are currently no vendors.
 	%hr
 	-# MAP
-	%div{style: 'width: 800px;'}
-		#map{style: 'width: 800px; height: 400px;'}
+	%div{style: 'width: 100%;'}
+		#map{style: 'width: 100%; height: 400px;'}
 
 %script{type: 'text/javascript'}
 	handler = Gmaps.build('Google');
