@@ -10,7 +10,16 @@
 		= f.select :category, options_for_select(Vendor.categories)
 
 		= f.label :address, class: 'active'
-		= f.text_field :address, placeholder: '123 My Street, Salt Lake City, UT 84111'
+		= f.text_field :address, placeholder: '123 My Street'
+
+		= f.label :city, class: 'active'
+		= f.text_field :city, placeholder: 'Salt Lake City'
+
+		= f.label :state, class: 'active'
+		= f.text_field :state, placeholder: 'UT'
+
+		= f.label :zip, class: 'active'
+		= f.text_field :zip, placeholder: '84111'
 
 		= f.label :website, class: 'active'
 		= f.text_field :website, placeholder: 'www.mywebsite.com'
