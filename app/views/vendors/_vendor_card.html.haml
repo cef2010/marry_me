@@ -1,12 +1,14 @@
-.vendor_card
-  .row
-    .col.m2
-      %img{src: vendor_card.vendor_avatar.url(:thumb)}
-    .col.m10
-      = vendor_card.name
-      %br
-      %a{href: "http://#{vendor_card.website}", target: '_blank'} #{vendor_card.website}
-      %br
-      %span #{vendor_card.city}, #{vendor_card.state}
-      %br
-      = link_to 'See more', vendor_path(vendor_card)
+- vendors.each do |vendor|
+  .vendor_card
+    .row
+      .col.m2
+        %img{src: vendor.vendor_avatar.url(:thumb)}
+      .col.m10
+        = vendor.name
+        %br
+        %a{href: "http://#{vendor.website}", target: '_blank'} #{vendor.website}
+        %br
+        %span #{vendor.city}, #{vendor.state}
+        %br
+        = link_to 'See more', vendor_path(vendor)
+  

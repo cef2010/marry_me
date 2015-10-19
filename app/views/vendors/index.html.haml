@@ -3,35 +3,35 @@
 	%hr
 	.vendor_display
 	- if @vendors.any?
-		- @vendors.each do |vendor_card|
-			= render(partial: 'vendor_card', object: vendor_card)
-			%br
-		%button.florists{data: { category: "Florist"}}
+		%button.vendor_button{data: { category: "Florist"}}
 			Florists
-		%button.attire{data: { category: "Attire"}}
+		%button.vendor_button{data: { category: "Attire"}}
 			Attire
-		%button.music{data: { category: "Music"}}
+		%button.vendor_button{data: { category: "Music"}}
 			Music
-		%button.venue{data: { category: "Venue"}}
+		%button.vendor_button{data: { category: "Venue"}}
 			Venue
-		%button.baker{data: { category: "Baker"}}
+		%button.vendor_button{data: { category: "Baker"}}
 			Baker
-		%button.caterer{data: { category: "Caterer"}}
+		%button.vendor_button{data: { category: "Caterer"}}
 			Caterer
-		%button.photographer{data: { category: "Photographer"}}
+		%button.vendor_button{data: { category: "Photographer"}}
 			Photographer
-		%button.videographer{data: { category: "Videographer"}}
+		%button.vendor_button{data: { category: "Videographer"}}
 			Videographer
-		%button.photobooth{data: { category: "Photobooth"}}
+		%button.vendor_button{data: { category: "Photobooth"}}
 			Photobooth
-		%button.invitation{data: { category: "Invitation"}}
+		%button.vendor_button{data: { category: "Invitation"}}
 			Invitation
-		%button.rental{data: { category: "Rental"}}
+		%button.vendor_button{data: { category: "Rental"}}
 			Rental
-		%button.other{data: { category: "Other"}}
+		%button.vendor_button{data: { category: "Other"}}
 			Other
+		.current_vendors
+			= render(partial: 'vendor_card', locals: {vendors: @vendors})
+		%br
 	- else
-		%h3 There are currently no vendors.
+		%h3 No vendors match your search.
 	%hr
 	-# MAP
 	%div{style: 'width: 100%;'}
