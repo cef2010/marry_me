@@ -16,9 +16,20 @@ class Vendor < ActiveRecord::Base
   after_validation :geocode
 
   def full_address
-    self.address
+    "#{self.address}, #{self.city}, #{self.state}"
   end
 
+  def self.search(query)
+   names = where("name like ?", "%#{query}%")
+   if names.any?
+     names
+   else
+     categories = where("category like ?", "%#{query}%")
+     if categories.any?
+       categories
+     end
+   end
+  end
   # Contract methods
   def pending_contracts
     self.contracts.where(vendor_pending: false, couple_pending: true)
