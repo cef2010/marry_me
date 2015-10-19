@@ -21,6 +21,8 @@ namespace :db do
       vendor.zip = Faker::Address.zip
       vendor.website = Faker::Internet.domain_name
       vendor.phone = Faker::PhoneNumber.cell_phone
+      vendor.latitude = Faker::Address.latitude
+      vendor.longitude = Faker::Address.longitude
     end
   end
 end
