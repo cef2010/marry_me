@@ -4,10 +4,13 @@ class Couple < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :trackable, :validatable
 
+  # paperclip
+  has_attached_file :couple_avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" } # ADD DEFAULT URL FOR ICON
+  validates_attachment_content_type :couple_avatar, :content_type => /\Aimage\/.*\Z/
+
   has_many :contracts
   has_many :families
   has_many :vendors, through: :contracts
-  delegate :musics, :venues, :florists, :bakers, :caterers, :photographers, :videographers, :photobooths, :invitations, :others, to: :vendors
 
   # Contract methods
   def pending_contracts

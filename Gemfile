@@ -3,7 +3,15 @@ source 'https://rubygems.org'
 gem 'devise'
 gem 'omniauth-facebook'
 gem 'materialize-sass'
+gem 'paperclip'
 
+#MAPS
+gem 'google_maps_geocoder'
+gem 'geocoder'
+gem 'gmaps4rails'
+gem 'underscore-rails'
+gem 'faker'
+gem 'populator'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.4'
 # Use postgresql as the database for Active Record

@@ -1,22 +1,40 @@
 .container
-	%h1
+	%img{src: @vendor.vendor_avatar.url(:thumb)}
+	%h1.the_name
 		- if @vendor.name == nil
 			Vendor
 		- else
 			= @vendor.name
 	%hr
+	%p.vendor_desc
 	= @vendor.try(:description)
-	%br
-	= @vendor.try(:type)
-	%br
+	%p.vendor_category
+	= @vendor.try(:category)
+	%p.vendor_address
 	= @vendor.try(:address)
-	%br
+	%p.vendor_website
 	= @vendor.try(:website)
-	%br
+	%p.vendor_phone
 	= @vendor.try(:phone)
-
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
 		= render(partial: 'current_vendor')
 	-else
 		=render(partial: 'not_current')
+	%hr
+	-# MAP
+	- if @vendor.latitude
+		%div{style: 'width: 100%;'}
+			#map{style: 'width: 100%; height: 400px;'}
+	- else
+		%p Add An Address Ya Goof!
+	%hr
+
+
+
+%script{type: 'text/javascript'}
+	handler = Gmaps.build('Google');
+	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
+	handler.bounds.extendWith(markers);
+	handler.fitMapToBounds();
+	handler.getMap().setZoom(14);});
