@@ -11,13 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012185232) do
+ActiveRecord::Schema.define(version: 20151014221612) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "contracts", force: :cascade do |t|
-    t.float    "total"
+    t.float    "cost"
     t.integer  "couple_id"
     t.integer  "vendor_id"
     t.datetime "created_at",                    null: false
@@ -28,27 +28,29 @@ ActiveRecord::Schema.define(version: 20151012185232) do
 
   create_table "couples", force: :cascade do |t|
     t.text     "description"
-    t.string   "player1"
-    t.string   "player2"
-    t.string   "wedding_date"
+    t.date     "wedding_date"
     t.float    "budget"
     t.string   "ceremony_location"
     t.string   "reception_location"
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                      default: "", null: false
+    t.string   "encrypted_password",         default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",              default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
     t.string   "provider"
     t.string   "uid"
     t.string   "name"
+    t.string   "couple_avatar_file_name"
+    t.string   "couple_avatar_content_type"
+    t.integer  "couple_avatar_file_size"
+    t.datetime "couple_avatar_updated_at"
   end
 
   add_index "couples", ["email"], name: "index_couples_on_email", unique: true, using: :btree
@@ -58,10 +60,10 @@ ActiveRecord::Schema.define(version: 20151012185232) do
 
   create_table "families", force: :cascade do |t|
     t.string   "name"
+    t.string   "relation"
+    t.string   "role"
     t.string   "description"
     t.string   "contact"
-    t.string   "role"
-    t.string   "relation"
     t.integer  "couple_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
@@ -70,24 +72,33 @@ ActiveRecord::Schema.define(version: 20151012185232) do
   create_table "vendors", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
-    t.string   "type"
+    t.string   "category"
     t.string   "address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
     t.string   "website"
     t.string   "phone"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.datetime "created_at",                              null: false
+    t.datetime "updated_at",                              null: false
+    t.string   "email",                      default: "", null: false
+    t.string   "encrypted_password",         default: "", null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",              default: 0,  null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
     t.string   "provider"
     t.string   "uid"
+    t.string   "vendor_avatar_file_name"
+    t.string   "vendor_avatar_content_type"
+    t.integer  "vendor_avatar_file_size"
+    t.datetime "vendor_avatar_updated_at"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
   add_index "vendors", ["email"], name: "index_vendors_on_email", unique: true, using: :btree
