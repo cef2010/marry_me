@@ -3,8 +3,11 @@ class CreateVendors < ActiveRecord::Migration
     create_table :vendors do |t|
       t.string :name
       t.text :description
-      t.string :type
+      t.string :category
       t.string :address
+      t.string :city
+      t.string :state
+      t.string :zip
       t.string :website
       t.string :phone
 

@@ -1,2 +1,0 @@
-class Caterer < Vendor
-end
