@@ -3,9 +3,33 @@ class Vendor < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # paperclip
+  has_attached_file :vendor_avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" } # ADD DEFAULT URL FOR ICON
+  validates_attachment_content_type :vendor_avatar, :content_type => /\Aimage\/.*\Z/
+
   has_many :contracts
   has_many :couples, through: :contracts
 
+  # geocoder
+  geocoded_by :full_address
+  after_validation :geocode
+
+  def full_address
+    "#{self.address}, #{self.city}, #{self.state}"
+  end
+
+  def self.search(query)
+   names = where("name like ?", "%#{query}%")
+   if names.any?
+     names
+   else
+     categories = where("category like ?", "%#{query}%")
+     if categories.any?
+       categories
+     end
+   end
+  end
   # Contract methods
   def pending_contracts
     self.contracts.where(vendor_pending: false, couple_pending: true)
@@ -20,8 +44,8 @@ class Vendor < ActiveRecord::Base
   end
 
   # Sort methods
-  def self.by_type(sort_type)
-    where(type: sort_type)
+  def self.by_category(sort_category)
+    where(category: sort_category)
   end
 
   # Omniauth
@@ -32,57 +56,57 @@ class Vendor < ActiveRecord::Base
     end
   end
 
-  # STI stuff
-  def self.types
-    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitations', 'Rentals', 'Attire', 'Other']
+  # ex-STI stuff
+  def self.categories
+    ['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitation', 'Rental', 'Attire', 'Other']
   end
 
   def self.musics
-    where(type: 'Music')
+    where(category: 'Music')
   end
 
   def self.venues
-    where(type: 'Venue')
+    where(category: 'Venue')
   end
 
   def self.florists
-    where(type: 'Florist')
+    where(category: 'Florist')
   end
 
   def self.bakers
-    where(type: 'Baker')
+    where(category: 'Baker')
   end
 
   def self.caterers
-    where(type: 'Caterer')
+    where(category: 'Caterer')
   end
 
   def self.photographers
-    where(type: 'Photographer')
+    where(category: 'Photographer')
   end
 
   def self.videographers
-    where(type: 'Videographer')
+    where(category: 'Videographer')
   end
 
   def self.photobooths
-    where(type: 'Photobooth')
+    where(category: 'Photobooth')
   end
 
   def self.invitations
-    where(type: 'Invitations')
+    where(category: 'Invitation')
   end
 
   def self.attires
-    where(type: 'Attire')
+    where(category: 'Attire')
   end
 
   def self.rentals
-    where(type: 'Rentals')
+    where(category: 'Rental')
   end
 
   def self.others
-    where(type: 'Other')
+    where(category: 'Other')
   end
 
 end

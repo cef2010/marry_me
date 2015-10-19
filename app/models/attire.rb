@@ -1,2 +1,0 @@
-class Attire < Vendor
-end

@@ -21,7 +21,7 @@ class ContractsController < ApplicationController
   end
 
   def update
-  	if @contract.update
+  	if @contract.update(contract_params) #added contract_params
   		redirect_to contracts_path
   	else
   		render 'edit'
