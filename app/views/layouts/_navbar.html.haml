@@ -1,23 +1,24 @@
-.nav
-  = form_tag(vendors_path, :method => 'get') do 
-    %div
-      = text_field_tag :search, params[:search], placeholder: 'Search Vendors'
-      %button.btn{type: 'submit'}
-
-  - if current_couple
-    %p Welcome #{current_couple.email}:
-    = link_to 'Logout', destroy_couple_session_path, method: 'delete'
-  - elsif current_vendor
-    %p Welcome #{current_vendor.email}:
-    = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
-  - else
-    = link_to 'Couple Sign In', new_couple_session_path
-    |
-    = link_to 'Vendor Sign In', new_vendor_session_path
-  |
-  = link_to 'Couples Index', couples_path
-  |
-  = link_to 'Vendors Index', vendors_path
-
-
-
+%nav
+  .nav-wrapper
+    -# = form_tag(vendors_path, :method => 'get') do
+    -#   .input-field
+    -#     = text_field_tag :search, params[:search], placeholder: 'Search Vendors'
+    %a.brand-logo.right{href: '/'} {MarryMe}
+    %ul
+      - if current_couple
+        %li
+          = link_to 'Profile', couple_path(current_couple)
+        %li
+          = link_to 'Logout', destroy_couple_session_path, method: 'delete'
+      - elsif current_vendor
+        %li
+          = link_to 'Profile', vendor_path(current_vendor)
+        %li
+          = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
+      - else
+        %li
+          = link_to 'Couple Sign In', new_couple_session_path
+        %li
+          = link_to 'Vendor Sign In', new_vendor_session_path
+      %li
+        =link_to 'Vendors', vendors_path

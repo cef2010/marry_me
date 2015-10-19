@@ -1,41 +1,42 @@
 .container
-	%h1.headline All Vendors
-	%hr
-	.vendor_display
-	- if @vendors.any?
-		%button.vendor_button{data: { category: "Florist"}}
-			Florists
-		%button.vendor_button{data: { category: "Attire"}}
-			Attire
-		%button.vendor_button{data: { category: "Music"}}
-			Music
-		%button.vendor_button{data: { category: "Venue"}}
-			Venue
-		%button.vendor_button{data: { category: "Baker"}}
-			Baker
-		%button.vendor_button{data: { category: "Caterer"}}
-			Caterer
-		%button.vendor_button{data: { category: "Photographer"}}
-			Photographer
-		%button.vendor_button{data: { category: "Videographer"}}
-			Videographer
-		%button.vendor_button{data: { category: "Photobooth"}}
-			Photobooth
-		%button.vendor_button{data: { category: "Invitation"}}
-			Invitation
-		%button.vendor_button{data: { category: "Rental"}}
-			Rental
-		%button.vendor_button{data: { category: "Other"}}
-			Other
-		.current_vendors
-			= render(partial: 'vendor_card', locals: {vendors: @vendors})
-		%br
-	- else
-		%h3 No vendors match your search.
-	%hr
-	-# MAP
-	%div{style: 'width: 100%;'}
-		#map{style: 'width: 100%; height: 400px;'}
+	.jumbotron.center-align
+		%h1 Vendors
+		%p The right people to make the best day of your life, the best day of your life.
+	.content
+		.vendor_sort
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Florist"}}
+				Florists
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Attire"}}
+				Attire
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Music"}}
+				Music
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Venue"}}
+				Venue
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Baker"}}
+				Baker
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Caterer"}}
+				Caterer
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Photographer"}}
+				Photographer
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Videographer"}}
+				Videographer
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Photobooth"}}
+				Photobooth
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Invitation"}}
+				Invitation
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Rental"}}
+				Rental
+			%button.btn-flat.waves-effect.vendor_button{data: { category: "Other"}}
+				Other
+		.vendor_display
+			- if @vendors.any?
+				.current_vendors
+					= render(partial: 'vendor_card', locals: {vendors: @vendors})
+			- else
+				%h3 No vendors match your search.
+		-# MAP
+		%div{style: 'width: 100%;'}
+			#map{style: 'width: 100%; height: 400px;'}
 
 %script{type: 'text/javascript'}
 	handler = Gmaps.build('Google');
