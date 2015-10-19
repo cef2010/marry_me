@@ -13,7 +13,7 @@ class VendorsController < ApplicationController
         @hash.delete(h)
       end
     end
-    if params[:search]
+    if Vendor.search(params[:search])
       @vendors = Vendor.search(params[:search]).order("name DESC")
       @hash = Gmaps4rails.build_markers(@vendors) do |vendor, marker|
         if vendor.latitude != nil
@@ -26,6 +26,8 @@ class VendorsController < ApplicationController
           @hash.delete(h)
         end
       end
+    else
+      @vendors = []
     end
   end
 
@@ -53,14 +55,13 @@ class VendorsController < ApplicationController
   # params[:type] = params[:type].to_sym
   # render json: { vendor: @vendor }
 
-<<<<<<< HEAD
-  def sort_by_type(vendor_type)
-    Vendor.where(type: vendor_type)
-=======
+
+  # def sort_by_type(vendor_type)
+  #   Vendor.where(type: vendor_type)
+
   def sort_by_type
-    vendor = Vendor.where(category: params[:category])
-    render json: { vendor: vendor }
->>>>>>> 96fccf30b2dcf70f2fe6e27c81fa0b1a8bef6a34
+    vendors = Vendor.where(category: params[:category])
+    render(partial: 'vendor_card', locals: {vendors: vendors})
   end
 
   private

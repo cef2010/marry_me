@@ -35,190 +35,22 @@ $(document).ready ->
 
 #AJAX requests for vendor types
 
-  $('.florists').click ->
-
+  $('.vendor_button').click ->
     vendor_category = $(this).data('category')
+    vendors = $('.current_vendors')
     $.ajax '/sort_by_type',
       type: 'GET'
       data:
         category: vendor_category
       success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
+        vendors.empty()
+        vendors.html(data)
         headline.empty()
-        headline.html("Florists")
+        headline.html(vendor_category + 's')
+        
       error: (data) ->
 
-  $('.attire').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
 
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Attire")
-      error: (data) ->
-
-  $('.music').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Music")
-      error: (data) ->
-
-  $('.venue').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Venues")
-      error: (data) ->
-
-  $('.baker').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Bakers")
-      error: (data) ->
-
-  $('.caterer').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Caterers")
-      error: (data) ->
-
-  $('.photographer').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Photographers")
-      error: (data) ->
-
-  $('.videographer').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Videographers")
-      error: (data) ->
-
-  $('.photobooth').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Photobooths")
-      error: (data) ->
-
-  $('.invitation').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Invitations")
-      error: (data) ->
-
-  $('.rental').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Rentals")
-      error: (data) ->
-
-  $('.other').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Other")
-      error: (data) ->
-
-  $('.music').click ->
-    vendor_category= $(this).data('category')
-    $.ajax '/sort_by_type',
-      type: 'GET'
-      data:
-        category: vendor_category
-      success: (data) ->
-        vendor.empty()
-        for i in [0...(data.vendor.length)]
-          vendor.append("<p>Name: #{data.vendor[i].name}</p><p>Description: #{data.vendor[i].description}</p><p>Address: #{ data.vendor[i].address}</p><p>Website: #{data.vendor[i].website}</p><p>Phone: #{data.vendor[i].phone}</p>")
-        headline.empty()
-        headline.html("Music")
-      error: (data) ->
 
 
 
