@@ -1,5 +1,5 @@
 #couple_form.hide
-	= form_for @couple, remote: true do |f|
+	= form_for @couple do |f|
 		= f.label :name, class: 'active'
 		= f.text_field :name, placeholder: 'Brad & Bill'
 
@@ -21,9 +21,11 @@
 		= f.label :couple_avatar
 		= f.file_field :couple_avatar
 
+		= f.submit 'Update', class: 'btn'
+
 	%p#close_couple_form.btn Close Form
-	.btn.couple_update{data: {id: @couple.id}} Test
+	-# .btn.couple_update{data: {id: @couple.id}} Test
 
-
+	-# , remote: true do
 -# %button.vote_button{"data-element-id" => "upvotes", "data-url" => "/upvote"} Up Vote
 -# %button.vote_button{"data-element-id" => "downvotes", "data-url" => "/downvote"} Down Vote
