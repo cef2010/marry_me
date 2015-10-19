@@ -23,7 +23,7 @@ class VendorsController < ApplicationController
   end
 
   def sort_by_type(vendor_type)
-    
+    Vendor.where(type: vendor_type)
   end
 
   private
