@@ -1,33 +1,39 @@
 .container
-	%img{src: @vendor.vendor_avatar.url(:thumb)}
-	%h1.the_name
-		- if @vendor.name == nil
-			Vendor
-		- else
-			= @vendor.name
+	.content
+		.row
+			.col.m4
+				%div{style: 'width: 100%;'}
+					%img{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%; width: 100%;'}
+			.col.m4
+				%h3.vendor_name
+					= @vendor.try(:name)
+				%p.vendor_desc
+					= @vendor.try(:description)
+				%p.vendor_category
+					= @vendor.try(:category)
+				%p.vendor_address
+					= @vendor.try(:address)
+				%p.vendor_website
+					= @vendor.try(:website)
+				%p.vendor_phone
+					= @vendor.try(:phone)
+			.col.m4
+				-# MAP
+				- if @vendor.latitude
+					%div{style: 'width: 100%;'}
+						#map{style: 'width: 100%; height: 400px;'}
+				- else
+					%p Add An Address Ya Goof!
+
 	%hr
-	%p.vendor_desc
-	= @vendor.try(:description)
-	%p.vendor_category
-	= @vendor.try(:category)
-	%p.vendor_address
-	= @vendor.try(:address)
-	%p.vendor_website
-	= @vendor.try(:website)
-	%p.vendor_phone
-	= @vendor.try(:phone)
+
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
 		= render(partial: 'current_vendor')
 	-else
 		=render(partial: 'not_current')
 	%hr
-	-# MAP
-	- if @vendor.latitude
-		%div{style: 'width: 100%;'}
-			#map{style: 'width: 100%; height: 400px;'}
-	- else
-		%p Add An Address Ya Goof!
+
 	%hr
 
 
