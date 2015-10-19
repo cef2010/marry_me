@@ -1,10 +1,10 @@
 .container
 	.content
 		.row
-			.col.m4
+			.col.s4
 				%div{style: 'width: 100%;'}
 					%img{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%; width: 100%;'}
-			.col.m4
+			.col.s4
 				%h3.vendor_name
 					= @vendor.try(:name)
 				%p.vendor_desc
@@ -17,19 +17,17 @@
 					= @vendor.try(:website)
 				%p.vendor_phone
 					= @vendor.try(:phone)
-			.col.m4
+			.col.s4
 				-# MAP
 				- if @vendor.latitude
 					%div{style: 'width: 100%;'}
-						#map{style: 'width: 100%; height: 400px;'}
+						#map{style: 'width: 100%; height: 300px; border-radius: 2%;'}
 				- else
 					%p Add An Address Ya Goof!
 
 	%hr
-
-	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
-		= render(partial: 'current_vendor')
+		= render(partial: 'vendor_dashboard')
 	-else
 		=render(partial: 'not_current')
 	%hr

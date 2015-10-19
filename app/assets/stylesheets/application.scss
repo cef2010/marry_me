@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+@import "materialize/components/color";
+$primary-color: color("light-blue", "lighten-2") !default;
+$secondary-color: color("light-blue", "darken-3") !default;
 @import 'materialize';
 
 // .nav {
@@ -25,12 +28,12 @@
 // }
 
 html, body {
-  height: 100%;
-  background-color: rgb(215, 232, 168);
+  min-height: 100%;
+  background-color: rgb(200, 206, 209);
  }
 
 .container {
-  height: 100%;
+  min-height: 100%;
   background-color: white;
 }
 
@@ -39,8 +42,6 @@ html, body {
   padding-top: 4%;
 }
 
-.vendor_sort.btn {
-}
 
 // main .container {
 //   overflow: auto;
