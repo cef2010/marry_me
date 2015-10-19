@@ -11,6 +11,7 @@ RSpec.describe ContractsController, type: :controller do
   #     expect(response).to have_http_status(:success)
   #   end
   # end
+
   # ask Dave--"current_couple" causing problems
   describe "GET #index" do
     it "returns http success" do

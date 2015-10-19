@@ -21,15 +21,16 @@ class Vendor < ActiveRecord::Base
 
   def self.search(query)
    names = where("name like ?", "%#{query}%")
-   if names.any?
-     names
-   else
-     categories = where("category like ?", "%#{query}%")
-     if categories.any?
-       categories
-     end
-   end
+   categories = where("category like ?", "%#{query}%")
+
+    if names.any?
+      names
+    elsif categories.any?
+      categories
+    end
   end
+
+
   # Contract methods
   def pending_contracts
     self.contracts.where(vendor_pending: false, couple_pending: true)
