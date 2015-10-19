@@ -19,7 +19,8 @@ class CouplesController < ApplicationController
   def update
     @couple = Couple.find(params[:id])
      if @couple.update(couple_params)
-      render json: { couple: @couple }
+       redirect_to couple_path(current_couple)
+      # render json: { couple: @couple }
     else
       render 'edit'
     end
