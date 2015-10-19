@@ -55,7 +55,18 @@ class VendorsController < ApplicationController
 
   def sort_by_type
     vendors = Vendor.where(category: params[:category])
-    render(partial: 'vendor_card', locals: {vendors: vendors})
+    @hash = Gmaps4rails.build_markers(vendors) do |vendor, marker|
+      if vendor.latitude != nil
+        marker.lat vendor.latitude
+        marker.lng vendor.longitude
+      end
+    end
+    @hash.each do |h|
+      if h = {}
+        @hash.delete(h)
+      end
+    end
+    render(partial: 'vendor_card', locals: {vendors: vendors, hash: @hash})
   end
 
   private
