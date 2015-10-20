@@ -3,9 +3,9 @@
   .col.s12
     %ul.tabs
       %li.tab.col.s6
-        %a{:href => '#vendors'}Vendors
+        %a#vendor_info_link{:href => '#vendors'}Vendors
       %li.tab.col.s6
-        %a{:href => '#map_vendors'}Map
+        %a#vendor_map_link{:style => 'cursor: pointer;', :data => {:map_hash => @hash.to_json}}Map
   #vendors.col.s12
     .row.custom-tab
       .col.m12
@@ -23,14 +23,9 @@
                 %span #{vendor.city}, #{vendor.state}
                 %br
                 = link_to 'See more', vendor_path(vendor)
-  #map_vendors.col.s12
+    .col.s10.offset-s1
+      = link_to 'ALL VENDORS', vendors_path
+  #map_vendors.col.s12.hide
     .row.custom-tab
-      .col.m12.center
-        -# %div{style: 'width: 100%;'}
-        -#   #map{style: 'width: 100%; height: 400px;'}
-
-        %script{type: 'text/javascript'}
-          handler = Gmaps.build('Google');
-          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
-          handler.bounds.extendWith(markers);
-          handler.fitMapToBounds();});
+      .col.m12
+        #map{style: 'width: 100%; height: 400px;'}
