@@ -7,7 +7,7 @@
     %ul
       - if current_couple
         %li
-          %a{href: "/couples/#{current_couple.id}"} 
+          %a{href: "/couples/#{current_couple.id}"}
             Profile
             %span.new.badge.black-text
               #{current_couple.request_contracts.length}
@@ -15,7 +15,7 @@
           = link_to 'Logout', destroy_couple_session_path, method: 'delete'
       - elsif current_vendor
         %li
-          %a{href: "/vendors/#{current_vendor.id}"} 
+          %a{href: "/vendors/#{current_vendor.id}"}
             Profile
             %span.new.badge.black-text
               #{current_vendor.request_contracts.length}

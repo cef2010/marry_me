@@ -6,7 +6,21 @@ $(document).ready ->
   baseUrl = '/vendors/'
   vendor = $('.vendor_display')
   headline = $('.headline')
-  #update vendor
+
+  $(document).on 'click', '#vendor_map_link', ->
+    $('#map_vendors').removeClass('hide')
+    mapHash = $(this).data('map-hash')
+    handler = Gmaps.build('Google')
+    handler.buildMap {
+      provider: {}
+      internal: id: 'map'
+      }, ->
+        markers = handler.addMarkers(mapHash)
+        handler.bounds.extendWith markers
+        handler.fitMapToBounds()
+
+  $('#vendor_info_link').click ->
+    $('#map_vendors').addClass('hide')
 
   $(".dropdown-button").dropdown();
 
@@ -20,27 +34,11 @@ $(document).ready ->
     $('#open_vendor_form').removeClass 'hide'
     $('#vendor_info').removeClass 'hide'
 
-  # $('.vendor_update').on 'click', ->
-  #   valuesToSubmit = $('.form_for_vendor').serialize()
-  #   debugger
-  #   $.ajax baseUrl + $(this).data('id'),
-  #     type: 'PUT'
-  #     data: valuesToSubmit
-  #     success: (data) ->
-  #       $('.vendor_name').html(data.vendor.name)
-  #       $('.vendor_desc').html(data.vendor.description)
-  #       $('.vendor_type').html(data.vendor.type)
-  #       $('.vendor_address').html(data.vendor.address)
-  #       $('.vendor_website').html(data.vendor.website)
-  #       $('.vendor_phone').html(data.vendor.phone)
-  #     error: (data) ->
-  #       console.log data
-        #how to convert data.vendor.type to symbol b/c vendor params is expecting symbol in require
 
-#AJAX requests for vendor types
 
   $('.vendor_button').click ->
     vendor_category = $(this).data('category')
+    vendor_map = $('#map_vendors')
     vendors = $('.current_vendors')
     $.ajax '/sort_by_type',
       type: 'GET'
@@ -53,7 +51,7 @@ $(document).ready ->
         headline.html(vendor_category + 's')
 
       error: (data) ->
-
+    vendor_map.removeClass('hide')
 
 
 
