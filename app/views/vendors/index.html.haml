@@ -31,17 +31,16 @@
 		.vendor_display
 			- if @vendors.any?
 				.current_vendors
+					-# = ajax_link_to 'vendors', link_url, :section_id => 'section_name'
 					= render(partial: 'vendor_card', locals: {vendors: @vendors, hash: @hash})
 			- else
 				%h3 No vendors match your search.
-		-# MAP
-		%div{style: 'width: 100%;'}
-			#map{style: 'width: 100%; height: 400px;'}
 
-%script{type: 'text/javascript'}
-	handler = Gmaps.build('Google');
-	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
-	handler.bounds.extendWith(markers);
-	handler.fitMapToBounds();});
+	%div{style: 'width: 100%;'}
+		#map{style: 'width: 100%; height: 400px;'}
 
-
+	%script{type: 'text/javascript'}
+		handler = Gmaps.build('Google');
+		handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
+		handler.bounds.extendWith(markers);
+		handler.fitMapToBounds();});
