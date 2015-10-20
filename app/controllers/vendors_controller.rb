@@ -22,7 +22,7 @@ class VendorsController < ApplicationController
         if vendor.latitude != nil
           marker.lat vendor.latitude
           marker.lng vendor.longitude
-          marker.infowindow "#{vendor.name}, #{vendor.category}"
+          marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
         end
       end
       @hash.each do |h|
@@ -63,7 +63,7 @@ class VendorsController < ApplicationController
       if vendor.latitude != nil
         marker.lat vendor.latitude
         marker.lng vendor.longitude
-        marker.infowindow "#{vendor.name}, #{vendor.category}"
+        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
       end
     end
     @hash.each do |h|
