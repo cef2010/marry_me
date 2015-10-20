@@ -10,7 +10,6 @@ $(document).ready ->
 
   $(".dropdown-button").dropdown();
 
-
   $('#open_vendor_form').on 'click', ->
     $('#open_vendor_form').addClass 'hide'
     $('#vendor_form').removeClass 'hide'
@@ -61,6 +60,23 @@ $(document).ready ->
 
 
   $('select').material_select()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   # initMap = ->
   #   myLatLng = {lat: document.getElementById('lat').val(), lng: document.getElementById('lng').val()}
