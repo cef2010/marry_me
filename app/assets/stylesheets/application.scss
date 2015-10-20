@@ -13,9 +13,10 @@
  *= require_tree .
  *= require_self
  */
+// @import url(asset-url("_color"));
 @import "materialize/components/color";
-$primary-color: color("grey", "darken-4") !default;
-$secondary-color: color("amber", "lighten-3") !default;
+$primary-color: #1A1A1A !default;
+$secondary-color: #B1AB6F !default;
 @import 'materialize';
 
 // .nav {

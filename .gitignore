@@ -12,5 +12,6 @@
 !/log/.keep
 /tmp
 /config/facebook_secrets.yml
+/config/aws_secrets.yml
 /temp
 /coverage
