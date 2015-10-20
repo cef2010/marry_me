@@ -31,7 +31,7 @@
 		.vendor_display
 			- if @vendors.any?
 				.current_vendors
-					= render(partial: 'vendor_card', locals: {vendors: @vendors})
+					= render(partial: 'vendor_card', locals: {vendors: @vendors, hash: @hash})
 			- else
 				%h3 No vendors match your search.
 		-# MAP
@@ -43,3 +43,5 @@
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
 	handler.bounds.extendWith(markers);
 	handler.fitMapToBounds();});
+
+

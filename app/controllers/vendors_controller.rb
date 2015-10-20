@@ -6,6 +6,8 @@ class VendorsController < ApplicationController
       if vendor.latitude != nil
         marker.lat vendor.latitude
         marker.lng vendor.longitude
+        # marker.infowindow render_to_string(link_to: "#{vendor.name}", vendor_path(vendor))
+        marker.infowindow "#{vendor.name}, #{vendor.category}"
       end
     end
     @hash.each do |h|
@@ -19,6 +21,7 @@ class VendorsController < ApplicationController
         if vendor.latitude != nil
           marker.lat vendor.latitude
           marker.lng vendor.longitude
+          marker.infowindow "#{vendor.name}, #{vendor.category}"
         end
       end
       @hash.each do |h|
@@ -55,8 +58,21 @@ class VendorsController < ApplicationController
 
   def sort_by_type
     vendors = Vendor.where(category: params[:category])
-    render(partial: 'vendor_card', locals: {vendors: vendors})
+    @hash = Gmaps4rails.build_markers(vendors) do |vendor, marker|
+      if vendor.latitude != nil
+        marker.lat vendor.latitude
+        marker.lng vendor.longitude
+        marker.infowindow "#{vendor.name}, #{vendor.category}"
+      end
+    end
+    @hash.each do |h|
+      if h = {}
+        @hash.delete(h)
+      end
+    end
+    render(partial: 'vendor_card', locals: {vendors: vendors, hash: @hash})
   end
+
 
   private
 
