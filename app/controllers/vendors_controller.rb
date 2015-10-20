@@ -7,7 +7,7 @@ class VendorsController < ApplicationController
         marker.lat vendor.latitude
         marker.lng vendor.longitude
         # marker.infowindow render_to_string(link_to: "#{vendor.name}", vendor_path(vendor))
-        marker.infowindow vendor.name
+        marker.infowindow "#{vendor.name}, #{vendor.category}"
       end
     end
     @hash.each do |h|
@@ -21,7 +21,7 @@ class VendorsController < ApplicationController
         if vendor.latitude != nil
           marker.lat vendor.latitude
           marker.lng vendor.longitude
-          marker.infowindow vendor.name
+          marker.infowindow "#{vendor.name}, #{vendor.category}"
         end
       end
       @hash.each do |h|
@@ -62,7 +62,7 @@ class VendorsController < ApplicationController
       if vendor.latitude != nil
         marker.lat vendor.latitude
         marker.lng vendor.longitude
-        marker.infowindow vendor.name
+        marker.infowindow "#{vendor.name}, #{vendor.category}"
       end
     end
     @hash.each do |h|
