@@ -8,9 +8,6 @@ $(document).ready ->
   headline = $('.headline')
   #update vendor
 
-  $(".dropdown-button").dropdown();
-        
-
   $('#open_vendor_form').on 'click', ->
     $('#open_vendor_form').addClass 'hide'
     $('#vendor_form').removeClass 'hide'
@@ -36,7 +33,7 @@ $(document).ready ->
   #       console.log data
         #how to convert data.vendor.type to symbol b/c vendor params is expecting symbol in require
 
-# AJAX requests for vendor types
+#AJAX requests for vendor types
 
   $('.vendor_button').click ->
     vendor_category = $(this).data('category')
@@ -66,18 +63,7 @@ $(document).ready ->
 
 
 
-function initMap() {
-  var uluru = {lat: -25.363, lng: 131.044};
-  var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 4,
-    center: uluru
-  });
 
-  var contentString = 
-
-  var infowindow = new google.maps.InfoWindow({
-    content: contentString
-  });
 
 
 
