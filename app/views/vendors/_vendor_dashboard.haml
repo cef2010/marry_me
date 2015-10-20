@@ -1,0 +1,87 @@
+-# FORM
+= render(partial: 'info_form')
+%p#open_vendor_form.btn Open Form
+%hr
+
+-# DASHBOARD
+.dashboard
+	.row
+		.col.s8
+			%table.active
+				%thead
+					%tr
+						%td
+							%b Name
+						%td
+							%b Date
+				%tbody
+					- if @vendor_active.any?
+						- @vendor_active.each do |contract|
+							%tr
+								%td
+									= contract.couple.name
+									= link_to '[x]', contract_path(contract), method: :delete
+								%td #{contract.couple.try(:wedding_date)}
+					- else
+						%tr
+							%td You currently have no approved couples
+		.col.s4
+			%table.requests
+				%thead
+					%tr
+						%td
+							%b Need Approval
+						%td
+							%b Date
+				%tbody
+					- if @vendor_requests.any?
+						- @vendor_requests.each do |contract|
+							%tr
+								%td
+									= contract.couple.name
+									= link_to '[x]', contract_path(contract), method: :delete
+								%td #{contract.couple.try(:wedding_date)}
+					- else
+						%tr
+							%td No requests
+			%table.pending
+				%thead
+					%tr
+						%td
+							%b Awaiting Response
+						%td
+							%b Date
+				%tbody
+					- if @vendor_pending.any?
+						- @vendor_pending.each do |contract|
+							%tr
+								%td
+									= contract.couple.name
+									= link_to '[x]', contract_path(contract), method: :delete
+								%td #{contract.couple.try(:wedding_date)}
+					- else
+						%tr
+							%td No pending
+-# - if @vendor.couples.any?
+-# 	%h3
+-# 		These Need Your Approval
+-# 	- @vendor_requests.each do |contract|
+-# 		= contract.couple.email
+-# 		|
+-# 		= link_to 'Approve', add_approval_path(contract_id: contract.id)
+-# 		|
+-# 		= link_to 'Remove', contract_path(contract), method: :delete
+-# 	%h3
+-# 		These Are Pending
+-# 	- @vendor_pending.each do |contract|
+-# 		= contract.couple.email
+-# 		|
+-# 		= link_to 'Remove', contract_path(contract), method: :delete
+-# 	%h3
+-# 		These Are Your Approved Contracts
+-# 	- @vendor_active.each do |contract|
+-# 		= contract.couple.email
+-# 		|
+-# 		= link_to 'Remove', contract_path(contract), method: :delete
+-# - else
+-# 	= "No couples yet!"

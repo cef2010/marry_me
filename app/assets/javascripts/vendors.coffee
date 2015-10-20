@@ -8,6 +8,9 @@ $(document).ready ->
   headline = $('.headline')
   #update vendor
 
+  $(".dropdown-button").dropdown();
+        
+
   $('#open_vendor_form').on 'click', ->
     $('#open_vendor_form').addClass 'hide'
     $('#vendor_form').removeClass 'hide'
