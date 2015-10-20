@@ -7,12 +7,17 @@
     %ul
       - if current_couple
         %li
-          = link_to 'Profile', couple_path(current_couple)
+          %a{href: "/couples/#{current_couple.id}"} 
+            Profile
+            %span.new.badge.black-text
+              #{current_couple.pending_contracts.length}
         %li
           = link_to 'Logout', destroy_couple_session_path, method: 'delete'
       - elsif current_vendor
         %li
           = link_to 'Profile', vendor_path(current_vendor)
+          %span.badge 
+            "#{current_vendor.pending_contracts.length}"
         %li
           = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
       - else
@@ -25,4 +30,4 @@
     %span.custom_nav.left
       = form_tag(vendors_path, :method => 'get', class: 'custom_nav') do
         .input-field
-          = text_field_tag :search, params[:search], placeholder: 'Search Vendors by name, category, or area'
+          = text_field_tag :search, params[:search], placeholder: 'Search Vendors'
