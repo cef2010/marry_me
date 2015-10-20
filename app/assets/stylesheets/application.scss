@@ -14,8 +14,8 @@
  *= require_self
  */
 @import "materialize/components/color";
-$primary-color: color("light-blue", "lighten-2") !default;
-$secondary-color: color("light-blue", "darken-3") !default;
+$primary-color: color("grey", "darken-4") !default;
+$secondary-color: color("amber", "lighten-3") !default;
 @import 'materialize';
 
 // .nav {
@@ -41,6 +41,11 @@ html, body {
   margin-top: 0;
   padding-top: 4%;
 }
+
+// .form_button {
+//   padding: 0;
+//   border-radius: 50%;
+// }
 
 
 // main .container {

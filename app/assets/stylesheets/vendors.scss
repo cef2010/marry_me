@@ -15,5 +15,9 @@ html, body {
 }
 .form_content {
   height: 300px;
+}
+.form_fields {
+  height: 300px;
   overflow: auto;
+  overflow-x: hidden;
 }
