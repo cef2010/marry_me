@@ -5,7 +5,18 @@ class Couple < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   # paperclip
-  has_attached_file :couple_avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" } # ADD DEFAULT URL FOR ICON
+  has_attached_file :couple_avatar, :styles => { :medium => "300x300>", :thumb => "100x100#" },
+    :default_url => "/assets/:style/marry-me-logo.jpg",
+    :url  => ":s3_domain_url",
+    :path => "public/avatars/couples/:id/:style_:basename.:extension",
+    :storage => :fog,
+    :fog_credentials => {
+        provider: 'AWS',
+        aws_access_key_id: ENV['AWSAccessKeyId'],
+        aws_secret_access_key: ENV['AWSSecretKey'],
+        region: 'us-west-2'
+    },
+    fog_directory: ENV["FOG_DIRECTORY"]
   validates_attachment_content_type :couple_avatar, :content_type => /\Aimage\/.*\Z/
 
   has_many :contracts

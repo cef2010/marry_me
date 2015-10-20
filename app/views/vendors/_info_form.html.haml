@@ -9,7 +9,7 @@
 				= f.text_area :description, placeholder: 'Tell us about you'
 
 				= f.label :category
-				= f.select :category, options_for_select(Vendor.categories)
+				= f.select :category, options_for_select(Vendor.categories), {}, class: 'browser-default'
 
 				= f.label :address, class: 'active'
 				= f.text_field :address, placeholder: '123 My Street'
@@ -19,7 +19,7 @@
 
 				= f.label :state, class: 'active'
 				-# = f.text_field :state, placeholder: 'UT'
-				= f.select :state, options_for_select(Vendor.states)
+				= f.select :state, options_for_select(Vendor.states), {}, class: 'browser-default'
 
 				= f.label :zip, class: 'active'
 				= f.text_field :zip, placeholder: '84111'
