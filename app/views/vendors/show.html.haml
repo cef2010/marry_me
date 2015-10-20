@@ -5,18 +5,21 @@
 				%div{style: 'width: 100%;'}
 					%img{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%; width: 100%;'}
 			.col.s4
-				%h3.vendor_name
-					= @vendor.try(:name)
-				%p.vendor_desc
-					= @vendor.try(:description)
-				%p.vendor_category
-					= @vendor.try(:category)
-				%p.vendor_address
-					= @vendor.try(:address)
-				%p.vendor_website
-					= @vendor.try(:website)
-				%p.vendor_phone
-					= @vendor.try(:phone)
+				#vendor_info
+					%h4.vendor_name
+						= @vendor.try(:name)
+					%p.vendor_desc
+						= @vendor.try(:description)
+					%p.vendor_category
+						= @vendor.try(:category)
+					%p.vendor_address
+						= @vendor.try(:address)
+					%p.vendor_website
+						= @vendor.try(:website)
+					%p.vendor_phone
+						= @vendor.try(:phone)
+					%a#open_vendor_form{style: 'cursor: pointer;'} Edit Info...
+				= render(partial: 'info_form')
 			.col.s4
 				-# MAP
 				- if @vendor.latitude
