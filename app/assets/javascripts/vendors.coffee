@@ -20,6 +20,9 @@ $(document).ready ->
     $('#open_vendor_form').removeClass 'hide'
     $('#vendor_info').removeClass 'hide'
 
+  #jquery tabs
+  $('ul.tabs').tabs()
+
   # $('.vendor_update').on 'click', ->
   #   valuesToSubmit = $('.form_for_vendor').serialize()
   #   debugger
