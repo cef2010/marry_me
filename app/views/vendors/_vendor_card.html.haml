@@ -1,9 +1,9 @@
 
 .row
   .col.s12
-    %ul.tabs
+    %ul#tabs.tabs
       %li.tab.col.s6
-        %a#vendor_info_link{:href => '#vendors'}Vendors
+        %a#vendor_info_link.active{:href => '#vendors'}Vendors
       %li.tab.col.s6
         %a#vendor_map_link{:style => 'cursor: pointer;', :data => {:map_hash => @hash.to_json}}Map
   #vendors.col.s12
