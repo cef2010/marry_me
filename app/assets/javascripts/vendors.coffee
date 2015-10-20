@@ -6,9 +6,11 @@ $(document).ready ->
   baseUrl = '/vendors/'
   vendor = $('.vendor_display')
   headline = $('.headline')
+  vendor_tab_select= $('#tabs').tabs('select_tab', '#vendor_info_link');
 
   $(document).on 'click', '#vendor_map_link', ->
     $('#map_vendors').removeClass('hide')
+    $('#vendors').addClass('hide')
     mapHash = $(this).data('map-hash')
     handler = Gmaps.build('Google')
     handler.buildMap {
@@ -22,6 +24,7 @@ $(document).ready ->
 
   $(document).on 'click', '#vendor_info_link', ->
     $('#map_vendors').addClass('hide')
+    $('#vendors').removeClass('hide')
 
   $(".dropdown-button").dropdown();
 
@@ -37,9 +40,12 @@ $(document).ready ->
 
 
 
-  $('.vendor_button').click ->
+  $(document).on 'click', '.vendor_button', ->
     vendor_category = $(this).data('category')
     vendor_map = $('#map_vendors')
+    vendor_info = $('#vendor_info_link')
+    $('#map_vendors').addClass('hide')
+    $('#vendors').removeClass('hide')
     vendors = $('.current_vendors')
     $.ajax '/sort_by_type',
       type: 'GET'
@@ -50,10 +56,7 @@ $(document).ready ->
         vendors.html(data)
         headline.empty()
         headline.html(vendor_category + 's')
-
       error: (data) ->
-    vendor_map.removeClass('hide')
-
 
 
 
