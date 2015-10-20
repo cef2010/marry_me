@@ -10,14 +10,15 @@
           %a{href: "/couples/#{current_couple.id}"} 
             Profile
             %span.new.badge.black-text
-              #{current_couple.pending_contracts.length}
+              #{current_couple.request_contracts.length}
         %li
           = link_to 'Logout', destroy_couple_session_path, method: 'delete'
       - elsif current_vendor
         %li
-          = link_to 'Profile', vendor_path(current_vendor)
-          %span.badge 
-            "#{current_vendor.pending_contracts.length}"
+          %a{href: "/vendors/#{current_vendor.id}"} 
+            Profile
+            %span.new.badge.black-text
+              #{current_vendor.request_contracts.length}
         %li
           = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
       - else
