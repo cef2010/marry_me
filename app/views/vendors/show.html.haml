@@ -18,7 +18,8 @@
 						= @vendor.try(:website)
 					%p.vendor_phone
 						= @vendor.try(:phone)
-					%a#open_vendor_form{style: 'cursor: pointer;'} Edit Info...
+					-if current_vendor && current_vendor.id == @vendor.id
+						%a#open_vendor_form{style: 'cursor: pointer;'} Edit Info...
 				= render(partial: 'info_form')
 			.col.s4
 				-# MAP

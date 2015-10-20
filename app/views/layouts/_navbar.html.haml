@@ -3,7 +3,10 @@
     -# = form_tag(vendors_path, :method => 'get') do
     -#   .input-field
     -#     = text_field_tag :search, params[:search], placeholder: 'Search Vendors'
-    %a.brand-logo.right{href: '/'} {MarryMe}
+    %a.brand-logo.right{href: '/'}
+      %span{style: 'color: #ffe082;'} {
+      %span MarryMe
+      %span{style: 'color: #ffe082;'} }
     %ul
       - if current_couple
         %li
