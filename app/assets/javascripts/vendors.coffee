@@ -19,7 +19,8 @@ $(document).ready ->
         handler.bounds.extendWith markers
         handler.fitMapToBounds()
 
-  $('#vendor_info_link').click ->
+
+  $(document).on 'click', '#vendor_info_link', ->
     $('#map_vendors').addClass('hide')
 
   $(".dropdown-button").dropdown();
