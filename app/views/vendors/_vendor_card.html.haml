@@ -1,22 +1,36 @@
-- vendors.each do |vendor|
-  .vendor_card
-    .row
-      .col.m2
-        %img{src: vendor.vendor_avatar.url(:thumb)}
-      .col.m10
-        = vendor.name
-        %br
-        %a{href: "http://#{vendor.website}", target: '_blank'} #{vendor.website}
-        %br
-        %span #{vendor.city}, #{vendor.state}
-        %br
-        = link_to 'See more', vendor_path(vendor)
-        
-%div{style: 'width: 100%;'}
-  #map{style: 'width: 100%; height: 400px;'}
 
-%script{type: 'text/javascript'}
-  handler = Gmaps.build('Google');
-  handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
-  handler.bounds.extendWith(markers);
-  handler.fitMapToBounds();});
+.row
+  .col.s12
+    %ul.tabs
+      %li.tab.col.s6
+        %a{:href => '#vendors'}Vendors
+      %li.tab.col.s6
+        %a{:href => '#map_vendors'}Map
+  #vendors.col.s12
+    .row.custom-tab
+      .col.m12
+      %br
+        - vendors.each do |vendor|
+          .vendor_card.col.m10.offset-m1
+            .row
+              .col.m2
+                %img{src: vendor.vendor_avatar.url(:thumb)}
+              .col.m10
+                = vendor.name
+                %br
+                %a{href: "http://#{vendor.website}", target: '_blank'} #{vendor.website}
+                %br
+                %span #{vendor.city}, #{vendor.state}
+                %br
+                = link_to 'See more', vendor_path(vendor)
+  #map_vendors.col.s12
+    .row.custom-tab
+      .col.m12.center
+        -# %div{style: 'width: 100%;'}
+        -#   #map{style: 'width: 100%; height: 400px;'}
+
+        %script{type: 'text/javascript'}
+          handler = Gmaps.build('Google');
+          handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();});

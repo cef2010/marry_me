@@ -31,6 +31,7 @@
 		.vendor_display
 			- if @vendors.any?
 				.current_vendors
+					-# = ajax_link_to 'vendors', link_url, :section_id => 'section_name'
 					= render(partial: 'vendor_card', locals: {vendors: @vendors, hash: @hash})
 			- else
 				%h3 No vendors match your search.
@@ -43,5 +44,3 @@
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});
 	handler.bounds.extendWith(markers);
 	handler.fitMapToBounds();});
-
-
