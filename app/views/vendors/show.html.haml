@@ -6,17 +6,17 @@
 					%img{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%; width: 100%;'}
 			.col.s4
 				#vendor_info
-					%h4.vendor_name
+					%h4
 						= @vendor.try(:name)
-					%p.vendor_desc
+					%p
 						= @vendor.try(:description)
-					%p.vendor_category
+					%p
 						= @vendor.try(:category)
-					%p.vendor_address
+					%p
 						= @vendor.try(:address)
-					%p.vendor_website
+					%a{href: "http://#{@vendor.try(:website)}", target: "_blank"}
 						= @vendor.try(:website)
-					%p.vendor_phone
+					%p
 						= @vendor.try(:phone)
 					-if current_vendor && current_vendor.id == @vendor.id
 						%a#open_vendor_form{style: 'cursor: pointer;'} Edit Info...
