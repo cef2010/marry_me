@@ -1,8 +1,5 @@
 %nav
   .nav-wrapper
-    -# = form_tag(vendors_path, :method => 'get') do
-    -#   .input-field
-    -#     = text_field_tag :search, params[:search], placeholder: 'Search Vendors by name, category, or area'
     %a.brand-logo.right{href: '/'}
       %span{style: 'color: #B1AB6F;'} {
       %span MarryMe
@@ -10,12 +7,18 @@
     %ul
       - if current_couple
         %li
-          = link_to 'Profile', couple_path(current_couple)
+          %a{href: "/couples/#{current_couple.id}"} 
+            Profile
+            %span.new.badge.black-text
+              #{current_couple.request_contracts.length}
         %li
           = link_to 'Logout', destroy_couple_session_path, method: 'delete'
       - elsif current_vendor
         %li
-          = link_to 'Profile', vendor_path(current_vendor)
+          %a{href: "/vendors/#{current_vendor.id}"} 
+            Profile
+            %span.new.badge.black-text
+              #{current_vendor.request_contracts.length}
         %li
           = link_to 'Logout', destroy_vendor_session_path, method: 'delete'
       - else
@@ -25,3 +28,7 @@
           = link_to 'Vendor Sign In', new_vendor_session_path
       %li
         =link_to 'Vendors', vendors_path
+    %span.custom_nav.left
+      = form_tag(vendors_path, :method => 'get', class: 'custom_nav') do
+        .input-field
+          = text_field_tag :search, params[:search], placeholder: 'Search Vendors'

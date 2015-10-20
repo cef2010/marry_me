@@ -19,6 +19,11 @@ $primary-color: #1A1A1A !default;
 $secondary-color: #B1AB6F !default;
 @import 'materialize';
 
+
+
+.custom_nav {
+	width: 150px;
+}
 // .nav {
 //   padding: 2%;
 //   background-color: rgb(255, 242, 152);
