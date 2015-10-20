@@ -9,15 +9,17 @@ $(document).ready ->
   #update vendor
 
   $(".dropdown-button").dropdown();
-        
+
 
   $('#open_vendor_form').on 'click', ->
     $('#open_vendor_form').addClass 'hide'
     $('#vendor_form').removeClass 'hide'
+    $('#vendor_info').addClass 'hide'
 
   $('#close_vendor_form').on 'click', ->
     $('#vendor_form').addClass 'hide'
     $('#open_vendor_form').removeClass 'hide'
+    $('#vendor_info').removeClass 'hide'
 
   # $('.vendor_update').on 'click', ->
   #   valuesToSubmit = $('.form_for_vendor').serialize()
@@ -50,7 +52,7 @@ $(document).ready ->
         vendors.html(data)
         headline.empty()
         headline.html(vendor_category + 's')
-        
+
       error: (data) ->
 
 
