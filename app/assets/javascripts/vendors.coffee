@@ -78,7 +78,6 @@ $(document).ready ->
 
 
 
-
   # initMap = ->
   #   myLatLng = {lat: document.getElementById('lat').val(), lng: document.getElementById('lng').val()}
   #
