@@ -1,8 +1,5 @@
 %nav
   .nav-wrapper
-    -# = form_tag(vendors_path, :method => 'get') do
-    -#   .input-field
-    -#     = text_field_tag :search, params[:search], placeholder: 'Search Vendors by name, category, or area'
     %a.brand-logo.right{href: '/'}
       %span{style: 'color: #ffe082;'} {
       %span MarryMe
@@ -25,3 +22,7 @@
           = link_to 'Vendor Sign In', new_vendor_session_path
       %li
         =link_to 'Vendors', vendors_path
+    %span.custom_nav.left
+      = form_tag(vendors_path, :method => 'get', class: 'custom_nav') do
+        .input-field
+          = text_field_tag :search, params[:search], placeholder: 'Search Vendors by name, category, or area'
