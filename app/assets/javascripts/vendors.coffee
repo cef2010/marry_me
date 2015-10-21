@@ -56,6 +56,7 @@ $(document).ready ->
         vendors.html(data)
         headline.empty()
         headline.html(vendor_category + 's')
+        $('ul.tabs').tabs();
       error: (data) ->
 
 
