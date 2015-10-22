@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get "/add_approval", to: 'contracts#add_approval'
   get "/sort_by_type", to: 'vendors#sort_by_type'
 
-
+  # POST routes
+  post '/contacts', to: 'static_pages#create'
   # resources :contracts
   resources :couples do
     resources :families
@@ -21,5 +22,6 @@ Rails.application.routes.draw do
   end
   resources :vendors
   resources :contracts
+
 
 end
