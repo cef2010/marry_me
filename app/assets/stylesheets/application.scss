@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require owl.carousel
+ *= require owl.theme
  *= require_tree .
  *= require_self
  */
@@ -39,7 +41,7 @@ $secondary-color: #B1AB6F !default;
 
 html, body {
   min-height: 100%;
-  background-color: rgb(237, 229, 219);
+  /*background-color: rgb(237, 229, 219);*/
  }
 
 .container {
@@ -48,7 +50,8 @@ html, body {
 }
 
 .gold-background {
-	background-color: #B1AB6F;
+	/*background-color: #B1AB6F;*/
+  background: rgb(237, 229, 219);
 }
 
 .jumbotron h1 {
@@ -69,10 +72,7 @@ html, body {
 
 
 
-.bios{
-	height: 200px;
-	width: 200px;
-}
+
 
 // main .container {
 //   overflow: auto;

@@ -4,7 +4,7 @@
 -# format text properly
 
 .container
-	.slider
+	.slider{style: "height: 400px;"}
 		%ul.slides
 			%li
 				%img{src: "http://www.weddingelation.com/wp-content/uploads/2012/06/Outdoor-wedding-reception-decorations-ideas.jpg"}
@@ -14,13 +14,7 @@
 				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
 			%li
 				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
-	.row.center.gold-background
-		.col.l4
-			= link_to 'Team', about_path
-		.col.l4
-			= link_to 'FAQ', faq_path
-		.col.l4
-			= link_to 'Contact Us', contact_path
+	= render partial: 'static_nav'
 
 	.row.center
 		.col.m6.center
