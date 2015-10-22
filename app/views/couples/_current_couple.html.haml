@@ -5,7 +5,7 @@
   %h3
     These Need Your Approval
   - @couple_requests.each do |contract|
-    = contract.vendor.email
+    = contract.vendor.try(:email)
     |
     = link_to 'Approve', add_approval_path(contract_id: contract.id)
     |
@@ -15,7 +15,7 @@
   %h3
     These Are Pending
   - @couple_pending.each do |contract|
-    = contract.vendor.email
+    = contract.vendor.try(:email)
     |
     = link_to 'Remove', contract_path(contract), method: :delete
     %br
@@ -23,7 +23,7 @@
   %h3
     These Are Your Approved Contracts
   - @couple_active.each do |contract|
-    = contract.vendor.email
+    = contract.vendor.try(:email)
     |
     = link_to 'Remove', contract_path(contract), method: :delete
     %br
