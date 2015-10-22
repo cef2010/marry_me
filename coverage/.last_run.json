@@ -1,5 +1,9 @@
 {
   "result": {
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
     "covered_percent": 68.65
+=======
+    "covered_percent": 90.18
+>>>>>>> add comment functionality to couple show page
   }
 }

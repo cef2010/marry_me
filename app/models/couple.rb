@@ -22,6 +22,12 @@ class Couple < ActiveRecord::Base
   has_many :contracts
   has_many :families
   has_many :vendors, through: :contracts
+  has_many :comments
+
+  # Comment methods
+  def wedding_vendor(vendor)
+    self.vendors.find_by(id: vendor.id)
+  end
 
   # Contract methods
   def pending_contracts
