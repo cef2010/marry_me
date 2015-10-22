@@ -1,0 +1,6 @@
+= render(partial: 'comment_form')
+
+- @comments.each do |comment|
+  %h4 Author: #{comment.author}
+  %p #{comment.string_time}
+  %p #{comment.body}
