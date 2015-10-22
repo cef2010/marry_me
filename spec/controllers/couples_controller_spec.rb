@@ -23,13 +23,6 @@ RSpec.describe CouplesController, type: :controller do
   end
 
 
-  # describe 'GET #edit' do
-  #   it 'returns http success' do
-  #     get :edit, {id: couple.id}
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
-
   describe 'PUT #update' do
     it 'updates a couple' do
       put :update, {id: couple.id, couple: {description: 'hello'}}
