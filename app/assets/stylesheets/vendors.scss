@@ -21,3 +21,13 @@ html, body {
   overflow: auto;
   overflow-x: hidden;
 }
+#vendors {
+  height: 500px;
+}
+#vendors_card_loop {
+  height: 500px;
+  overflow: auto;
+  overflow-x: hidden;
+}
+#vendors, #map_vendors {
+}
