@@ -13,6 +13,7 @@ class StaticPagesController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
+      flash[:notice] = "Thanks for contacting us. Someone will contact you shortly."
       redirect_to root_path
     end
   end
