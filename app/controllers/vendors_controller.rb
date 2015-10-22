@@ -1,35 +1,12 @@
 class VendorsController < ApplicationController
+  include MapHashBuilder
 
   def index
     @vendors = Vendor.all
-    @hash = Gmaps4rails.build_markers(@vendors) do |vendor, marker|
-      if vendor.latitude != nil
-        marker.lat vendor.latitude
-        marker.lng vendor.longitude
-        # marker.infowindow render_to_string(link_to: "#{vendor.name}", vendor_path(vendor))
-        # marker.infowindow "#{vendor.name}, #{vendor.category}"
-        marker.infowindow "index"
-      end
-    end
-    @hash.each do |h|
-      if h = {}
-        @hash.delete(h)
-      end
-    end
+    @hash = hash_on_index(@vendors)
     if Vendor.search(params[:search])
       @vendors = Vendor.search(params[:search]).order("name DESC")
-      @hash = Gmaps4rails.build_markers(@vendors) do |vendor, marker|
-        if vendor.latitude != nil
-          marker.lat vendor.latitude
-          marker.lng vendor.longitude
-          marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
-        end
-      end
-      @hash.each do |h|
-        if h = {}
-          @hash.delete(h)
-        end
-      end
+      @hash = hash_on_index(@vendors)
     else
       @vendors = []
     end
@@ -40,10 +17,7 @@ class VendorsController < ApplicationController
     @vendor_active = @vendor.active_contracts
     @vendor_requests = @vendor.request_contracts
     @vendor_pending = @vendor.pending_contracts
-    @hash = Gmaps4rails.build_markers(@vendor) do |vendor, marker|
-      marker.lat vendor.latitude
-      marker.lng vendor.longitude
-    end
+    @hash = build_hash(@vendor)
   end
 
   def edit
@@ -59,18 +33,7 @@ class VendorsController < ApplicationController
 
   def sort_by_type
     vendors = Vendor.where(category: params[:category])
-    @hash = Gmaps4rails.build_markers(vendors) do |vendor, marker|
-      if vendor.latitude != nil
-        marker.lat vendor.latitude
-        marker.lng vendor.longitude
-        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
-      end
-    end
-    @hash.each do |h|
-      if h = {}
-        @hash.delete(h)
-      end
-    end
+    @hash = hash_on_index(vendors)
     render(partial: 'vendor_index_content', locals: {vendors: vendors, hash: @hash})
   end
 
