@@ -19,14 +19,23 @@ RSpec.describe VendorsController, type: :controller do
       get :show, {id: vendor.id}
       expect(response).to have_http_status(:success)
     end
-
-    # it 'returns active contracts for vendor' do
-    #   contracts
-    #   @vendor = vendor
-    #   get :show, {id: vendor.id}
-    #   @vendor_active = vendor.active_contracts
-    #   expect(@vendor_active.count).to eq(5)
-    # end
   end
 
+  describe 'PUT #update' do
+    it 'updates a couple' do
+      expect(vendor.name).to eq("Vendor")
+      update_params = {id: vendor.id, vendor: {name: 'Hello!'}}
+      put :update, update_params
+      vendor.reload
+      expect(vendor.name).to eq('Hello!')
+    end
+  end
 end
+
+# describe 'PUT #update' do
+#   it 'updates a couple' do
+#     put :update, {id: couple.id, couple: {description: 'hello'}}
+#     couple.reload
+#     expect(couple.description).to eq('hello')
+#   end
+# end
