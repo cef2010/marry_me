@@ -1,0 +1,14 @@
+.vendor_card_content
+  .row
+    .col.m2
+      %img{src: vendor.vendor_avatar.url(:thumb)}
+    .col.m10
+      #{vendor.name} - #{vendor.category}
+      %br
+      %a{href: "http://#{vendor.website}", target: '_blank'} #{vendor.website}
+      %br
+      %span #{vendor.city}, #{vendor.state}
+      %br
+      = link_to 'See more', vendor_path(vendor)
+      |
+      = link_to 'Remove', contract_path(contract), method: :delete
