@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  */
-// @import url(asset-url("_color"));
 @import "materialize/components/color";
 $primary-color: #2b2b2b !default;
 $secondary-color: #B1AB6F !default;
 @import 'materialize';
+
 
 // FONT FOR LOGO
 // @font-face {
@@ -61,13 +61,6 @@ html, body {
 	margin-left: 5%;
 	margin-right: 5%;
 }
-
-// .form_button {
-//   padding: 0;
-//   border-radius: 50%;
-// }
-
-
 
 .bios{
 	height: 200px;
