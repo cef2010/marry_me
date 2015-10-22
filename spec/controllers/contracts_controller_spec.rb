@@ -5,8 +5,9 @@ RSpec.describe ContractsController, type: :controller do
   let(:couple) { FactoryGirl.create(:couple) }
   let(:contract) { FactoryGirl.create(:contract, vendor_id: vendor.id, couple_id: couple.id) }
 
-
-
+    before(:each) do
+      sign_in couple
+    end
   # describe "GET #index" do
   #   it "returns http success" do
   #     get :index
