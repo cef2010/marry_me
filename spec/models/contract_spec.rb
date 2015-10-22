@@ -26,7 +26,7 @@ RSpec.describe Contract, type: :model do
       expect(@new_contract.couple_pending).to eq(true)
     end
 
-    it 'updates a contract' do
+    it 'approves a contract' do
       contract
       contract.approve_contract
       contract.reload

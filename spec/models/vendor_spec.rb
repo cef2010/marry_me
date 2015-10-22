@@ -2,6 +2,8 @@ require 'rails_helper'
 RSpec.describe Vendor, type: :model do
 
   describe "tests model attributes" do
+    it { should have_many (:couples) }
+    it { should have_many (:contracts) }
     it { should respond_to :name }
     it { should respond_to :description }
     it { should respond_to :category }
@@ -11,8 +13,6 @@ RSpec.describe Vendor, type: :model do
     it { should respond_to :zip }
     it { should respond_to :website }
     it { should respond_to :phone }
-    it { should have_many :couples }
-    it { should have_many :contracts }
     it { should respond_to :latitude }
     it { should respond_to :longitude }
   end
@@ -33,11 +33,33 @@ RSpec.describe Vendor, type: :model do
       expect(vendor.full_address).to eq("Vendor, Vendor, Vendor")
     end
 
-    it 'queries a vendor name or category' do
+    it 'queries a vendor name' do
+      vendor
+      expect(Vendor.search('Vendor').count).to eq(1)
+    end
+
+    it 'queries a vendor category' do
       bakers = create_list(:vendor, 5, category: 'Baker')
-      different_vendors = create_list(:vendor, 5, name: 'Bob')
       expect(Vendor.search("Baker").count).to eq(5)
-      expect(Vendor.search("Bob").count).to eq(5)
+    end
+
+    it 'queries a city' do
+      FactoryGirl.create(:vendor, city: 'San Francisco')
+      expect(Vendor.search('San Francisco').count).to eq(1)
+    end
+
+    it 'queries a state' do
+      FactoryGirl.create(:vendor, state: 'Utah')
+      expect(Vendor.search('Utah').count).to eq(1)
+    end
+
+    it 'queries a zip' do
+      FactoryGirl.create(:vendor, zip: '84092')
+      expect(Vendor.search('84092').count).to eq(1)
+    end
+
+    it 'returns the correct states' do
+      expect(Vendor.states).to eq(['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Lousiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennesse', 'Texas', 'Utah', 'Vermont', 'Washingoton', 'West Virginia', 'Wisconsin', 'Wyoming'])
     end
 
     it 'returns the correct types' do

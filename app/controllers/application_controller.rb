@@ -5,9 +5,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if current_couple
-      couples_path
+      couple_path(current_couple)
     else current_vendor
-      vendors_path
+      vendor_path(current_vendor)
     end
   end
 

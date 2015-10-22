@@ -1,45 +1,47 @@
 .container
 	.content
-		.row
-			.col.s4
+		.row.valign-wrapper{style: 'padding-top: 20px;'}
+			.col.s4.valign
 				%div{style: 'width: 100%;'}
-					%img{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%; width: 100%;'}
-			.col.s4
-				#vendor_info
-					%h4
-						= @vendor.try(:name)
-					%p
-						= @vendor.try(:description)
-					%p
-						= @vendor.try(:category)
+					%img.w90{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%;'}
+			.col.s8
+				#vendor_info.w90
+					.vendor_info_head
+						%h4{style: 'display: inline-block;'}
+							= @vendor.try(:name)
+						%span{style: 'margin-left: 5px; vertical-align: middle;'}
+							(
+							= @vendor.try(:phone)
+							)
 					%p
 						= @vendor.try(:address)
+						, #{@vendor.try(:city)}, #{@vendor.try(:state)} #{@vendor.try(:zip)}
+					%p
+						= @vendor.try(:description)
 					%a{href: "http://#{@vendor.try(:website)}", target: "_blank"}
 						= @vendor.try(:website)
-					%p
-						= @vendor.try(:phone)
 					-if current_vendor && current_vendor.id == @vendor.id
-						%a#open_vendor_form{style: 'cursor: pointer;'} Edit Info...
-				= render(partial: 'info_form')
-			.col.s4
-				-# MAP
-				- if @vendor.latitude
-					%div{style: 'width: 100%;'}
-						#map{style: 'width: 100%; height: 300px; border-radius: 2%;'}
-				- else
-					%p Add An Address Ya Goof!
+						%a#open_vendor_form.right{style: 'cursor: pointer;'} Edit Info...
+				.w90
+					= render(partial: 'info_form')
+		.content-bottom
+			-# MAP
+			- if @vendor.latitude
+				%div{style: 'width: 100%; height: 300px;'}
+					#map{style: 'width: 100%; height: 300px; border-radius: 2%;'}
+			- else
+				%p Add An Address Ya Goof!
+
 
 	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
 		= render(partial: 'vendor_dashboard')
 	-else
 		=render(partial: 'not_current')
-	%hr
-
-	%hr
 
 
 
+-# MAPS SCRIPT
 %script{type: 'text/javascript'}
 	handler = Gmaps.build('Google');
 	handler.buildMap({ provider: {}, internal: {id: 'map'}}, function(){ markers = handler.addMarkers(#{raw @hash.to_json});

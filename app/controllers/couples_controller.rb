@@ -14,15 +14,16 @@ class CouplesController < ApplicationController
     # render json: {name: @couple.name, description: @couple.description, wedding_date: @couple.wedding_date, budget: @couple.budget, ceremony_location: @couple.ceremony_location, reception_location: @couple.reception_location}
   end
 
-  def edit
-    @couple = Couple.find(params[:id])
-  end
+  #No view so we don't need this?
+
+  # def edit
+  #   @couple = Couple.find(params[:id])
+  # end
 
   def update
     @couple = Couple.find(params[:id])
      if @couple.update(couple_params)
        redirect_to couple_path(current_couple)
-      # render json: { couple: @couple }
     else
       render 'edit'
     end
@@ -30,7 +31,7 @@ class CouplesController < ApplicationController
 
 	private
 		def couple_params
-			params.require(:couple).permit(:name, :description, :player1, :player2, :wedding_date, :budget, :ceremony_location, :reception_location, :email, :couple_avatar)
+			params.require(:couple).permit(:name, :description, :wedding_date, :budget, :ceremony_location, :reception_location, :email, :couple_avatar)
 		end
 
     def comment_params

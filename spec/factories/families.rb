@@ -5,5 +5,6 @@ FactoryGirl.define do
     contact "MyString"
     role "MyString"
     relation "MyString"
+
   end
 end

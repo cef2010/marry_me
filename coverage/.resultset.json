@@ -1,6 +1,7 @@
 {
   "RSpec": {
     "coverage": {
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/models/vendor_spec.rb": [
         1,
         1,
@@ -66,6 +67,85 @@
         1,
         1,
         1,
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/controllers/vendors_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+=======
+        0,
+        0,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+=======
+        0,
+        0,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+=======
+        0,
+        0,
+        0,
+        0,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+        null,
+        null,
+        1,
+=======
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        1,
+        1,
+        null,
+        null,
+<<<<<<< HEAD
+        1,
+        1,
+        1,
         null,
         null,
         1,
@@ -76,56 +156,20 @@
         1,
         1,
         1,
+=======
         null,
         null,
-        1,
-        1,
-        1,
         null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/rails_helper.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/rails_helper.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         null,
@@ -135,6 +179,11 @@
         1,
         1,
         1,
+<<<<<<< HEAD
+=======
+        1,
+        1,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -159,7 +208,11 @@
         1,
         null,
         1,
+<<<<<<< HEAD
         null,
+=======
+        1,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -171,8 +224,16 @@
         null,
         null,
         1,
+<<<<<<< HEAD
         31,
         31,
+=======
+        1,
+        1,
+        null,
+        null,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -185,6 +246,7 @@
         null,
         null,
         null,
+<<<<<<< HEAD
         null,
         null,
         null,
@@ -192,13 +254,31 @@
         null
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/environment.rb": [
+=======
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/environment.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         1,
         null,
         null,
         1
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/application.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/application.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         null,
         1,
@@ -235,12 +315,20 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/boot.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/boot.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         null,
         1
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/environments/test.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/environments/test.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         null,
         null,
@@ -284,7 +372,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/app_config.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/app_config.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         0,
         0,
@@ -292,6 +384,7 @@
         null,
         null,
         0,
+<<<<<<< HEAD
         null,
         null,
         0,
@@ -304,6 +397,20 @@
         null
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/assets.rb": [
+=======
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/assets.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -317,7 +424,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/backtrace_silencers.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/backtrace_silencers.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -326,12 +437,20 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/cookies_serializer.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/cookies_serializer.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         1
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/devise.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/devise.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         1,
@@ -595,13 +714,21 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/filter_parameter_logging.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/filter_parameter_logging.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
         1
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/inflections.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/inflections.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -619,25 +746,41 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/mime_types.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/mime_types.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/omniauth.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/omniauth.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/session_store.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/session_store.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         1
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/wrap_parameters.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/wrap_parameters.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -653,21 +796,34 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/comments.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/contracts.rb": [
+        1,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
         1,
-        null,
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/contracts.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/couples.rb": [
+        1,
+        1,
+        1,
+        1,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
         1,
         1,
+<<<<<<< HEAD
         null,
         null
       ],
@@ -680,6 +836,12 @@
         null
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/families.rb": [
+=======
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/families.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
@@ -690,7 +852,11 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/vendors.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/vendors.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
@@ -702,14 +868,22 @@
         1,
         1,
         1,
+<<<<<<< HEAD
         41,
+=======
+        6,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
         1,
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/routes.rb": [
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/routes.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         null,
         1,
@@ -747,19 +921,84 @@
         null,
         null
       ],
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/models/vendor.rb": [
-        1,
-        null,
-        null,
-        1,
-        null,
-        null,
-        null,
+=======
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/models/vendor.rb": [
         1,
         null,
         null,
         null,
         null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+<<<<<<< HEAD
+=======
+        1,
+        5,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+<<<<<<< HEAD
+=======
+        null,
+        1,
+        0,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         null,
@@ -814,23 +1053,73 @@
         1,
         null,
         null,
-        null,
+<<<<<<< HEAD
+=======
         1,
-        0,
-        null,
-        null,
-        null,
         1,
-        0,
-        0,
-        0,
-        null,
-        null,
         null,
         null,
         1,
         0,
         null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        1,
+        0,
+        null,
+        null,
+<<<<<<< HEAD
+=======
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/models/couple.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        1,
+        0,
+        0,
+<<<<<<< HEAD
+        0,
+        null,
+        null,
+=======
+        null,
+        null,
+        1,
+        0,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        0,
+<<<<<<< HEAD
+        null,
         null,
         1,
         1,
@@ -838,8 +1127,70 @@
         null,
         1,
         1,
+=======
+        0,
+        0,
         null,
         null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/authentications_helper.rb": [
+        null,
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/contracts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/couples_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/families_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/static_pages_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/sti_helper.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/vendors_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/controllers/vendors_controller.rb": [
+        1,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        0,
+        0,
+        0,
+        null,
+<<<<<<< HEAD
         1,
         1,
         null,
@@ -892,43 +1243,100 @@
         null,
         1,
         null,
+=======
         null,
-        null,
-        1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        null,
-        1,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         null,
         null,
-        1,
+        0,
+        0,
         0,
         null,
         null,
-        1,
+        null,
         0,
         null,
         null,
         null,
         1,
         0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+<<<<<<< HEAD
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+=======
+        1,
+        1,
+        1,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        null,
+        1,
+        null,
+        1,
+<<<<<<< HEAD
+        1,
+        1,
+=======
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null
+      ],
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/controllers/application_controller.rb": [
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        1,
+        null,
+        null,
+        1,
+<<<<<<< HEAD
+        0,
+        null,
+=======
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        0,
+<<<<<<< HEAD
         0,
         0,
         null,
@@ -997,10 +1405,16 @@
         1,
         0,
         0,
+=======
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null
       ]
     },
+<<<<<<< HEAD
     "timestamp": 1445458542
+=======
+    "timestamp": 1445527254
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
   }
 }

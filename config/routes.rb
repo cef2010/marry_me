@@ -21,17 +21,5 @@ Rails.application.routes.draw do
   end
   resources :vendors
   resources :contracts
-  resources :attires, controller: 'vendors', type: 'Attire'
-  resources :bakers, controller: 'vendors', type: 'Baker'
-  resources :caterers, controller: 'vendors', type: 'Caterer'
-  resources :rentals, controller: 'vendors', type: 'Rental'
-  resources :florists, controller: 'vendors', type: 'Florist'
-  resources :invitations, controller: 'vendors', type: 'Invitation'
-  resources :musics, controller: 'vendors', type: 'Music'
-  resources :others, controller: 'vendors', type: 'Other'
-  resources :photobooths, controller: 'vendors', type: 'Photobooth'
-  resources :photographers, controller: 'vendors', type: 'Photographer'
-  resources :videographers, controller: 'vendors', type: 'Videographer'
-  resources :venues, controller: 'vendors', type: 'Venue'
 
 end

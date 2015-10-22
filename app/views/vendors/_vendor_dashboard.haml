@@ -33,6 +33,7 @@
 							%tr
 								%td
 									= contract.couple.name
+									= link_to '[+]', add_approval_path(contract_id: contract.id)
 									= link_to '[x]', contract_path(contract), method: :delete
 								%td #{contract.couple.try(:wedding_date)}
 					- else
