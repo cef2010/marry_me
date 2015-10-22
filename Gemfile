@@ -4,6 +4,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'materialize-sass'
 gem 'paperclip'
+gem 'owlcarousel-rails'
 
 #AWS
 gem 'aws-sdk'
