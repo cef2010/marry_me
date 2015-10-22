@@ -1,3 +1,46 @@
+-# TO DO: fix team, etc div 
+-# kill indicators
+-# vertical line?
+-# format text properly
+
 .container
-  %h1 MARRY ME
-  %p babysit me
+	.slider
+		%ul.slides
+			%li
+				%img{src: "http://www.weddingelation.com/wp-content/uploads/2012/06/Outdoor-wedding-reception-decorations-ideas.jpg"}
+			%li
+				%img{src: "http://www.weddingdecor.com/site/ywd_dd_wedding_decor/assets/images/5sc.gif"}
+			%li
+				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
+			%li
+				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
+	.row.center.gold-background
+		.col.l4
+			= link_to 'Team', about_path
+		.col.l4
+			= link_to 'FAQ', faq_path
+		.col.l4
+			= link_to 'Contact Us', contact_path
+
+	.row.center
+		.col.m6.center
+			.icon-block
+				%i.material-icons.medium
+					favorite_border
+				%h3
+					for couples.. 
+				easily search vendors in your area
+				checkout profiles of vendors to find good fits
+				add your vendors to your profile! 
+			= link_to 'Sign up', new_couple_registration_path
+		.col.m6.center
+			%i.material-icons.medium
+				store
+			%h3 
+				for vendors..
+			%p 
+				fill out a profile to attract potential clients
+				connect with other vendors at each event
+				organize your events 
+			= link_to 'Sign up', new_vendor_registration_path
+				
