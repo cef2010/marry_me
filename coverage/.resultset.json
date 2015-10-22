@@ -2,6 +2,7 @@
   "RSpec": {
     "coverage": {
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/models/vendor_spec.rb": [
         1,
         1,
@@ -68,6 +69,9 @@
         1,
         1,
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/controllers/vendors_controller_spec.rb": [
         1,
         null,
@@ -76,6 +80,64 @@
         null,
         null,
         null,
+<<<<<<< HEAD
+>>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/models/vendor_spec.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        null,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        null,
+        1,
+        19,
+        4,
+        2,
+        2,
+        2,
+        null,
+        1,
+        18,
+        null,
+        null,
+        1,
+        1,
+        1,
+<<<<<<< HEAD
+<<<<<<< HEAD
+        1,
+=======
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        null,
+        null,
+        1,
+        1,
+<<<<<<< HEAD
+        1,
+=======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        0,
+        0,
+        null,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
@@ -92,40 +154,50 @@
         0,
         0,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         1,
         1,
 <<<<<<< HEAD
-        1,
-        null,
-        null,
-        1,
-        1,
-        1,
 =======
-        0,
-        0,
-        null,
->>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+        1,
+        1,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        1,
         null,
         null,
         1,
         1,
 <<<<<<< HEAD
         1,
-        null,
-        null,
-        1,
-        1,
-        1,
 =======
+=======
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+>>>>>>> add comment functionality to couple show page
+        null,
+        null,
+        1,
+        1,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         0,
         0,
         0,
         0,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
@@ -140,23 +212,46 @@
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         1,
         1,
+=======
+=======
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
 <<<<<<< HEAD
         1,
         1,
         1,
+<<<<<<< HEAD
         null,
         null,
         1,
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+=======
+        null,
+        null,
+        1,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         null,
         null,
+<<<<<<< HEAD
         1,
         1,
         1,
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -173,14 +268,71 @@
         1,
         1,
         null,
+=======
         1,
         1,
+        1,
+        null,
         null,
         1,
         1,
         1,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/rails_helper.rb": [
+>>>>>>> add comment functionality to couple show page
+        1,
+        1,
+        null,
+        1,
+        1,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+=======
+        null,
+>>>>>>> add comment functionality to couple show page
+        1,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
@@ -209,8 +361,12 @@
         null,
         1,
 <<<<<<< HEAD
+<<<<<<< HEAD
         null,
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
@@ -222,6 +378,13 @@
         1,
         1,
         null,
+=======
+        null,
+        null,
+        null,
+        null,
+        1,
+>>>>>>> add comment functionality to couple show page
         null,
         1,
 <<<<<<< HEAD
@@ -232,6 +395,12 @@
         1,
         null,
         null,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+=======
+        1,
+        31,
+        31,
+>>>>>>> add comment functionality to couple show page
         null,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
@@ -250,6 +419,7 @@
         null,
         null,
         null,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
         1,
         null
       ],
@@ -267,18 +437,37 @@
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/environment.rb": [
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/environment.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         1,
         null,
         null,
         1
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/application.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/application.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/application.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/application.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         1,
@@ -315,20 +504,36 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/boot.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/boot.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/boot.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/boot.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         1
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/environments/test.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/environments/test.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/environments/test.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/environments/test.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         null,
@@ -373,10 +578,18 @@
         null
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/app_config.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/app_config.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/app_config.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/app_config.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         0,
         0,
@@ -384,6 +597,7 @@
         null,
         null,
         0,
+<<<<<<< HEAD
 <<<<<<< HEAD
         null,
         null,
@@ -398,6 +612,9 @@
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/assets.rb": [
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         0,
@@ -410,7 +627,24 @@
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/assets.rb": [
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+        null,
+        null,
+        0,
+        0,
+        0,
+        null,
+        null,
+        0,
+        null,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/assets.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -424,11 +658,19 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/backtrace_silencers.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/backtrace_silencers.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/backtrace_silencers.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/backtrace_silencers.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -437,20 +679,36 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/cookies_serializer.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/cookies_serializer.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/cookies_serializer.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/cookies_serializer.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         1
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/devise.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/devise.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/devise.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/devise.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         1,
@@ -714,21 +972,37 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/filter_parameter_logging.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/filter_parameter_logging.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/filter_parameter_logging.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/filter_parameter_logging.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
         1
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/inflections.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/inflections.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/inflections.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/inflections.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -746,41 +1020,73 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/mime_types.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/mime_types.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/mime_types.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/mime_types.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/omniauth.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/omniauth.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/omniauth.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/omniauth.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/session_store.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/session_store.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/session_store.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/session_store.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         1
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/wrap_parameters.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/wrap_parameters.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/initializers/wrap_parameters.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/initializers/wrap_parameters.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -796,12 +1102,21 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/comments.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/contracts.rb": [
         1,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/contracts.rb": [
+        1,
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/comments.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
@@ -810,19 +1125,30 @@
         null
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/contracts.rb": [
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/couples.rb": [
         1,
         1,
         1,
         1,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/contracts.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
         1,
         1,
+<<<<<<< HEAD
 <<<<<<< HEAD
         null,
         null
@@ -837,11 +1163,31 @@
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/families.rb": [
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/families.rb": [
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+        null,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/couples.rb": [
+        1,
+        1,
+        4,
+        1,
+        null,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/families.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
@@ -852,11 +1198,19 @@
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/vendors.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/vendors.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/spec/factories/vendors.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/spec/factories/vendors.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
@@ -868,22 +1222,38 @@
         1,
         1,
         1,
+<<<<<<< HEAD
 <<<<<<< HEAD
         41,
 =======
         6,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+        6,
+=======
+        41,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         1,
         null,
         null
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/routes.rb": [
 =======
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/routes.rb": [
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+      "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/config/routes.rb": [
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/config/routes.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         1,
@@ -922,15 +1292,25 @@
         null
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/models/vendor.rb": [
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/models/vendor.rb": [
         1,
         null,
         null,
         null,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/models/vendor.rb": [
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         null,
@@ -957,7 +1337,11 @@
         1,
         null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         5,
         null,
@@ -985,7 +1369,12 @@
         null,
         1,
         0,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         1,
@@ -994,11 +1383,20 @@
         null,
         null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         null,
         1,
         0,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+        null,
+        1,
+        0,
+=======
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null,
         null,
@@ -1054,7 +1452,11 @@
         null,
         null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         1,
         null,
@@ -1062,14 +1464,23 @@
         1,
         0,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         1,
         0,
         null,
         null,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/models/couple.rb": [
@@ -1098,6 +1509,7 @@
         1,
         1,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         1,
@@ -1111,7 +1523,15 @@
         null,
         null,
         1,
+=======
+=======
+>>>>>>> add comment functionality to couple show page
+        null,
+        1,
         0,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        0,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
         null,
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
@@ -1131,10 +1551,14 @@
         0,
         0,
         null,
+=======
+        0,
+>>>>>>> add comment functionality to couple show page
         null,
         null,
         null,
         null,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/helpers/application_helper.rb": [
@@ -1184,12 +1608,28 @@
         null,
         0,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+        1,
+        0,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         0,
         0,
         0,
         null,
+<<<<<<< HEAD
 <<<<<<< HEAD
         1,
         1,
@@ -1244,6 +1684,9 @@
         1,
         null,
 =======
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         0,
         0,
@@ -1274,6 +1717,7 @@
         0,
         null,
         null,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
@@ -1285,27 +1729,102 @@
         null,
         null,
         null,
+=======
+=======
+        1,
+        1,
         null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null,
 =======
         1,
         1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/models/couple.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+>>>>>>> add comment functionality to couple show page
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+        1,
+        1,
         1,
         0,
         0,
         0,
         0,
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
         null,
         null,
         1,
+=======
+=======
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+>>>>>>> add comment functionality to couple show page
+        null,
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         1,
 <<<<<<< HEAD
         1,
         1,
 =======
+        null,
+        1,
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
         null,
         null,
         null,
@@ -1317,16 +1836,31 @@
         null
       ],
       "/Users/trevorslater/Documents/Class_assignments/rails projects/marry_me/app/controllers/application_controller.rb": [
+<<<<<<< HEAD
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+=======
+        1,
+        1,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         1,
         null,
         null,
         1,
+<<<<<<< HEAD
 <<<<<<< HEAD
         0,
         null,
 =======
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+=======
+        0,
+        null,
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         1,
         0,
@@ -1337,6 +1871,11 @@
         1,
         0,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+=======
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         0,
         0,
         null,
@@ -1347,6 +1886,7 @@
         null
       ],
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/helpers/application_helper.rb": [
+<<<<<<< HEAD
         1,
         null
       ],
@@ -1355,6 +1895,16 @@
         1,
         null
       ],
+=======
+        1,
+        null
+      ],
+      "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/helpers/authentications_helper.rb": [
+        null,
+        1,
+        null
+      ],
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
       "/Users/jenniferbaguley/fall_dev_15/capstone/marry_me/app/helpers/contracts_helper.rb": [
         1,
         null
@@ -1405,16 +1955,28 @@
         1,
         0,
         0,
+<<<<<<< HEAD
 =======
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
         null,
         null
       ]
     },
 <<<<<<< HEAD
+<<<<<<< HEAD
     "timestamp": 1445458542
 =======
     "timestamp": 1445527254
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+    "timestamp": 1445527254
+=======
+    "timestamp": 1445458542
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
   }
 }

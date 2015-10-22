@@ -13,11 +13,11 @@
  *= require_tree .
  *= require_self
  */
-// @import url(asset-url("_color"));
 @import "materialize/components/color";
 $primary-color: #2b2b2b !default;
 $secondary-color: #B1AB6F !default;
 @import 'materialize';
+
 
 // FONT FOR LOGO
 // @font-face {
@@ -33,7 +33,6 @@ $secondary-color: #B1AB6F !default;
 //
 // }
 
-
 .custom_nav {
 	width: 150px;
 }
@@ -48,6 +47,10 @@ html, body {
   background-color: white;
 }
 
+.gold-background {
+	background-color: #B1AB6F;
+}
+
 .jumbotron h1 {
   margin-top: 0;
   padding-top: 4%;
@@ -59,11 +62,10 @@ html, body {
 	margin-right: 5%;
 }
 
-// .form_button {
-//   padding: 0;
-//   border-radius: 50%;
-// }
-
+.bios{
+	height: 200px;
+	width: 200px;
+}
 
 // main .container {
 //   overflow: auto;

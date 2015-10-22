@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20151022012337) do
+=======
+ActiveRecord::Schema.define(version: 20151022210830) do
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +30,17 @@ ActiveRecord::Schema.define(version: 20151022012337) do
     t.datetime "updated_at", null: false
   end
 
+<<<<<<< HEAD
+=======
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
   create_table "contracts", force: :cascade do |t|
     t.float    "cost"
     t.integer  "couple_id"

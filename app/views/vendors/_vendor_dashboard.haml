@@ -13,7 +13,7 @@
 						- @vendor_active.each do |contract|
 							%tr
 								%td
-									= contract.couple.name
+									= link_to contract.couple.name, couple_path(contract.couple)
 									= link_to '[x]', contract_path(contract), method: :delete
 								%td #{contract.couple.try(:wedding_date)}
 					- else
@@ -32,7 +32,7 @@
 						- @vendor_requests.each do |contract|
 							%tr
 								%td
-									= contract.couple.name
+									= link_to contract.couple.name, couple_path(contract.couple)
 									= link_to '[+]', add_approval_path(contract_id: contract.id)
 									= link_to '[x]', contract_path(contract), method: :delete
 								%td #{contract.couple.try(:wedding_date)}
@@ -51,7 +51,7 @@
 						- @vendor_pending.each do |contract|
 							%tr
 								%td
-									= contract.couple.name
+									= link_to contract.couple.name, couple_path(contract.couple)
 									= link_to '[x]', contract_path(contract), method: :delete
 								%td #{contract.couple.try(:wedding_date)}
 					- else

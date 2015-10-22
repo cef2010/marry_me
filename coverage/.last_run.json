@@ -1,9 +1,17 @@
 {
   "result": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "covered_percent": 90.18
 =======
     "covered_percent": 68.65
 >>>>>>> 198259c3c3d63fe9327e72e44554dc69a7d6eff8
+=======
+<<<<<<< c50aa36087649e29e9d258731c3bac6cc97b746c
+    "covered_percent": 68.65
+=======
+    "covered_percent": 90.18
+>>>>>>> add comment functionality to couple show page
+>>>>>>> 34f131685780b9b9d23e7a49f1e1262318ff1f0f
   }
 }
