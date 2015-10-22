@@ -23,19 +23,23 @@ RSpec.describe VendorsController, type: :controller do
 
   describe 'PUT #update' do
     it 'updates a couple' do
-      expect(vendor.name).to eq("Vendor")
       update_params = {id: vendor.id, vendor: {name: 'Hello!'}}
       put :update, update_params
       vendor.reload
       expect(vendor.name).to eq('Hello!')
     end
   end
+
+  describe 'GET #sort by type' do
+    it 'returns vendors within a category' do
+      attire = create_list(:vendor, 5, category: 'Attire')
+      get :sort_by_type, {vendor: {category: 'Baker'}}
+      expect(Vendor.attires.count).to eq(5)
+    end
+  end
 end
 
-# describe 'PUT #update' do
-#   it 'updates a couple' do
-#     put :update, {id: couple.id, couple: {description: 'hello'}}
-#     couple.reload
-#     expect(couple.description).to eq('hello')
-#   end
+# it 'queries a vendor category' do
+#   bakers = create_list(:vendor, 5, category: 'Baker')
+#   expect(Vendor.search("Baker").count).to eq(5)
 # end
