@@ -24,6 +24,6 @@ namespace :db do
       vendor.latitude = Faker::Address.latitude
       vendor.longitude = Faker::Address.longitude
     end
+    puts "populated 30 users"
   end
-  puts "populated 30 users"
 end
