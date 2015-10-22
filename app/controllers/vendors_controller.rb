@@ -71,7 +71,7 @@ class VendorsController < ApplicationController
         @hash.delete(h)
       end
     end
-    render(partial: 'vendor_card', locals: {vendors: vendors, hash: @hash})
+    render(partial: 'vendor_index_content', locals: {vendors: vendors, hash: @hash})
   end
 
 
