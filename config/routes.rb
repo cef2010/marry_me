@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   # resources :contracts
   resources :couples do
     resources :families
+    resources :comments
   end
   resources :vendors
   resources :contracts

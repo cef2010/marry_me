@@ -21,3 +21,5 @@
     = render(partial: 'current_couple')
   -else
     = render(partial: 'not_current')
+  - if current_couple && current_couple.id == @couple.id || @couple.wedding_vendor(current_vendor)
+    = render(partial: 'comment_card')
