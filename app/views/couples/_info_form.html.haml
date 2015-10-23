@@ -1,31 +1,28 @@
-#couple_form.hide
+#couple_form.hide{style: 'padding-top: 20px;'}
 	= form_for @couple do |f|
-		= f.label :name, class: 'active'
-		= f.text_field :name, placeholder: 'Brad & Bill'
+		.form-fields
+			= f.label :name, class: 'active'
+			= f.text_field :name, placeholder: 'Brad & Bill'
 
-		= f.label :description, class: 'active'
-		= f.text_area :description, placeholder: 'Tell us about you!'
+			= f.label :description, class: 'active'
+			= f.text_area :description, placeholder: 'Tell us about you!'
 
-		= f.label :wedding_date, class: 'active'
-		= f.date_field :wedding_date, class: 'datepicker'
+			= f.label :wedding_date, class: 'active'
+			= f.date_field :wedding_date, class: 'datepicker'
 
-		= f.label :budget, class: 'active'
-		= f.text_field :budget, placeholder: '8000'
+			= f.label :budget, class: 'active'
+			= f.text_field :budget, placeholder: '8000'
 
-		= f.label :ceremony_location, class: 'active'
-		= f.text_field :ceremony_location, placeholder: 'Wasatch State Park'
+			= f.label :ceremony_location, class: 'active'
+			= f.text_field :ceremony_location, placeholder: 'Wasatch State Park'
 
-		= f.label :reception_location, class: 'active'
-		= f.text_field :reception_location, placeholder: 'Porcupine Grill'
+			= f.label :reception_location, class: 'active'
+			= f.text_field :reception_location, placeholder: 'Porcupine Grill'
 
-		= f.label :couple_avatar
-		= f.file_field :couple_avatar
-
-		= f.submit 'Update', class: 'btn'
-
-	%p#close_couple_form.btn Close Form
-	-# .btn.couple_update{data: {id: @couple.id}} Test
-
-	-# , remote: true do
--# %button.vote_button{"data-element-id" => "upvotes", "data-url" => "/upvote"} Up Vote
--# %button.vote_button{"data-element-id" => "downvotes", "data-url" => "/downvote"} Down Vote
+			= f.label :couple_avatar
+			= f.file_field :couple_avatar
+		.form-buttons.center
+			= f.button :submit, class: 'btn-floating' do
+				<i class="material-icons">check</i>
+			%span#close_couple_form.btn-floating{style: 'cursor: pointer;'}
+				<i class="material-icons">close</i>

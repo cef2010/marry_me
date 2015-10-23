@@ -1,8 +1,31 @@
-= render(partial: 'info_form')
-%p#open_couple_form.btn Open Form
-- if @couple.vendors.any?
-  %hr
+.couple_dashboard.w90
   %h3
+    Current Vendors
+  - @couple_active.each do |contract|
+    = render(partial: 'layouts/vendor_card', locals: {contract: contract, vendor: contract.vendor})
+  %hr
+  - if @couple.families.any?
+    - @couple.families.each do |family|
+      .family_div
+        = family.name
+        |
+        = family.relation
+        |
+        = family.role
+        %br
+        = family.description
+        %br
+        = family.contact
+        %br
+        = link_to 'Edit Role', edit_couple_family_path(current_couple, family.id)
+        |
+        = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
+  - else
+    %p No Family Roles Yet!
+  = link_to 'New Family Role', new_couple_family_path(current_couple)
+
+
+  %h5
     These Need Your Approval
   - @couple_requests.each do |contract|
     = contract.vendor.try(:email)
@@ -12,42 +35,10 @@
     = link_to 'Remove', contract_path(contract), method: :delete
     %br
   %hr
-  %h3
+  %h5
     These Are Pending
   - @couple_pending.each do |contract|
     = contract.vendor.try(:email)
     |
     = link_to 'Remove', contract_path(contract), method: :delete
     %br
-  %hr
-  %h3
-    These Are Your Approved Contracts
-  - @couple_active.each do |contract|
-    = contract.vendor.try(:email)
-    |
-    = link_to 'Remove', contract_path(contract), method: :delete
-    %br
-  %hr
-- else
-  %p No vendors yet!
-- if @couple.families.any?
-  %h3
-    These Are Your Family Vendors
-  - @couple.families.each do |family|
-    .family_div
-      = family.name
-      |
-      = family.relation
-      |
-      = family.role
-      %br
-      = family.description
-      %br
-      = family.contact
-      %br
-      = link_to 'Edit Role', edit_couple_family_path(current_couple, family.id)
-      |
-      = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
-- else
-  %p No Family Roles Yet!
-= link_to 'New Family Role', new_couple_family_path(current_couple)

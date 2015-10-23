@@ -4,7 +4,7 @@
 
 $(document).ready ->
   $('.datepicker').pickadate({
-    selectMonths: true, 
+    selectMonths: true,
     selectYears: 15
   });
 
@@ -14,10 +14,12 @@ $(document).ready ->
   $('#close_couple_form').on 'click', ->
     $('#couple_form').addClass 'hide'
     $('#open_couple_form').removeClass 'hide'
+    $('.couple_show_info').removeClass 'hide'
 
   $('#open_couple_form').on 'click', ->
     $('#open_couple_form').addClass 'hide'
     $('#couple_form').removeClass 'hide'
+    $('.couple_show_info').addClass 'hide'
 
   $('.couple_update').on 'click', ->
     valuesToSubmit = $('.edit_couple').serialize()
