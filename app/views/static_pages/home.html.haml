@@ -14,25 +14,35 @@
 				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
 			%li
 				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
+				
 	= render partial: 'static_nav'
 
 	.row.center
 		.col.m6.center
 			.icon-block
-				%i.material-icons.medium
-					favorite_border
+					
 				%h3
 					for couples.. 
-				easily search vendors in your area
-				checkout profiles of vendors to find good fits
-				add your vendors to your profile! 
-			= link_to 'Sign up', new_couple_registration_path
+				%p.left
+					%i.material-icons.small
+						location_city
+					easily search vendors in your area
+				%p.left
+					%i.material-icons.small
+						person
+					checkout profiles of vendors to find good fits
+				%p.left
+					%i.material-icons.small
+						favorite
+					add your vendors to your profile! 
+					= link_to 'Sign up', new_couple_registration_path
 		.col.m6.center
-			%i.material-icons.medium
-				store
-			%h3 
-				for vendors..
+			.icon-block
+				%h3
+					for vendors..
 			%p 
+				%i.material-icons.small
+					store
 				fill out a profile to attract potential clients
 				connect with other vendors at each event
 				organize your events 
