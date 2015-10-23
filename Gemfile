@@ -5,7 +5,7 @@ gem 'devise'
 gem 'omniauth-facebook'
 gem 'materialize-sass'
 gem 'paperclip'
-
+gem 'sprig'
 #AWS
 gem 'aws-sdk'
 gem 'fog'
