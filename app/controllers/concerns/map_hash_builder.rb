@@ -10,7 +10,7 @@ module MapHashBuilder
       end
     end
     hash.each do |h|
-      if h = {}
+      if h == {}
         hash.delete(h)
       end
     end
@@ -26,7 +26,7 @@ module MapHashBuilder
       end
     end
     hash.each do |h|
-      if h = {}
+      if h == {}
         hash.delete(h)
       end
     end
