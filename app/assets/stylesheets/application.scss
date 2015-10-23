@@ -37,6 +37,7 @@ $secondary-color: #B1AB6F !default;
 
 .custom_nav {
 	width: 150px;
+  text-align: left;
 }
 
 html, body {
@@ -50,8 +51,8 @@ html, body {
 }
 
 .gold-background {
-	background-color: #B1AB6F;
-  /*background: rgb(237, 229, 219);*/
+	/*background-color: #B1AB6F;*/
+  background: rgb(237, 229, 219);
 }
 
 .jumbotron h1 {
