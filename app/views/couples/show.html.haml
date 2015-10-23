@@ -1,21 +1,27 @@
 .container
-  %img{src: @couple.couple_avatar.url(:thumb)}
-  %h1
-    - if @couple.name == nil
-      Couple
-    - else
-      = @couple.name
-  %hr
-  %p.couple_desc
-    = @couple.try(:description)
-  %p.couple_date
-    = @couple.try(:wedding_date)
-  %p.budget
-    = @couple.try(:budget)
-  %p.ceremony_location
-    = @couple.try(:ceremony_location)
-  %p.reception_location
-    = @couple.try(:reception_location)
+  .couple_show_info
+    .row.valign-wrapper{style: 'height: 300px;'}
+      .col.s4.valign
+        %img.w90{src: @couple.couple_avatar.url(:medium)}
+      .col.s8
+        .w90
+          %h4
+            = @couple.try(:name)
+          %p.couple_date
+            The Date:
+            = @couple.try(:wedding_date)
+          %p.ceremony_location
+            The Ceremony:
+            = @couple.try(:ceremony_location)
+          %p.reception_location
+            The Reception:
+            = @couple.try(:reception_location)
+          - if current_couple && current_couple.id == @couple.id
+            %p#open_couple_form.btn Edit Info
+    %p.couple_desc.w90
+      = @couple.try(:description)
+  .w90
+    = render(partial: 'info_form')    
   %hr
   -if current_couple && current_couple.id == @couple.id
     = render(partial: 'current_couple')
