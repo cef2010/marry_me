@@ -30,7 +30,7 @@ class Vendor < ActiveRecord::Base
   after_validation :geocode
 
   def full_address
-    "#{self.address}, #{self.city}, #{self.state}"
+    "#{self.try(:address)}, #{self.try(:city)}, #{self.try(:state)}"
   end
 
   def self.search(query)
