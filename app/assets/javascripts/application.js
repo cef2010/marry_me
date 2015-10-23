@@ -25,4 +25,5 @@ $(document).ready(function(){
   $(".owl-carousel").owlCarousel({
     singleItem: true,
   });
+  $('.collapsible').collapsible();
 });

@@ -1,53 +1,87 @@
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 Why {MarryMe}?
-		%p
-			No wedding planner? No problem! {MarryMe} is a one-stop shop for couples seeking vendors for their wedding. Fill out your profile and easily search and add that perfect caterer or decor rental.
+.container
+	.slider{style: "height: 400px;"}
+		%ul.slides
+			%li
+				%img{src: "http://www.azulreceptionhall.com/PagePhoto/Page_9.jpg"}
+	= render partial: 'static_nav'
 
-			For vendors, {MarryMe} is a central location for planning and coordinating with other vendors. 
-
-
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 Who can use {MarryMe}?
-		%p
-			{MarryMe} is specially designed for newly engaged couples to find the right vendors to make the best day of your life, the best day of your life!
-
-			Vendors, {MarryMe} is for you too! Coordinate with other vendors to save time and confusion. Whether you're a caterer, dress-maker, or bunny-wrangler, we have the tools and features to also help your business grow.
-
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 How do I find my ideal vendors?
-		%p
-			{MarryMe} has lots of search options for you to find exactly what you're looking for. Search by name, location, and category to find that perfect photobooth or dove-trainer.
-
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 How do I attract potential clients?
-		%p
-			The more complete your profile is, the better! Showcase your logo, info, and category to draw more couples to your page.
-
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 What if my mom is making the cake?
-		%p
-			Simply add family vendors using the Family Vendor form! This will make it easier for your other vendors to coordinate with your loved ones so your big day goes smoothly.
-
-.parallax-container
-	.parallax
-		%img{src: "http://eventsbyambrosia.com/wp-content/uploads/2014/10/wedding-photostock1.jpg"}
-	.section.gold-background
-		%h4 I have other questions/comments/concerns..
-		%p
-			Please don't hesitate to Contact Us!
-
+	%h3
+		for couples..
+	%ul.collapsible.popout{"data-collapsible" => "accordion"}
+		%li
+			.collapsible-header
+				%i.material-icons
+					filter_drama
+				Why {MarryMe}?
+			.collapsible-body
+				%p
+					No wedding planner? No problem! {MarryMe} is a one-stop shop for couples seeking vendors for their wedding. Fill out your profile and easily search and add that perfect caterer or decor rental.
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					Who can use {MarryMe}?
+				.collapsible-body
+					%p
+						{MarryMe} is specially designed for newly engaged couples to find the right vendors to make the best day of your life, the best day of your life!
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					How do I find my ideal vendors?
+				.collapsible-body
+					%p
+						{MarryMe} has lots of search options for you to find exactly what you're looking for. Search by name, location, and category to find that perfect photobooth or dove-trainer.
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					What if my mom is making the cake?
+				.collapsible-body
+					%p
+						Simply add family vendors using the Family Vendor form! This will make it easier for your other vendors to coordinate with your loved ones so your big day goes smoothly.
+						
+						
+	%h3
+		for vendors..
+	%ul.collapsible.popout{"data-collapsible" => "accordion"}
+		%li
+			.collapsible-header
+				%i.material-icons
+					filter_drama
+				Why {MarryMe}?
+			.collapsible-body
+				%p
+					For vendors, {MarryMe} is a central location for planning and coordinating with other vendors. 
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					Who can use {MarryMe}?
+				.collapsible-body
+					%p
+						Vendors, {MarryMe} is for you too! Coordinate with other vendors to save time and confusion. Whether you're a caterer, dress-maker, or bunny-wrangler, we have the tools and features to also help your business grow.
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					Who can use {MarryMe}?
+				.collapsible-body
+					%p
+						Vendors, {MarryMe} is for you too! Coordinate with other vendors to save time and confusion. Whether you're a caterer, dress-maker, or bunny-wrangler, we have the tools and features to also help your business grow.
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					How do I attract potential clients?
+				.collapsible-body
+					%p
+						The more complete your profile is, the better! Showcase your logo, info, and category to draw more couples to your page.
+			%li
+				.collapsible-header
+					%i.material-icons
+						filter_drama
+					What if I have other questions/comments/concerns?
+				.collapsible-body
+					%p
+						Please don't hesitate to Contact Us!

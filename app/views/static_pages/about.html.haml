@@ -1,8 +1,10 @@
 .container
-	%img.materialboxed{src: 'http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/devTeam.jpeg', height: "25%", width: "100%"}
-
-	%h1.center About Team {MarryMe}
-	= render partial: 'static_nav'
+	.slider{style: "height: 400px;"}
+		%ul.slides
+			%li
+				%img{src: "http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/devTeam.jpeg"}
+		%h1.center About Team {MarryMe}
+		= render partial: 'static_nav'
 
 	.owl-carousel
 		.center

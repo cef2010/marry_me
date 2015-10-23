@@ -19,32 +19,43 @@
 
 	.row.center
 		.col.m6.center
-			.icon-block
-					
-				%h3
-					for couples.. 
-				%p.left
-					%i.material-icons.small
-						location_city
-					easily search vendors in your area
-				%p.left
-					%i.material-icons.small
-						person
-					checkout profiles of vendors to find good fits
-				%p.left
-					%i.material-icons.small
-						favorite
-					add your vendors to your profile! 
-					= link_to 'Sign up', new_couple_registration_path
+			%h3
+				for vendors..
 		.col.m6.center
-			.icon-block
-				%h3
-					for vendors..
-			%p 
+			%h3
+				for couples.. 
+	.row.center
+		.col.m6.center
+			%p
 				%i.material-icons.small
-					store
-				fill out a profile to attract potential clients
-				connect with other vendors at each event
-				organize your events 
-			= link_to 'Sign up', new_vendor_registration_path
+					location_city
+				easily search vendors in your area
+			%p
+				%i.material-icons.small
+					person
+				checkout profiles of vendors to find good fits
+			%p
+				%i.material-icons.small
+					favorite
+				add your vendors to your profile! 
 				
+		.col.m6.center
+			%p
+				%i.material-icons.small
+					assignment_ind
+				fill out a profile to attract potential clients
+			%p
+				%i.material-icons.small
+					group
+				connect with other vendors at each event
+			%p
+				%i.material-icons.small
+					library_books
+				organize your events 
+	.row
+		.col.m6.center
+			= link_to 'Sign up', new_vendor_registration_path
+		.col.m6.center
+			= link_to 'Sign up', new_couple_registration_path
+				
+	
