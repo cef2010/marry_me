@@ -1,33 +1,31 @@
 .container
-	%h1 About Team {MarryMe}
+	.slider{style: "height: 400px;"}
+		%ul.slides
+			%li
+				%img{src: "http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/devTeam.jpeg"}
+		%h1.center About Team {MarryMe}
+		= render partial: 'static_nav'
 
-	.row
-		.col.m3
+	.owl-carousel
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Trevor Slater 
 			%p 
-				
+					
 
-	.row
-		.col.m3
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Jen Baguley 
 			%p 
-				
+					
 
-	.row
-		.col.m3
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Christian Fuller 
 			%p 
-				
-	.row
-		.col.m3
+					
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Arleigh Atkinson 
 			%p 
 				
