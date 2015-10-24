@@ -27,6 +27,9 @@
     = render(partial: 'current_couple')
   -else
     = render(partial: 'not_current')
-  - if (current_couple && current_couple.id == @couple.id) || (current_vendor && @couple.wedding_vendor(current_vendor))
+  - if (current_couple && current_couple.id == @couple.id)
+    .w90
+      = render(partial: 'comment_card')
+  - elsif (current_vendor && @couple.wedding_vendor(current_vendor) && @couple.contract_accepted(current_vendor))
     .w90
       = render(partial: 'comment_card')
