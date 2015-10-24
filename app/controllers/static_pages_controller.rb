@@ -17,7 +17,7 @@ class StaticPagesController < ApplicationController
                        shortly.'
       redirect_to controller: 'static_pages', action: 'home', flag: true
     else
-      flash[:error] = 'There was an error'
+      flash.now[:error] = 'There was an error'
       render 'contact'
     end
   end
