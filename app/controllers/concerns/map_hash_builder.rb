@@ -6,13 +6,12 @@ module MapHashBuilder
       if vendor.latitude != nil
         marker.lat vendor.latitude
         marker.lng vendor.longitude
-        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
+        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>,
+                           #{vendor.category}"
       end
     end
     hash.each do |h|
-      if h == {}
-        hash.delete(h)
-      end
+      hash.delete(h) if h == {}
     end
     hash
   end
@@ -22,13 +21,12 @@ module MapHashBuilder
       if vendor.latitude != nil
         marker.lat vendor.latitude
         marker.lng vendor.longitude
-        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>, #{vendor.category}"
+        marker.infowindow "<a href='/vendors/#{vendor.id}'>#{vendor.name}</a>,
+                           #{vendor.category}"
       end
     end
     hash.each do |h|
-      if h == {}
-        hash.delete(h)
-      end
+      hash.delete(h) if h == {}
     end
     hash
   end

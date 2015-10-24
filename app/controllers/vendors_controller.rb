@@ -5,7 +5,7 @@ class VendorsController < ApplicationController
     @vendors = Vendor.all
     @hash = hash_on_index(@vendors)
     if Vendor.search(params[:search])
-      @vendors = Vendor.search(params[:search]).order("name DESC")
+      @vendors = Vendor.search(params[:search]).order('name DESC')
       @hash = hash_on_index(@vendors)
     else
       @vendors = []
@@ -26,21 +26,21 @@ class VendorsController < ApplicationController
 
   def update
     @vendor = Vendor.find(params[:id])
-    if @vendor.update(vendor_params)
-      redirect_to vendor_path(@vendor)
-    end
+    redirect_to vendor_path(@vendor) if @vendor.update(vendor_params)
   end
 
   def sort_by_type
     vendors = Vendor.where(category: params[:category])
     @hash = hash_on_index(vendors)
-    render(partial: 'vendor_index_content', locals: {vendors: vendors, hash: @hash})
+    render(partial: 'vendor_index_content', locals: { vendors: vendors,
+                                                      hash: @hash })
   end
-
 
   private
 
   def vendor_params
-    params.require(:vendor).permit(:name, :description, :category, :address, :website, :phone, :email, :password, :vendor_avatar, :city, :state, :zip)
+    params.require(:vendor).permit(:name, :description, :category, :address,
+                                   :website, :phone, :email, :password,
+                                   :vendor_avatar, :city, :state, :zip)
   end
 end

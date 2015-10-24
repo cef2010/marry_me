@@ -1,10 +1,9 @@
 require 'rails_helper'
 
-
 RSpec.describe Couple, type: :model do
   let(:couple) { FactoryGirl.create(:couple) }
   let(:contract) { FactoryGirl.create(:contract, couple_pending: false, vendor_pending: false) }
-  let(:vendor) { FactoryGirl.create (:vendor) }
+  let(:vendor) { FactoryGirl.create(:vendor) }
 
   describe 'model attributes' do
     it { should respond_to :description }
@@ -18,7 +17,6 @@ RSpec.describe Couple, type: :model do
   end
 
   describe 'model methods' do
-
     it 'returns contracts who have accepted a vendor contract' do
       couple.contracts << contract
       couple.contracts << FactoryGirl.create(:contract, couple_pending: true, vendor_pending: false)
