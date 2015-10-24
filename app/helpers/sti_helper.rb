@@ -1,3 +1,0 @@
-module StiHelper
-
-end

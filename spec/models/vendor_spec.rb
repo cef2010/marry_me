@@ -1,9 +1,9 @@
 require 'rails_helper'
-RSpec.describe Vendor, type: :model do
 
-  describe "tests model attributes" do
-    it { should have_many (:couples) }
-    it { should have_many (:contracts) }
+RSpec.describe Vendor, type: :model do
+  describe 'tests model attributes' do
+    it { should have_many :couples }
+    it { should have_many :contracts }
     it { should respond_to :name }
     it { should respond_to :description }
     it { should respond_to :category }
@@ -17,7 +17,7 @@ RSpec.describe Vendor, type: :model do
     it { should respond_to :longitude }
   end
 
-  describe "model methods" do
+  describe 'model methods' do
     let(:vendor) { FactoryGirl.create(:vendor) }
     let(:couple) { FactoryGirl.create(:couple) }
     let(:contracts) { create_list(:contract, 5, vendor_id: vendor.id, couple_id: couple.id) }
@@ -30,7 +30,7 @@ RSpec.describe Vendor, type: :model do
 
     it 'returns full address' do
       vendor
-      expect(vendor.full_address).to eq("Vendor, Vendor, Vendor")
+      expect(vendor.full_address).to eq('Vendor, Vendor, Vendor')
     end
 
     it 'queries a vendor name' do
@@ -39,8 +39,8 @@ RSpec.describe Vendor, type: :model do
     end
 
     it 'queries a vendor category' do
-      bakers = create_list(:vendor, 5, category: 'Baker')
-      expect(Vendor.search("Baker").count).to eq(5)
+      create_list(:vendor, 5, category: 'Baker')
+      expect(Vendor.search('Baker').count).to eq(5)
     end
 
     it 'queries a city' do
@@ -59,11 +59,27 @@ RSpec.describe Vendor, type: :model do
     end
 
     it 'returns the correct states' do
-      expect(Vendor.states).to eq(['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Lousiana', 'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota', 'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire', 'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota', 'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island', 'South Carolina', 'South Dakota', 'Tennesse', 'Texas', 'Utah', 'Vermont', 'Washingoton', 'West Virginia', 'Wisconsin', 'Wyoming'])
+      expect(Vendor.states).to eq(['Alabama', 'Alaska', 'Arizona', 'Arkansas',
+                                   'California', 'Colorado', 'Connecticut',
+                                   'Delaware', 'Florida', 'Georgia', 'Hawaii',
+                                   'Idaho', 'Illinois', 'Indiana', 'Iowa',
+                                   'Kansas', 'Kentucky', 'Lousiana', 'Maine',
+                                   'Maryland', 'Massachusetts', 'Michigan',
+                                   'Minnesota', 'Mississippi', 'Missouri',
+                                   'Montana', 'Nebraska', 'Nevada',
+                                   'New Hampshire', 'New Jersey', 'New Mexico',
+                                   'New York', 'North Carolina', 'North Dakota',
+                                   'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania',
+                                   'Rhode Island', 'South Carolina',
+                                   'South Dakota', 'Tennesse', 'Texas', 'Utah',
+                                   'Vermont', 'Washingoton', 'West Virginia',
+                                   'Wisconsin', 'Wyoming'])
     end
 
     it 'returns the correct types' do
-      expect(Vendor.categories).to eq(['Music', 'Venue', 'Florist', 'Baker', 'Caterer', 'Photographer', 'Videographer', 'Photobooth', 'Invitation', 'Rental', 'Attire', 'Other'])
+      expect(Vendor.categories).to eq(%w(Music Venue Florist Baker Caterer
+                                         Photographer Videographer Photobooth
+                                         Invitation Rental Attire Other))
     end
 
     it 'finds pending contracts' do
@@ -82,62 +98,62 @@ RSpec.describe Vendor, type: :model do
     end
 
     it 'return all attire' do
-      attire = FactoryGirl.create(:vendor, category: 'Attire')
+      FactoryGirl.create(:vendor, category: 'Attire')
       expect(Vendor.attires.count).to eq(1)
     end
 
     it 'return all bakers' do
-      photographer = FactoryGirl.create(:vendor, category: 'Baker')
+      FactoryGirl.create(:vendor, category: 'Baker')
       expect(Vendor.bakers.count).to eq(1)
     end
 
     it 'return all caterers' do
-      photographer = FactoryGirl.create(:vendor, category: 'Caterer')
+      FactoryGirl.create(:vendor, category: 'Caterer')
       expect(Vendor.caterers.count).to eq(1)
     end
 
     it 'return all florists' do
-      photographer = FactoryGirl.create(:vendor, category: 'Florist')
+      FactoryGirl.create(:vendor, category: 'Florist')
       expect(Vendor.florists.count).to eq(1)
     end
 
     it 'return all invitations' do
-      photographer = FactoryGirl.create(:vendor, category: 'Invitation')
+      FactoryGirl.create(:vendor, category: 'Invitation')
       expect(Vendor.invitations.count).to eq(1)
     end
 
     it 'return all mucisians' do
-      photographer = FactoryGirl.create(:vendor, category: 'Music')
+      FactoryGirl.create(:vendor, category: 'Music')
       expect(Vendor.musics.count).to eq(1)
     end
 
     it 'return all type other vendors' do
-      photographer = FactoryGirl.create(:vendor, category: 'Other')
+      FactoryGirl.create(:vendor, category: 'Other')
       expect(Vendor.others.count).to eq(1)
     end
 
     it 'return all photobooths' do
-      photographer = FactoryGirl.create(:vendor, category: 'Photobooth')
+      FactoryGirl.create(:vendor, category: 'Photobooth')
       expect(Vendor.photobooths.count).to eq(1)
     end
 
     it 'return all photographers' do
-      photographer = FactoryGirl.create(:vendor, category: 'Photographer')
+      FactoryGirl.create(:vendor, category: 'Photographer')
       expect(Vendor.photographers.count).to eq(1)
     end
 
     it 'return all rentals' do
-      photographer = FactoryGirl.create(:vendor, category: 'Rental')
+      FactoryGirl.create(:vendor, category: 'Rental')
       expect(Vendor.rentals.count).to eq(1)
     end
 
     it 'return all venues' do
-      photographer = FactoryGirl.create(:vendor, category: 'Venue')
+      FactoryGirl.create(:vendor, category: 'Venue')
       expect(Vendor.venues.count).to eq(1)
     end
 
     it 'return all videographers' do
-      photographer = FactoryGirl.create(:vendor, category: 'Videographer')
+      FactoryGirl.create(:vendor, category: 'Videographer')
       expect(Vendor.videographers.count).to eq(1)
     end
   end

@@ -1,20 +1,15 @@
 class AuthenticationsController < ApplicationController
-
   def create
     # You need to implement the method below in your model (e.g. app/models/user.rb)
     user_type = request.env['HTTP_REFERER'].split('/')[3].singularize.capitalize.constantize
-    @user = user_type.from_omniauth(request.env["omniauth.auth"])
+    @user = user_type.from_omniauth(request.env['omniauth.auth'])
 
     if @user.persisted?
-      sign_in_and_redirect @user, :event => :authentication #this will throw if @user is not activated
+      sign_in_and_redirect @user, event: :authentication # this will throw if @user is not activated
       # set_flash_message(:notice, :success, :kind => "Facebook") if is_navigational_format?
     else
-      session["devise.facebook_data"] = request.env["omniauth.auth"]
+      session['devise.facebook_data'] = request.env['omniauth.auth']
       redirect_to new_user_registration_url
     end
-  end
-
-  def failure
-    binding.pry
   end
 end
