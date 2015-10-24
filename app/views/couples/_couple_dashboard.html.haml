@@ -1,0 +1,37 @@
+.dashboard
+  %h3 Contracts Dashboard
+  .row
+    .col.s6
+      %table.requests
+        %thead
+          %tr
+            %td
+              %b Need Approval
+        %tbody
+          - if @couple_requests.any?
+            - @couple_requests.each do |contract|
+              %tr
+                %td
+                  = link_to contract.vendor.name, vendor_path(contract.vendor)
+                  = link_to '[+]', add_approval_path(contract_id: contract.id)
+                  = link_to '[x]', contract_path(contract), method: :delete
+          - else
+            %tr
+              %td No requests
+    .col.s6
+      %table.pending
+        %thead
+          %tr
+            %td
+              %b Awaiting Response
+        %tbody
+          - if @couple_pending.any?
+            - @couple_pending.each do |contract|
+              %tr
+                %td
+                  = link_to contract.vendor.name, couple_path(contract.vendor)
+                  = link_to '[x]', contract_path(contract), method: :delete
+          - else
+            %tr
+              %td No pending
+  %hr            
