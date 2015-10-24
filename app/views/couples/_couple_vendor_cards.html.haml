@@ -1,0 +1,27 @@
+.couple_vendors
+  %h3 Current Vendors
+  .couple_vendor_cards
+    - @couple_active.each do |contract|
+      = render(partial: 'layouts/vendor_card', locals: {contract: contract, vendor: contract.vendor})
+    - if @couple.families.any?
+      - @couple.families.each do |family|
+        .family_div
+          .vendor_card_content
+            = family.name
+            |
+            = family.relation
+            |
+            = family.role
+            %br
+            = family.description
+            %br
+            = family.contact
+            %br
+            = link_to 'Edit Role', edit_couple_family_path(current_couple, family.id)
+            |
+            = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
+  - if current_couple && current_couple.id == @couple.id
+    .center
+      = link_to 'New Family Role', new_couple_family_path(current_couple), class: 'btn white-text'
+  %br    
+  %hr

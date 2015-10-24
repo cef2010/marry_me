@@ -1,5 +1,5 @@
 .container
-  .couple_show_info
+  .couple_show_info.w90
     .row.valign-wrapper{style: 'height: 300px;'}
       .col.s4.valign
         %img.w90{src: @couple.couple_avatar.url(:medium)}
@@ -18,15 +18,25 @@
             = @couple.try(:reception_location)
           - if current_couple && current_couple.id == @couple.id
             %p#open_couple_form.btn Edit Info
-    %p.couple_desc.w90
-      = @couple.try(:description)
+          - if current_vendor
+            -if current_vendor.contracts.find_by(couple_id: @couple.id)
+              -if current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending
+                .btn Pending
+              -elsif current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending
+                = link_to 'Approve', add_approval_path(contract_id: current_vendor.contracts.find_by(couple_id: @couple.id)), class: 'btn white-text'
+              -elsif (current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending && current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending) == false
+                = link_to 'Remove', contract_path(current_vendor.contracts.find_by(couple_id: @couple.id)), method: :delete, class: 'btn white-text'
+            -else
+              = link_to "Add Couple", add_contract_path(couple_id: @couple.id, vendor_id: current_vendor.id), class: 'btn white-text'
+    %p.couple_desc
+      = @couple.try(:description)  
   .w90
     = render(partial: 'info_form')
-  %hr
+    %hr
+    = render(partial: 'couple_vendor_cards')
   -if current_couple && current_couple.id == @couple.id
-    = render(partial: 'current_couple')
-  -else
-    = render(partial: 'not_current')
+    .w90
+      = render(partial: 'couple_dashboard')
   - if (current_couple && current_couple.id == @couple.id) || (current_vendor && @couple.wedding_vendor(current_vendor))
     .w90
       = render(partial: 'comment_card')
