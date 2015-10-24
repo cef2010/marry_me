@@ -10,9 +10,7 @@
 						%h4{style: 'display: inline-block;'}
 							= @vendor.try(:name)
 						%span{style: 'margin-left: 5px; vertical-align: middle;'}
-							(
 							= @vendor.try(:phone)
-							)
 					%p
 						= @vendor.try(:address)
 						, #{@vendor.try(:city)}, #{@vendor.try(:state)} #{@vendor.try(:zip)}
