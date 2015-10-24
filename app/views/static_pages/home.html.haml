@@ -1,4 +1,4 @@
--# TO DO: fix team, etc div 
+-# TO DO: fix team, etc div
 -# kill indicators
 -# vertical line?
 -# format text properly
@@ -14,7 +14,7 @@
 				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
 			%li
 				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
-				
+
 	= render partial: 'static_nav'
 
 	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
@@ -37,10 +37,13 @@
 		.col.m4.center
 			%p{style: "float: left"}
 				easily search vendors in your area
+			%br
 			%p{style: "float: left"}
 				check out vendor profiles
+			%br
 			%p{style: "float: left"}
-				add your vendors to your profile! 
+				add your vendors to your profile!
+			%br
 
 		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
 			%i.material-icons.small{style: "margin-top: 10px"}
@@ -49,19 +52,20 @@
 				group
 			%i.material-icons.small{style: "margin-top: 15px"}
 				library_books
-	
+
 		.col.m4.center
 			%p{style: "float: left"}
 				fill out a profile to attract clients
+			%br
 			%p{style: "float: left"}
 				connect with other vendors
+			%br
 			%p{style: "float: left"}
-				organize your events 
+				organize your events
+			%br
 
 	.row{style: "margin-top: 20px;"}
 		.col.m6.center
 			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
 		.col.m6.center
 			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
-				
-	
