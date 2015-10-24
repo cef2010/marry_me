@@ -17,42 +17,42 @@
 				
 	= render partial: 'static_nav'
 
-
-
-
-	.row.center
+	.row.center.grey-text{style: "margin-bottom: 0px;"}
 		.col.m6.center
 			%h3
 				for vendors..
 		.col.m6.center
 			%h3
-				for couples.. 
-	.row.center
-		.col.m6.center
-			%p
-				%i.material-icons.small
+				for couples..
+
+	.row.center{style: "margin-bottom: 0px;"}
+		.col.m6.center{style: "margin-left: 20px"}
+			%p{style: "float: left"}
+				%i.material-icons.small.grey-text.grey-text
 					location_city
 				easily search vendors in your area
-			%p
-				%i.material-icons.small
-					person
-				checkout profiles of vendors to find good fits
-			%p
-				%i.material-icons.small
-					favorite
-				add your vendors to your profile! 
-				
+			
+				%p{style: "float: left"}
+					%i.material-icons.small.grey-text.grey-text
+						person
+					check out vendor profiles
+			
+				%p{style: "float: left"}
+					%i.material-icons.small.grey-text.grey-text
+						favorite
+					add your vendors to your profile! 
+	
 		.col.m6.center
-			%p
-				%i.material-icons.small
+			%p{style: "float: left"}
+				%i.material-icons.small.grey-text
 					assignment_ind
 				fill out a profile to attract potential clients
-			%p
-				%i.material-icons.small
+			%p{style: "float: left"}
+				%i.material-icons.small.grey-text
 					group
 				connect with other vendors at each event
-			%p
-				%i.material-icons.small
+			%p{style: "float: left"}
+				%i.material-icons.small.grey-text
 					library_books
 				organize your events 
 	.row
