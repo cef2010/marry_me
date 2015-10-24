@@ -3,8 +3,8 @@
 -# vertical line?
 -# format text properly
 
-.container
-	.slider
+.container.z-depth-3
+	.slider{style: "height: 400px;"}
 		%ul.slides
 			%li
 				%img{src: "http://www.weddingelation.com/wp-content/uploads/2012/06/Outdoor-wedding-reception-decorations-ideas.jpg"}
@@ -14,33 +14,54 @@
 				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
 			%li
 				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
-	.row.center.gold-background
-		.col.l4
-			= link_to 'Team', about_path
-		.col.l4
-			= link_to 'FAQ', faq_path
-		.col.l4
-			= link_to 'Contact Us', contact_path
-
-	.row.center
-		.col.m6.center
-			.icon-block
-				%i.material-icons.medium
-					favorite_border
-				%h3
-					for couples.. 
-				easily search vendors in your area
-				checkout profiles of vendors to find good fits
-				add your vendors to your profile! 
-			= link_to 'Sign up', new_couple_registration_path
-		.col.m6.center
-			%i.material-icons.medium
-				store
-			%h3 
-				for vendors..
-			%p 
-				fill out a profile to attract potential clients
-				connect with other vendors at each event
-				organize your events 
-			= link_to 'Sign up', new_vendor_registration_path
 				
+	= render partial: 'static_nav'
+
+	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
+		.col.m6.center
+			%h3
+				for couples..
+		.col.m6.center
+			%h3
+				for vendors..
+
+	.row.center{style: "margin-bottom: 0px;"}
+		.col.m1.center{style: "margin-left: 40px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				location_city
+			%i.material-icons.small{style: "margin-top: 15px"}
+				person
+			%i.material-icons.small{style: "margin-top: 15px"}
+				favorite
+
+		.col.m4.center
+			%p{style: "float: left"}
+				easily search vendors in your area
+			%p{style: "float: left"}
+				check out vendor profiles
+			%p{style: "float: left"}
+				add your vendors to your profile! 
+
+		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				info
+			%i.material-icons.small{style: "margin-top: 15px"}
+				group
+			%i.material-icons.small{style: "margin-top: 15px"}
+				library_books
+	
+		.col.m4.center
+			%p{style: "float: left"}
+				fill out a profile to attract clients
+			%p{style: "float: left"}
+				connect with other vendors
+			%p{style: "float: left"}
+				organize your events 
+
+	.row{style: "margin-top: 20px;"}
+		.col.m6.center
+			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
+		.col.m6.center
+			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
+				
+	

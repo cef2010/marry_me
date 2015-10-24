@@ -29,7 +29,7 @@
             -else
               = link_to "Add Couple", add_contract_path(couple_id: @couple.id, vendor_id: current_vendor.id), class: 'btn white-text'
     %p.couple_desc
-      = @couple.try(:description)  
+      = @couple.try(:description)
   .w90
     = render(partial: 'info_form')
     %hr
