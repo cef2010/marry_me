@@ -1,5 +1,7 @@
 Rails.application.configure do
 
+  config.assets.compress = true
+
   config.serve_static_files = true
   # Settings specified here will take precedence over those in config/application.rb.
 

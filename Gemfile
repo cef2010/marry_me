@@ -7,6 +7,7 @@ gem 'omniauth-facebook'
 gem 'materialize-sass'
 gem 'paperclip'
 gem 'owlcarousel-rails'
+gem 'sprig'
 
 #AWS
 gem 'aws-sdk'

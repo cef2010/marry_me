@@ -1,8 +1,8 @@
 #comment_form
+  %h3 Comments
   = form_for([@couple, @comment]) do |f|
     -if current_couple && current_couple.id == @couple.id
       = f.hidden_field :author, {value: current_couple.name}
-      = f.label :body
       = f.text_area :body
       = f.submit 'Submit', class: 'btn'
     -elsif current_vendor # check logic
