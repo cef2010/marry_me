@@ -14,4 +14,12 @@ if Rails.env.development?
   rescue
     raise "You need to add config/aws_secrets.yml"
   end
+
+  begin
+    YAML.load(File.read('config/recaptcha_secrets.yml')).each do |key, value|
+      ENV[key] = value
+    end
+  rescue
+    raise "You need to add config/recaptcha_secrets.yml"
+  end
 end

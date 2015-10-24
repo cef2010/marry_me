@@ -1,6 +1,6 @@
 .container.z-depth-3
 	%img{src: "http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/devTeam.jpeg", style: "width: 100%; height: 400px;"}
-		
+
 	= render partial: 'static_nav'
 	.container
 		%h1 Contact Us
@@ -14,4 +14,5 @@
 			= f.label :message
 			= f.text_area :body, style: 'height: 150px'
 
-			= f.submit 'Submit', class: 'btn', style: 'margin-top: 20px'
+    = recaptcha_tags
+    = f.submit 'Contact Us', class: 'btn'
