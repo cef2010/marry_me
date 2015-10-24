@@ -3,7 +3,7 @@
 -# vertical line?
 -# format text properly
 
-.container
+.container.z-depth-3
 	.slider{style: "height: 400px;"}
 		%ul.slides
 			%li
@@ -17,48 +17,51 @@
 				
 	= render partial: 'static_nav'
 
-	.row.center.grey-text{style: "margin-bottom: 0px;"}
-		.col.m6.center
-			%h3
-				for vendors..
+	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
 		.col.m6.center
 			%h3
 				for couples..
+		.col.m6.center
+			%h3
+				for vendors..
 
 	.row.center{style: "margin-bottom: 0px;"}
-		.col.m6.center{style: "margin-left: 20px"}
+		.col.m1.center{style: "margin-left: 40px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				location_city
+			%i.material-icons.small{style: "margin-top: 15px"}
+				person
+			%i.material-icons.small{style: "margin-top: 15px"}
+				favorite
+
+		.col.m4.center
 			%p{style: "float: left"}
-				%i.material-icons.small.grey-text.grey-text
-					location_city
 				easily search vendors in your area
-			
-				%p{style: "float: left"}
-					%i.material-icons.small.grey-text.grey-text
-						person
-					check out vendor profiles
-			
-				%p{style: "float: left"}
-					%i.material-icons.small.grey-text.grey-text
-						favorite
-					add your vendors to your profile! 
+			%p{style: "float: left"}
+				check out vendor profiles
+			%p{style: "float: left"}
+				add your vendors to your profile! 
+
+		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				info
+			%i.material-icons.small{style: "margin-top: 15px"}
+				group
+			%i.material-icons.small{style: "margin-top: 15px"}
+				library_books
 	
-		.col.m6.center
+		.col.m4.center
 			%p{style: "float: left"}
-				%i.material-icons.small.grey-text
-					assignment_ind
-				fill out a profile to attract potential clients
+				fill out a profile to attract clients
 			%p{style: "float: left"}
-				%i.material-icons.small.grey-text
-					group
-				connect with other vendors at each event
+				connect with other vendors
 			%p{style: "float: left"}
-				%i.material-icons.small.grey-text
-					library_books
 				organize your events 
-	.row
+
+	.row{style: "margin-top: 20px;"}
 		.col.m6.center
-			= link_to 'Sign up', new_vendor_registration_path
+			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
 		.col.m6.center
-			= link_to 'Sign up', new_couple_registration_path
+			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
 				
 	
