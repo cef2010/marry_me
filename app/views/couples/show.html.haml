@@ -21,11 +21,12 @@
     %p.couple_desc.w90
       = @couple.try(:description)
   .w90
-    = render(partial: 'info_form')    
+    = render(partial: 'info_form')
   %hr
   -if current_couple && current_couple.id == @couple.id
     = render(partial: 'current_couple')
   -else
     = render(partial: 'not_current')
   - if (current_couple && current_couple.id == @couple.id) || (current_vendor && @couple.wedding_vendor(current_vendor))
-    = render(partial: 'comment_card')
+    .w90
+      = render(partial: 'comment_card')
