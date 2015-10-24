@@ -57,26 +57,3 @@
 					- else
 						%tr
 							%td No pending
--# - if @vendor.couples.any?
--# 	%h3
--# 		These Need Your Approval
--# 	- @vendor_requests.each do |contract|
--# 		= contract.couple.email
--# 		|
--# 		= link_to 'Approve', add_approval_path(contract_id: contract.id)
--# 		|
--# 		= link_to 'Remove', contract_path(contract), method: :delete
--# 	%h3
--# 		These Are Pending
--# 	- @vendor_pending.each do |contract|
--# 		= contract.couple.email
--# 		|
--# 		= link_to 'Remove', contract_path(contract), method: :delete
--# 	%h3
--# 		These Are Your Approved Contracts
--# 	- @vendor_active.each do |contract|
--# 		= contract.couple.email
--# 		|
--# 		= link_to 'Remove', contract_path(contract), method: :delete
--# - else
--# 	= "No couples yet!"
