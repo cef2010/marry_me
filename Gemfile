@@ -7,6 +7,7 @@ gem 'omniauth-facebook'
 gem 'materialize-sass'
 gem 'paperclip'
 gem 'sprig'
+gem "recaptcha", :require => "recaptcha/rails"
 #AWS
 gem 'aws-sdk'
 gem 'fog'
