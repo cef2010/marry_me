@@ -5,8 +5,6 @@
       %span MarryMe
       %span{style: 'color: #B1AB6F;'} }
     %ul
-      %li
-        = link_to 'Home', root_path, class: "nav_hover"
       - if current_couple
         %li
           %a{href: "/couples/#{current_couple.id}"}
@@ -30,13 +28,11 @@
           = link_to 'Vendor Sign In', new_vendor_session_path
       %li
         =link_to 'Vendors', vendors_path
-    
+
     %span.left{style: "margin-right: -25px; margin-left: 15px;"}
       %i.material-icons{style: "color: #B1AB6F;"}
         search
     %span.custom_nav.left{style: "padding-left: 0px"}
       = form_tag(vendors_path, :method => 'get', class: 'custom_nav') do
         .input-field.center
-          = text_field_tag :search, params[:search], placeholder: 'Search Vendors' 
-    
-
+          = text_field_tag :search, params[:search], placeholder: 'Search Vendors'
