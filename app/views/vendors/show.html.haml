@@ -22,24 +22,29 @@
 						= @vendor.try(:website)
 					-if current_vendor && current_vendor.id == @vendor.id
 						%a#open_vendor_form.right{style: 'cursor: pointer;'} Edit Info...
+					-if current_couple
+						-if current_couple.contracts.find_by(vendor_id: @vendor.id)
+							-if current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending
+								.btn Pending
+							-elsif current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending
+								= link_to 'Approve', add_approval_path(contract_id: current_couple.contracts.find_by(vendor_id: @vendor.id)), class: 'btn white-text'
+							-elsif (current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending && current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending) == false
+								= link_to 'Remove', contract_path(current_couple.contracts.find_by(vendor_id: @vendor.id)), method: :delete, class: 'btn white-text'
+						-else
+							= link_to "Add Vendor", add_contract_path(couple_id: current_couple.id, vendor_id: @vendor.id), class: 'btn white-text'
 				.w90
 					= render(partial: 'info_form')
 		.content-bottom
 			-# MAP
 			- if @vendor.latitude
 				%div{style: 'width: 100%; height: 300px;'}
-					#map{style: 'width: 100%; height: 300px; border-radius: 2%;'}
+					#map{style: 'width: 100%; height: 300px;'}
 			- else
 				%p Add An Address Ya Goof!
 
-
-	%hr
 	-if current_vendor && current_vendor.id == @vendor.id
+		%hr
 		= render(partial: 'vendor_dashboard')
-	-else
-		=render(partial: 'not_current')
-
-
 
 -# MAPS SCRIPT
 %script{type: 'text/javascript'}
