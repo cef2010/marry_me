@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require owl.carousel
+ *= require owl.theme
  *= require_tree .
  *= require_self
  */
@@ -35,6 +37,7 @@ $secondary-color: #B1AB6F !default;
 
 .custom_nav {
 	width: 150px;
+  text-align: left;
 }
 
 html, body {
@@ -42,13 +45,28 @@ html, body {
   background-color: #ede5db;
  }
 
+.couple-reg-sesh-background {
+  background: url(https://www.theknot.com/assets/topic_pages/wedding-vows-ceremony-77b611d2f39d24f67893109fa671ce2b.jpg) no-repeat;
+  background-size: cover;
+
+}
+
+
+
+.vendor-reg-sesh-background {
+  background: url(http://cdn.phillymag.com/wp-content/uploads/2014/10/Wedding-Vendor-Header.jpg) no-repeat;
+  background-size: cover;
+}
+
 .container {
   min-height: 100%;
   background-color: white;
+  padding-bottom: 1%;
 }
 
 .gold-background {
-	background-color: #B1AB6F;
+	/*background-color: #B1AB6F;*/
+  background: rgb(237, 229, 219);
 }
 
 .jumbotron h1 {
@@ -62,10 +80,41 @@ html, body {
 	margin-right: 5%;
 }
 
+
+
+footer .page-footer, footer .container {
+  background-color: #2B2B2B;
+}
+
+footer {
+    margin-top: 2%;
+}
+
+footer .row {
+
+  margin-bottom: 0px;
+}
+
+nav {
+  margin-bottom: 2%;
+}
+
+.materialboxed {
+  width: 100%;
+  margin: 0%;
+}
+
 .bios{
 	height: 200px;
 	width: 200px;
 }
+
+// .form_button {
+//   padding: 0;
+//   border-radius: 50%;
+// }
+
+
 
 // main .container {
 //   overflow: auto;

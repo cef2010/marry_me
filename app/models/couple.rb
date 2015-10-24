@@ -29,6 +29,11 @@ class Couple < ActiveRecord::Base
     self.vendors.find_by(id: vendor.id)
   end
 
+  def contract_accepted(vendor)
+    contract = self.contracts.find_by(vendor_id: vendor.id)
+    true if contract.couple_pending == false && contract.vendor_pending == false
+  end
+
   # Contract methods
   def pending_contracts
     self.contracts.where(couple_pending: false, vendor_pending: true)

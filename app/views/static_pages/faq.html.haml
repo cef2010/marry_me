@@ -1,25 +1,88 @@
-.container
-	%h4 Why {MarryMe}?
-	%p
-		No wedding planner? No problem! {MarryMe} is a one-stop shop for couples seeking vendors for their wedding. Fill out your profile and easily search and add that perfect caterer or decor rental.
+.container.z-depth-3
+	%img{src: "http://www.trusted-host.com/wp-content/uploads/2014/08/small-wedding-reception-ideas-philadelphia.jpg", style: "width: 100%; height: 400px;"}		
+	= render partial: 'static_nav'
 
-	For vendors, {MarryMe} is a central location for planning and coordinating with other vendors. 
-
-	%h4 Who can use {MarryMe}?
-	%p
-	{MarryMe} is specially designed for newly engaged couples to find the right vendors to make the best day of your life, the best day of your life!
-
-	Vendors, {MarryMe} is for you too! Coordinate with other vendors to save time and confusion. Whether you're a caterer, dress-maker, or bunny-wrangler, we have the tools and features to also help your business grow.
-
-	%h4 How do I find my ideal vendors?
-	%p
-	{MarryMe} has lots of search options for you to find exactly what you're looking for. Search by name, location, and category to find that perfect photobooth or dove-trainer.
-
-	%h4 How do I attract potential clients?
-	%p The more complete your profile is, the better! Showcase your logo, info, and category to draw more couples to your page.
-
-	%h4 What if my mom is making the cake?
-	%p Simply add family vendors using the Family Vendor form! This will make it easier for your other vendors to coordinate with your loved ones so your big day goes smoothly.
-
-	%h4	I have other questions/comments/concerns!
-	%p Please don't hesitate to Contact Us!
+	.w90
+		%h3{style: "color: #B1AB6F;"}
+			for couples
+		%ul.collapsible.popout{"data-collapsible" => "accordion"}
+			%li
+				.collapsible-header
+					%i.material-icons{style: "color: #B1AB6F;"}
+						help
+					Why {MarryMe}?
+				.collapsible-body
+					%p
+						No wedding planner? No problem! {MarryMe} is a one-stop shop for couples seeking vendors for their wedding. Fill out your profile and easily search and add that perfect caterer or decor rental.
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						Who can use {MarryMe}?
+					.collapsible-body
+						%p
+							{MarryMe} is specially designed for newly engaged couples to find the right vendors to make the best day of your life, the best day of your life!
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						How do I find my ideal vendors?
+					.collapsible-body
+						%p
+							{MarryMe} has lots of search options for you to find exactly what you're looking for. Search by name, location, and category to find that perfect photobooth or dove-trainer.
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						What if my mom is making the cake?
+					.collapsible-body
+						%p
+							Simply add family vendors using the Family Vendor form! This will make it easier for your other vendors to coordinate with your loved ones so your big day goes smoothly.	
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						What if I have other questions/comments/concerns?
+					.collapsible-body
+						%p
+							Please don't hesitate to 
+							= link_to 'contact us', contact_path
+							!
+							
+		%h3{style: "color: #B1AB6F; margin-top: 60px;"}
+			for vendors
+		%ul.collapsible.popout{"data-collapsible" => "accordion"}
+			%li
+				.collapsible-header
+					%i.material-icons{style: "color: #B1AB6F;"}
+						help
+					Why {MarryMe}?
+				.collapsible-body
+					%p
+						For vendors, {MarryMe} is a central location for planning and coordinating with other vendors. 
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						Who can use {MarryMe}?
+					.collapsible-body
+						%p
+							Vendors, {MarryMe} is for you too! Coordinate with other vendors to save time and confusion. Whether you're a caterer, dress-maker, or bunny-wrangler, we have the tools and features to also help your business grow.
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						How do I attract potential clients?
+					.collapsible-body
+						%p
+							The more complete your profile is, the better! Showcase your logo, info, and category to draw more couples to your page.
+				%li
+					.collapsible-header
+						%i.material-icons{style: "color: #B1AB6F;"}
+							help
+						What if I have other questions/comments/concerns?
+					.collapsible-body
+						%p
+							Please don't hesitate to 
+							= link_to 'contact us', contact_path
+							!

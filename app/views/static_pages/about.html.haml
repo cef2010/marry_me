@@ -1,33 +1,46 @@
-.container
-	%h1 About Team {MarryMe}
+.container.z-depth-3
+	%img{src: "http://atlassian.wpengine.netdna-cdn.com/wp-content/uploads/devTeam.jpeg", style: "width: 100%; height: 400px;"}
+		= render partial: 'static_nav'
 
-	.row
-		.col.m3
-			%img.bios.circle{src: ""}
-		.col.m8.offset-1
-			%h5 Trevor Slater 
-			%p 
-				
+	.owl-carousel
+		.container
+			.center
+				%img.bios.circle{src: ""}
+				%h5 Trevor Slater 
+			%p.left
+				Trevor is a former nurse who enjoys golfing, tinkering with computers, and learning how things work. He may or may not have a man-crush on Elon Musk. 
+			%p.center
+				trevor.s.slater@gmail.com 
+			%p.center
+				%a{href: "https://github.com/tslater3", target: "_blank"} Github 
+				|
+				%a{href: "https://www.linkedin.com/in/trevorslater", target: "_blank"} LinkedIn
+					
 
-	.row
-		.col.m3
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Jen Baguley 
-			%p 
-				
+			%p.center
+				jen's email
+			%p.center
+				%a{href: "", target: "_blank"} Github 
+				|
+				%a{href: "https://www.linkedin.com/pub/jennifer-baguley/17/667/942", target: "_blank"} LinkedIn
+					
 
-	.row
-		.col.m3
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Christian Fuller 
-			%p 
-				
-	.row
-		.col.m3
+			%p.center
+				%a{href: "", target: "_blank"} Github
+				|
+				%a{href: "https://www.linkedin.com/profile/view?id=ADEAABrTk1QBiBL--bhddIBSknsVP6yv0Ms8ljE&authType=NAME_SEARCH&authToken=5ocN&locale=en_US&srchid=3351221431445700003553&srchindex=1&srchtotal=39&trk=vsrp_people_res_name&trkInfo=VSRPsearchId%3A3351221431445700003553%2CVSRPtargetId%3A450073428%2CVSRPcmpt%3Aprimary%2CVSRPnm%3Atrue%2CauthType%3ANAME_SEARCH", target: "_blank"} LinkedIn
+					
+		.center
 			%img.bios.circle{src: ""}
-		.col.m8.offset-1
 			%h5 Arleigh Atkinson 
-			%p 
+			%p.center
+				%a{href: "", target: "_blank"} Github
+				|
+				%a{href: "https://www.linkedin.com/pub/arleigh-atkinson/94/294/513", target: "_blank"} LinkedIn
 				

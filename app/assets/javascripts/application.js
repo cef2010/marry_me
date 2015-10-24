@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize-sprockets
+//= require owl.carousel
 //= require underscore
 //= require gmaps/google
 //= require_tree .
@@ -20,4 +21,16 @@
 $(document).ready(function(){
   $('.slider').slider({full_width: true});
   $('.parallax').parallax();
+  $('.materialboxed').materialbox();
+  $(".owl-carousel").owlCarousel({
+    singleItem: true,
+  });
+  $('.collapsible').collapsible();
+
+  // nav bar
+ //  $(".nav_hover").hover(function(){
+ //    $(this).css("background-color", "#B1AB6F;");
+ //    }
+	// });
+
 });
