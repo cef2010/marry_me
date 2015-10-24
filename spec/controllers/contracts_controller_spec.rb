@@ -5,19 +5,13 @@ RSpec.describe ContractsController, type: :controller do
   let(:couple) { FactoryGirl.create(:couple) }
   let(:contract) { FactoryGirl.create(:contract, vendor_id: vendor.id, couple_id: couple.id) }
 
-    before(:each) do
-      sign_in couple
-    end
-  # describe "GET #index" do
-  #   it "returns http success" do
-  #     get :index
-  #     expect(response).to have_http_status(:success)
-  #   end
-  # end
+  before(:each) do
+    sign_in couple
+  end
 
   # ask Dave--"current_couple" causing problems
-  describe "GET #index" do
-    it "returns http success" do
+  describe 'GET #index' do
+    it 'returns http success' do
       get :index
       expect(response).to have_http_status(:success)
     end
@@ -63,5 +57,4 @@ RSpec.describe ContractsController, type: :controller do
 #       expect(Contract.count).to eq(0)
 #     end
 #   end
-#
 end
