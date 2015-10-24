@@ -3,7 +3,7 @@
 -# vertical line?
 -# format text properly
 
-.container
+.container.z-depth-3
 	.slider{style: "height: 400px;"}
 		%ul.slides
 			%li
@@ -17,48 +17,51 @@
 				
 	= render partial: 'static_nav'
 
-
-
-
-	.row.center
+	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
+		.col.m6.center
+			%h3
+				for couples..
 		.col.m6.center
 			%h3
 				for vendors..
-		.col.m6.center
-			%h3
-				for couples.. 
-	.row.center
-		.col.m6.center
-			%p
-				%i.material-icons.small
-					location_city
+
+	.row.center{style: "margin-bottom: 0px;"}
+		.col.m1.center{style: "margin-left: 40px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				location_city
+			%i.material-icons.small{style: "margin-top: 15px"}
+				person
+			%i.material-icons.small{style: "margin-top: 15px"}
+				favorite
+
+		.col.m4.center
+			%p{style: "float: left"}
 				easily search vendors in your area
-			%p
-				%i.material-icons.small
-					person
-				checkout profiles of vendors to find good fits
-			%p
-				%i.material-icons.small
-					favorite
+			%p{style: "float: left"}
+				check out vendor profiles
+			%p{style: "float: left"}
 				add your vendors to your profile! 
-				
-		.col.m6.center
-			%p
-				%i.material-icons.small
-					assignment_ind
-				fill out a profile to attract potential clients
-			%p
-				%i.material-icons.small
-					group
-				connect with other vendors at each event
-			%p
-				%i.material-icons.small
-					library_books
+
+		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
+			%i.material-icons.small{style: "margin-top: 10px"}
+				info
+			%i.material-icons.small{style: "margin-top: 15px"}
+				group
+			%i.material-icons.small{style: "margin-top: 15px"}
+				library_books
+	
+		.col.m4.center
+			%p{style: "float: left"}
+				fill out a profile to attract clients
+			%p{style: "float: left"}
+				connect with other vendors
+			%p{style: "float: left"}
 				organize your events 
-	.row
+
+	.row{style: "margin-top: 20px;"}
 		.col.m6.center
-			= link_to 'Sign up', new_vendor_registration_path
+			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
 		.col.m6.center
-			= link_to 'Sign up', new_couple_registration_path
+			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
 				
 	

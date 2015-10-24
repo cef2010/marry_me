@@ -26,4 +26,11 @@ $(document).ready(function(){
     singleItem: true,
   });
   $('.collapsible').collapsible();
+
+  // nav bar
+ //  $(".nav_hover").hover(function(){
+ //    $(this).css("background-color", "#B1AB6F;");
+ //    }
+	// });
+
 });
