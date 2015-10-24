@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Family, type: :model do
-  describe "model attributes" do
+  describe 'model attributes' do
     it { should respond_to :name }
     it { should respond_to :description }
     it { should respond_to :contact }
