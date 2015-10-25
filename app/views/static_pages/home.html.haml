@@ -4,68 +4,123 @@
 -# format text properly
 
 .container.z-depth-3
-	.slider{style: "height: 400px;"}
-		%ul.slides
-			%li
-				%img{src: "http://www.weddingelation.com/wp-content/uploads/2012/06/Outdoor-wedding-reception-decorations-ideas.jpg"}
-			%li
-				%img{src: "http://www.weddingdecor.com/site/ywd_dd_wedding_decor/assets/images/5sc.gif"}
-			%li
-				%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
-			%li
-				%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
+	.row
+		.col.s12
+			.slider{style: "height: 400px;"}
+				%ul.slides
+					%li
+						%img{src: "http://www.weddingelation.com/wp-content/uploads/2012/06/Outdoor-wedding-reception-decorations-ideas.jpg"}
+					%li
+						%img{src: "http://www.weddingdecor.com/site/ywd_dd_wedding_decor/assets/images/5sc.gif"}
+					%li
+						%img{src: "http://sunandseabeachweddings.com/wp-content/uploads/2012/07/20140227-IMG_3375.jpg"}
+					%li
+						%img{src: "http://nationtrendz.com/wp-content/uploads/2014/04/2014-collection-Rustic-Wedding-Lights.jpg"}
 
 	= render partial: 'static_nav'
+	.div
+		.row
+			.col.s12
+				.row{style: "color: #B1AB6F; margin-bottom: 1.5%;"}
+					.col.m5.offset-m1.hide-on-small-only{style: "margin-left: 7%; margin-right: 9%; "}
+						%h3 for couples..
+					.col.m5.hide-on-small-only
+						%h3 for vendors..
 
-	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
-		.col.m6.center
-			%h3
-				for couples..
-		.col.m6.center
-			%h3
-				for vendors..
+				.row.hide-on-med-and-up
+					.col.s12
+						.card
+							.card-content.black-text
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											location_city
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										easily search vendors in your area
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											person
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										check out vendor profiles
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											favorite
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										add your vendors to your profile!
+								.row
+									.col.s12.center
+										%h6
+											= link_to 'Couple sign up', new_vendor_registration_path, class: 'btn'
 
-	.row.center{style: "margin-bottom: 0px;"}
-		.col.m1.center{style: "margin-left: 40px; color: #B1AB6F;"}
-			%i.material-icons.small{style: "margin-top: 10px"}
-				location_city
-			%i.material-icons.small{style: "margin-top: 15px"}
-				person
-			%i.material-icons.small{style: "margin-top: 15px"}
-				favorite
+				.row.hide-on-med-and-up
+					.col.s12
+						.card
+							.card-content.black-text
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											info
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										fill out a profile to attract clients
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											group
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										connect with other vendors
+								.row
+									.col.s3{style: "color: #B1AB6F;"}
+										%i.material-icons.small
+											library_books
+									.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+										organize your events
+								.row
+									.col.s12.center
+										%h6
+											= link_to 'Vendor sign up', new_couple_registration_path, class: 'btn'
 
-		.col.m4.center
-			%p{style: "float: left"}
-				easily search vendors in your area
-			%br
-			%p{style: "float: left"}
-				check out vendor profiles
-			%br
-			%p{style: "float: left"}
-				add your vendors to your profile!
-			%br
+				.row
+					.div.hide-on-small-only{style: "margin-left: 5%; margin-right: 4%;"}
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								location_city
+						.col.m4{style: "margin-left: -2%; margin-right: 17%;"}
+							easily search vendors in your area
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								info
+						.col.m4{style: "margin-left: -2%;"}
+							fill out a profile to attract clients
+				.row
+					.div.hide-on-small-only{style: "margin-left: 5%; margin-right: 4%;"}
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								person
+						.col.m4{style: "margin-left: -2%; margin-right: 17%;"}
+							check out vendor profiles
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								group
+						.col.m4{style: "margin-left: -2%;"}
+							connect with other vendors
+				.row
+					.div.hide-on-small-only{style: "margin-left: 5%; margin-right: 4%;"}
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								favorite
+						.col.m4{style: "margin-left: -2%; margin-right: 17%;"}
+							add your vendors to your profile!
+						.col.m1{style: "color: #B1AB6F;"}
+							%i.material-icons.small{style: "margin-top: -10%"}
+								library_books
+						.col.m4{style: "margin-left: -2%;"}
+							organize your events
 
-		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
-			%i.material-icons.small{style: "margin-top: 10px"}
-				info
-			%i.material-icons.small{style: "margin-top: 15px"}
-				group
-			%i.material-icons.small{style: "margin-top: 15px"}
-				library_books
-
-		.col.m4.center
-			%p{style: "float: left"}
-				fill out a profile to attract clients
-			%br
-			%p{style: "float: left"}
-				connect with other vendors
-			%br
-			%p{style: "float: left"}
-				organize your events
-			%br
 
 	.row{style: "margin-top: 20px;"}
-		.col.m6.center
+		.col.m4.hide-on-small-only{style: "margin-left: 11%; margin-right: 18%"}
 			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
-		.col.m6.center
+		.col.m4.hide-on-small-only
 			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
