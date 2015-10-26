@@ -6,7 +6,7 @@ class Vendor < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # paperclip
-  has_attached_file :vendor_avatar, style: { medium: '300x300>', thumb: '100x100#' },
+  has_attached_file :vendor_avatar, styles: { medium: '300x300>', thumb: '100x100#' },
                                     default_url: "https://s3-us-west-2.amazonaws.com/marry-me-production/public/avatars/default/:style/marry-me-logo.jpg",
                                     url: ':s3_domain_url',
                                     path: 'public/avatars/vendors/:id/:style_:basename.:extension',
@@ -33,21 +33,13 @@ class Vendor < ActiveRecord::Base
   end
 
   def self.search(query)
-    names = where('name like ?', "%#{query}%")
-    categories = where('category like ?', "%#{query}%")
-    city = where('city like ?', "%#{query}%")
-    state = where('state like ?', "%#{query}%")
-    zip = where('zip like ?', "%#{query}%")
-    if names.any?
-      names
-    elsif categories.any?
-      categories
-    elsif city.any?
-      city
-    elsif state.any?
-      state
-    elsif zip.any?
-      zip
+    results = where('name like ?
+                     OR city like ?
+                     OR state like ?
+                     OR zip like ?
+                     OR category like ?', "%#{query}%", "%#{query}%", "%#{query}%", "%#{query}%", "%#{query}%")
+    if results.any?
+      results
     end
   end
 
@@ -79,6 +71,7 @@ class Vendor < ActiveRecord::Base
 
   # all states
   def self.states
+    # could clean this up by using the carmen rails gem
     ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
      'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho',
      'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Lousiana', 'Maine',
