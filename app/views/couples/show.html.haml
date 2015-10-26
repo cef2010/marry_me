@@ -2,7 +2,7 @@
   .couple_show_info.w90
     .row.valign-wrapper{style: 'height: 300px;'}
       .col.s4.valign
-        %img.w90{src: @couple.couple_avatar.url(:medium)}
+        %img.w90{src: @couple.couple_avatar.url(:medium), style: 'max-height: 300px;'}
       .col.s8
         .w90
           %h4
@@ -28,7 +28,7 @@
                 = link_to 'Approve', add_approval_path(contract_id: current_vendor.contracts.find_by(couple_id: @couple.id)), class: 'btn white-text'
               -elsif (current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending && current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending) == false
                 = link_to 'Remove', contract_path(current_vendor.contracts.find_by(couple_id: @couple.id)), method: :delete, class: 'btn white-text'
-                
+
               
     
   .w90

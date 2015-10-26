@@ -5,7 +5,7 @@ class Couple < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # paperclip
-  has_attached_file :couple_avatar, styles: { medium: '300x300>', thumb: '100x100#' },
+  has_attached_file :couple_avatar, styles: { medium: '300x300#', thumb: '100x100#' },
                                     default_url: "https://s3-us-west-2.amazonaws.com/marry-me-production/public/avatars/default/:style/marry-me-logo.jpg",
                                     url: ':s3_domain_url',
                                     path: 'public/avatars/couples/:id/:style_:basename.:extension',
