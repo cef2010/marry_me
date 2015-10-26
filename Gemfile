@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 ruby '2.2.2'
+gem 'newrelic_rpm' #NEWRELIC APM MONITORING
 gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'omniauth-facebook'

@@ -1,18 +1,22 @@
-#family_form
+#family_form.w90
   = form_for [@couple, @family] do |f|
-    = f.label :name, class: 'active'
-    = f.text_field :name, placeholder: 'Family member name'
+    .input-field
+      = f.label :name, class: 'active'
+      = f.text_field :name
 
-    = f.label :relation, class: 'active'
-    = f.text_area :relation, placeholder: 'Relation to couple'
+    .input-field
+      = f.label :relation, class: 'active'
+      = f.text_area :relation, class: 'materialize-textarea'
 
-    = f.label :role, class: 'active'
-    = f.text_area :role, placeholder: 'Role in Wedding'
+    .input-field
+      = f.label :role, class: 'active'
+      = f.text_area :role, class: 'materialize-textarea'
 
-    = f.label :description, class: 'active'
-    = f.text_area :description, placeholder: 'Description of part in wedding'
-
-    = f.label :contact, class: 'active'
-    = f.text_area :contact, placeholder: 'How can other vendors reach you?'
+    .input-field
+      = f.label :description, class: 'active'
+      = f.text_area :description, class: 'materialize-textarea'
+    .input-field
+      = f.label :contact, class: 'active'
+      = f.text_area :contact, class: 'materialize-textarea'
 
     = f.submit 'Submit', class: 'btn'

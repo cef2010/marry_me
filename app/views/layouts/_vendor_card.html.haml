@@ -10,6 +10,7 @@
       %span #{vendor.city}, #{vendor.state}
       %br
       = link_to 'See more', vendor_path(vendor)
-      - if current_couple && contract.couple.id == current_couple.id
-        |
-        = link_to 'Remove', contract_path(contract), method: :delete
+      - if contract
+        - if current_couple && contract.couple.id == current_couple.id
+          |
+          = link_to 'Remove', contract_path(contract), method: :delete

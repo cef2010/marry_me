@@ -1,6 +1,6 @@
 .couple_vendors
   %h3 Current Vendors
-  .couple_vendor_cards
+  .couple_vendor_cards.z-depth-1
     - @couple_active.each do |contract|
       = render(partial: 'layouts/vendor_card', locals: {contract: contract, vendor: contract.vendor})
     - if @couple.families.any?
