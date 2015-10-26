@@ -10,19 +10,21 @@
       -# VENDOR CARDS RENDERING
       #vendors.col.s12
         #vendors_card_loop
-          - vendors.each do |vendor|
-            .vendor_card
+          - @vendors.each do |vendor|
+            .vendor_card_content
               .row
                 .col.m2
                   %img{src: vendor.vendor_avatar.url(:thumb)}
                 .col.m10
-                  = vendor.name
+                  #{vendor.name} - #{vendor.category}
                   %br
                   %a{href: "http://#{vendor.website}", target: '_blank'} #{vendor.website}
                   %br
                   %span #{vendor.city}, #{vendor.state}
                   %br
                   = link_to 'See more', vendor_path(vendor)
+        
+                
       -# VENDORS MAP RENDERING
       #map_vendors.col.s12.hide
         #map{style: 'width: 100%; height: 400px;'}

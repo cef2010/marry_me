@@ -1,4 +1,4 @@
-.container
+.container.z-depth-3
 	.content
 		.row.valign-wrapper{style: 'padding-top: 20px;'}
 			.col.s4.valign
@@ -9,42 +9,36 @@
 					.vendor_info_head
 						%h4{style: 'display: inline-block;'}
 							= @vendor.try(:name)
-						%span{style: 'margin-left: 5px; vertical-align: middle;'}
-							(
-							= @vendor.try(:phone)
-							)
-					%p
-						= @vendor.try(:address)
-						, #{@vendor.try(:city)}, #{@vendor.try(:state)} #{@vendor.try(:zip)}
-					%p
-						= @vendor.try(:description)
-					%a{href: "http://#{@vendor.try(:website)}", target: "_blank"}
-						= @vendor.try(:website)
-					-if current_vendor && current_vendor.id == @vendor.id
-						%a#open_vendor_form.right{style: 'cursor: pointer;'} Edit Info...
-					-if current_couple
-						-if current_couple.contracts.find_by(vendor_id: @vendor.id)
-							-if current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending
-								.btn Pending
-							-elsif current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending
-								= link_to 'Approve', add_approval_path(contract_id: current_couple.contracts.find_by(vendor_id: @vendor.id)), class: 'btn white-text'
-							-elsif (current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending && current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending) == false
-								= link_to 'Remove', contract_path(current_couple.contracts.find_by(vendor_id: @vendor.id)), method: :delete, class: 'btn white-text'
-						-else
-							= link_to "Add Vendor", add_contract_path(couple_id: current_couple.id, vendor_id: @vendor.id), class: 'btn white-text'
+						%p{style: 'vertical-align: middle;'}
+							%a{href: "http://#{@vendor.try(:website)}", target: "_blank"}
+								= @vendor.try(:website)
+							%p
+								= @vendor.try(:phone) 
+							%p
+								= @vendor.try(:address)
+								= @vendor.try(:city)
+								, 
+								= @vendor.try(:state)  
+								= @vendor.try(:zip)
+							%p
+								= @vendor.try(:description) 
+					= render partial: 'button'
 				.w90
 					= render(partial: 'info_form')
 		.content-bottom
-			-# MAP
 			- if @vendor.latitude
 				%div{style: 'width: 100%; height: 300px;'}
 					#map{style: 'width: 100%; height: 300px;'}
-			- else
-				%p Add An Address Ya Goof!
+			
 
 	-if current_vendor && current_vendor.id == @vendor.id
 		%hr
 		= render(partial: 'vendor_dashboard')
+
+
+
+
+
 
 -# MAPS SCRIPT
 %script{type: 'text/javascript'}

@@ -18,3 +18,13 @@
 .slider {
 	height: 400px;
 }
+
+.header-content {
+	width: 85% !important;
+}
+
+@media screen and (min-width: 992px) {
+	.header-content {
+		width: 70% !important;
+	}
+}

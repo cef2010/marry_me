@@ -1,0 +1,14 @@
+-if current_couple
+	%br
+	-if current_couple.contracts.find_by(vendor_id: @vendor.id)
+		-if current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending
+			.btn Pending
+		-elsif current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending
+			= link_to 'Approve', add_approval_path(contract_id: current_couple.contracts.find_by(vendor_id: @vendor.id)), class: 'btn white-text'
+		-elsif (current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending && current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending) == false
+			= link_to 'Remove', contract_path(current_couple.contracts.find_by(vendor_id: @vendor.id)), method: :delete, class: 'btn white-text'
+-elsif current_vendor && current_vendor.id == @vendor.id
+	%a#open_vendor_form{ class: 'btn', style: 'cursor: pointer;'} Edit Info...
+-elsif !current_couple && !current_vendor
+	%br
+	= link_to "Sign in to add vendor", new_couple_session_path, class: 'btn white-text'
