@@ -7,7 +7,7 @@ class Vendor < ActiveRecord::Base
 
   # paperclip
   has_attached_file :vendor_avatar, style: { medium: '300x300>', thumb: '100x100#' },
-                                    default_url: '/assets/:style/marry-me-logo.jpg',
+                                    default_url: "https://s3-us-west-2.amazonaws.com/marry-me-production/public/avatars/default/:style/marry-me-logo.jpg",
                                     url: ':s3_domain_url',
                                     path: 'public/avatars/vendors/:id/:style_:basename.:extension',
                                     storage: :fog,
