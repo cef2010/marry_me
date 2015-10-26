@@ -26,7 +26,7 @@ $(document).ready(function(){
     singleItem: true,
   });
   $('.collapsible').collapsible();
-
+  $(".button-collapse").sideNav();
   // nav bar
  //  $(".nav_hover").hover(function(){
  //    $(this).css("background-color", "#B1AB6F;");
