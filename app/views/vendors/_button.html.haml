@@ -7,6 +7,8 @@
 			= link_to 'Approve', add_approval_path(contract_id: current_couple.contracts.find_by(vendor_id: @vendor.id)), class: 'btn white-text'
 		-elsif (current_couple.contracts.find_by(vendor_id: @vendor.id).couple_pending && current_couple.contracts.find_by(vendor_id: @vendor.id).vendor_pending) == false
 			= link_to 'Remove', contract_path(current_couple.contracts.find_by(vendor_id: @vendor.id)), method: :delete, class: 'btn white-text'
+	- else 
+		= link_to "Add Vendor", add_contract_path(couple_id: current_couple.id, vendor_id: @vendor.id), class: 'btn white-text'
 -elsif current_vendor && current_vendor.id == @vendor.id
 	%a#open_vendor_form{ class: 'btn', style: 'cursor: pointer;'} Edit Info...
 -elsif !current_couple && !current_vendor

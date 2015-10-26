@@ -1,6 +1,6 @@
-#vendor_form.hide
+#vendor_form.hide{style: 'padding-top: 20px;'}
 	.form_content
-		= form_for @vendor do |f|
+		= form_for @vendor do |f| 
 			.form_fields
 				= f.label :name, class: 'active'
 				= f.text_field :name, placeholder: 'Company Name'
@@ -33,7 +33,8 @@
 				= f.label :vendor_avatar
 				= f.file_field :vendor_avatar
 
-			= f.button :submit, class: 'btn-floating' do
-				<i class="material-icons">check</i>
-			%span#close_vendor_form.btn-floating.right{style: 'cursor: pointer;'}
-				<i class="material-icons">close</i>
+			.form-buttons.center
+				= f.button :submit, class: 'btn-floating' do
+					<i class="material-icons">check</i>
+				%span#close_vendor_form.btn-floating{style: 'cursor: pointer;'}
+					<i class="material-icons">close</i>

@@ -1,9 +1,8 @@
 .container.z-depth-3
-	.content
-		.row.valign-wrapper{style: 'padding-top: 20px;'}
-			.col.s4.valign
-				%div{style: 'width: 100%;'}
-					%img.w90{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%;'}
+	.vendor_show_info.w90
+		.row.valign-wrapper{style: 'height: 300px'}
+			.col.s4.valign	
+				%img#vendor_avatar.w90{src: @vendor.vendor_avatar.url(:medium), style: 'border-radius: 2%;'}
 			.col.s8
 				#vendor_info.w90
 					.vendor_info_head
@@ -22,9 +21,9 @@
 								= @vendor.try(:zip)
 							%p
 								= @vendor.try(:description) 
-					= render partial: 'button'
-				.w90
-					= render(partial: 'info_form')
+						= render partial: 'button'
+	.w90
+		= render(partial: 'info_form')
 		.content-bottom
 			- if @vendor.latitude
 				%div{style: 'width: 100%; height: 300px;'}

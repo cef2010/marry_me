@@ -31,11 +31,16 @@ $(document).ready ->
     $('#open_vendor_form').addClass 'hide'
     $('#vendor_form').removeClass 'hide'
     $('#vendor_info').addClass 'hide'
+    $('#vendor_avatar').addClass 'hide'
+    $('.vendor_show_info').addClass 'hide'
 
   $('#close_vendor_form').on 'click', ->
     $('#vendor_form').addClass 'hide'
     $('#open_vendor_form').removeClass 'hide'
     $('#vendor_info').removeClass 'hide'
+    $('#vendor_avatar').removeClass 'hide'
+    $('.vendor_show_info').removeClass 'hide'
+
 
   $(document).on 'click', '.vendor_button', ->
     vendor_category = $(this).data('category')
