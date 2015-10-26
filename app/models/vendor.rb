@@ -33,21 +33,13 @@ class Vendor < ActiveRecord::Base
   end
 
   def self.search(query)
-    names = where('name like ?', "%#{query}%")
-    categories = where('category like ?', "%#{query}%")
-    city = where('city like ?', "%#{query}%")
-    state = where('state like ?', "%#{query}%")
-    zip = where('zip like ?', "%#{query}%")
-    if names.any?
-      names
-    elsif categories.any?
-      categories
-    elsif city.any?
-      city
-    elsif state.any?
-      state
-    elsif zip.any?
-      zip
+    results = where('name like ?
+                     OR city like ?
+                     OR state like ?
+                     OR zip like ?
+                     OR category like ?', "%#{query}%", "%#{query}%", "%#{query}%", "%#{query}%", "%#{query}%")
+    if results.any?
+      results
     end
   end
 
