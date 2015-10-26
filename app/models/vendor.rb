@@ -79,6 +79,7 @@ class Vendor < ActiveRecord::Base
 
   # all states
   def self.states
+    # could clean this up by using the carmen rails gem
     ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California', 'Colorado',
      'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii', 'Idaho',
      'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Lousiana', 'Maine',
