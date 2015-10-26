@@ -1,5 +1,5 @@
 .container.z-depth-3
-	.slider-wrapper
+	.slider-wrapper.hide-on-small-only
 		.overlay-container
 			%img.header-content{src: "https://s3-us-west-2.amazonaws.com/marry-me-production/public/resources/logo-overlay.png", style: "height: 400px; z-index: 2; position: absolute;"}
 		.slider.header-content{style: "height: 400px; position: absolute; z-index: 1;"}
@@ -20,7 +20,7 @@
 
 	= render partial: 'static_nav'
 
-	.row.center{style: "margin-bottom: 0px; color: #B1AB6F;"}
+	.row.center.hide-on-small-only{style: "margin-bottom: 0px; color: #B1AB6F;"}
 		.col.m6.center
 			%h3
 				for couples..
@@ -28,7 +28,7 @@
 			%h3
 				for vendors..
 
-	.row.center{style: "margin-bottom: 0px;"}
+	.row.center.hide-on-small-only{style: "margin-bottom: 0px;"}
 		.col.m1.center{style: "margin-left: 40px; color: #B1AB6F;"}
 			%i.material-icons.small{style: "margin-top: 10px"}
 				location_city
@@ -37,7 +37,7 @@
 			%i.material-icons.small{style: "margin-top: 15px"}
 				favorite
 
-		.col.m4.center
+		.col.m4.center.hide-on-small-only
 			%p{style: "float: left"}
 				easily search vendors in your area
 			%br
@@ -48,7 +48,7 @@
 				add your vendors to your profile!
 			%br
 
-		.col.m1.center{style: "margin-left: 60px; color: #B1AB6F;"}
+		.col.m1.center.hide-on-small-only{style: "margin-left: 60px; color: #B1AB6F;"}
 			%i.material-icons.small{style: "margin-top: 10px"}
 				info
 			%i.material-icons.small{style: "margin-top: 15px"}
@@ -56,7 +56,7 @@
 			%i.material-icons.small{style: "margin-top: 15px"}
 				library_books
 
-		.col.m4.center
+		.col.m4.center.hide-on-small-only
 			%p{style: "float: left"}
 				fill out a profile to attract clients
 			%br
@@ -67,8 +67,62 @@
 				organize your events
 			%br
 
-	.row{style: "margin-top: 20px;"}
+	.row.hide-on-small-only{style: "margin-top: 20px;"}
 		.col.m6.center
 			= link_to 'Sign up', new_vendor_registration_path, class: 'btn'
 		.col.m6.center
 			= link_to 'Sign up', new_couple_registration_path, class: 'btn'
+
+	.row.hide-on-med-and-up
+		.col.s12
+			.card
+				.card-content.black-text
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								location_city
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							easily search vendors in your area
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								person
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							check out vendor profiles
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								favorite
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							add your vendors to your profile!
+					.row
+						.col.s12.center
+							%h6
+								= link_to 'Couple sign up', new_vendor_registration_path, class: 'btn'
+
+	.row.hide-on-med-and-up
+		.col.s12
+			.card
+				.card-content.black-text
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								info
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							fill out a profile to attract clients
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								group
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							connect with other vendors
+					.row
+						.col.s3{style: "color: #B1AB6F;"}
+							%i.material-icons.small
+								library_books
+						.col.s7{style: "margin-left: -2%; margin-right: 17%;"}
+							organize your events
+					.row
+						.col.s12.center
+							%h6
+								= link_to 'Vendor sign up', new_couple_registration_path, class: 'btn'
