@@ -23,7 +23,7 @@
               = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
   - if current_couple && current_couple.id == @couple.id
     .center
-      = link_to 'Add Family Member', new_couple_family_path(current_couple), class: 'btn white-text'
 
-  %br
+      = link_to 'Add Family Member', new_couple_family_path(current_couple), class: 'btn white-text' 
+    %br
   %hr
