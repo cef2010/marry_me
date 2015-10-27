@@ -13,8 +13,8 @@
               %tr
                 %td
                   = link_to contract.vendor.name, vendor_path(contract.vendor)
-                  = link_to '[+]', add_approval_path(contract_id: contract.id)
-                  = link_to '[x]', contract_path(contract), method: :delete
+                  = link_to 'Approve', add_approval_path(contract_id: contract.id), class: 'btn btn-flat waves-effect'
+                  = link_to 'Remove', contract_path(contract), method: :delete, class: 'btn btn-flat waves-effect'
           - else
             %tr
               %td No requests
@@ -29,8 +29,10 @@
             - @couple_pending.each do |contract|
               %tr
                 %td
-                  = link_to contract.vendor.name, couple_path(contract.vendor)
-                  = link_to '[x]', contract_path(contract), method: :delete
+                  = link_to contract.vendor.name, vendor_path(contract.vendor), style: "font-size: 100%;"
+                %td
+                  = link_to contract_path(contract), method: :delete, class: 'btn-floating' do
+                    <i class="material-icons">close</i>
           - else
             %tr
               %td No pending
