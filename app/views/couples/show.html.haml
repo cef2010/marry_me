@@ -25,12 +25,12 @@
               -if current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending
                 .btn Pending
               -elsif current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending
-                = link_to 'Approve', add_approval_path(contract_id: current_vendor.contracts.find_by(couple_id: @couple.id)), class: 'btn white-text'
+                = link_to 'Approve', add_approval_path(contract_id: current_vendor.contracts.find_by(couple_id: @couple.id)) 
               -elsif (current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending && current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending) == false
                 = link_to 'Remove', contract_path(current_vendor.contracts.find_by(couple_id: @couple.id)), method: :delete, class: 'btn white-text'
 
-              
-    
+              -# = link_to 'Add Family Member', new_couple_family_path(current_couple), class: 'btn white-text tooltipped', data: {delay:  '50', position: 'left', tooltip: 'Have a Family Member involved with the wedding? Click Here!'}
+
   .w90
     = render(partial: 'info_form')
     %hr

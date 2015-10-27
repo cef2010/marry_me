@@ -22,7 +22,7 @@
 			= f.label :couple_avatar
 			= f.file_field :couple_avatar
 		.form-buttons.center
-			= f.button :submit, class: 'btn-floating' do
+			= f.button :submit, class: 'btn-floating tooltipped', data: {delay: '30', position: 'left', tooltip: 'Submit Information'} do
 				<i class="material-icons">check</i>
-			%span#close_couple_form.btn-floating{style: 'cursor: pointer;'}
+			%span#close_couple_form.btn-floating.tooltipped{style: 'cursor: pointer;', data: {delay: '30', position: 'right', tooltip: 'Close Form'}}
 				<i class="material-icons">close</i>
