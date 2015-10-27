@@ -1,23 +1,6 @@
 .dashboard
-  %h3 Contracts Dashboard
+  %h3 Dashboard
   .row
-    .col.s6
-      %table.requests
-        %thead
-          %tr
-            %td
-              %b Need Approval
-        %tbody
-          - if @couple_requests.any?
-            - @couple_requests.each do |contract|
-              %tr
-                %td
-                  = link_to contract.vendor.name, vendor_path(contract.vendor)
-                  = link_to 'Approve', add_approval_path(contract_id: contract.id), class: 'btn btn-flat waves-effect'
-                  = link_to 'Remove', contract_path(contract), method: :delete, class: 'btn btn-flat waves-effect'
-          - else
-            %tr
-              %td No requests
     .col.s6
       %table.pending
         %thead
@@ -35,5 +18,5 @@
                     <i class="material-icons">close</i>
           - else
             %tr
-              %td No pending
+              %td None pending
   %hr            

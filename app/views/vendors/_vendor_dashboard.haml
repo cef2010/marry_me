@@ -1,4 +1,4 @@
-.dashboard
+.w90.dashboard
 	.row
 		.col.s8
 			%table.active
@@ -39,21 +39,4 @@
 					- else
 						%tr
 							%td No requests
-			%table.pending
-				%thead
-					%tr
-						%td
-							%b Awaiting Response
-						%td
-							%b Date
-				%tbody
-					- if @vendor_pending.any?
-						- @vendor_pending.each do |contract|
-							%tr
-								%td
-									= link_to contract.couple.name, couple_path(contract.couple)
-									= link_to '[x]', contract_path(contract), method: :delete
-								%td #{contract.couple.try(:wedding_date)}
-					- else
-						%tr
-							%td No pending
+			

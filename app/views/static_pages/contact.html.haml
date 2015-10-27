@@ -13,7 +13,8 @@
 			= f.email_field :email
 
 			= f.label :message
-			= f.text_area :body, style: 'height: 150px'
+			= f.text_area :body, style: 'height: 150px; margin-bottom: 15px;'
 
-			= recaptcha_tags
-			= f.submit 'Contact Us', class: 'btn'
+			= recaptcha_tags  
+
+			= f.submit 'Contact Us', class: 'btn', style: "margin-top: 15px;"
