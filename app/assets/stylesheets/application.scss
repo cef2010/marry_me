@@ -30,17 +30,6 @@ html, body {
   background-color: #ede5db;
  }
 
-.couple-reg-sesh-background {
-  background: url(https://www.theknot.com/assets/topic_pages/wedding-vows-ceremony-77b611d2f39d24f67893109fa671ce2b.jpg) no-repeat;
-  background-size: cover;
-
-}
-
-.vendor-reg-sesh-background {
-  background: url(http://cdn.phillymag.com/wp-content/uploads/2014/10/Wedding-Vendor-Header.jpg) no-repeat;
-  background-size: cover;
-}
-
 .container {
   min-height: 100%;
   background-color: white;
@@ -48,8 +37,15 @@ html, body {
 }
 
 .gold-background {
-	/*background-color: #B1AB6F;*/
   background: rgb(237, 229, 219);
+}
+
+a:link { 
+  text-decoration: none;
+}
+
+a:visited { 
+  text-decoration: none;
 }
 
 .jumbotron h1 {
@@ -93,3 +89,8 @@ nav {
 .slider-wrapper {
 	height: 455px;
 }
+
+.waves-effect.waves-white .waves-ripple {
+
+      background-color: rgba(255, 255, 255, 1);
+    }

@@ -1,5 +1,8 @@
 #comment_form
   %h3 Comments
+  %em
+    %p{style: "margin-bottom: 20px;"}
+      connect with vendors for this event
   = form_for([@couple, @comment]) do |f|
     -if current_couple && current_couple.id == @couple.id
       = f.hidden_field :author, {value: current_couple.name}
