@@ -6,7 +6,7 @@
       %i.material-icons menu
     %ul.hide-on-small-only
       - if current_couple
-        %li
+        %li.tooltipped{data: {delay: '30', position: 'right', tooltip: 'Check your notifications'}}
           %a{href: "/couples/#{current_couple.id}"}
             Profile
             %span.new.badge.black-text
