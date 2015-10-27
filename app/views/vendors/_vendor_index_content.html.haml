@@ -4,9 +4,9 @@
       .col.s12
         %ul#tabs.tabs
           %li.tab.col.s6
-            %a#vendor_info_link.active{href: '#vendors'}Vendors
+            %a#vendor_info_link.active{href: '#vendors'}List View
           %li.tab.col.s6
-            %a#vendor_map_link{style: 'cursor: pointer;', data: {map_hash: @hash.to_json}}Map
+            %a#vendor_map_link{style: 'cursor: pointer;', data: {map_hash: @hash.to_json}}Map View
       -# VENDOR CARDS RENDERING
       #vendors.col.s12
         #vendors_card_loop
@@ -22,7 +22,7 @@
                   %br
                   %span #{vendor.city}, #{vendor.state}
                   %br
-                  = link_to 'See more', vendor_path(vendor)
+                  = link_to 'Profile', vendor_path(vendor)
 
 
       -# VENDORS MAP RENDERING

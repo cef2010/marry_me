@@ -29,7 +29,6 @@
               -elsif (current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending && current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending) == false
                 = link_to 'Remove', contract_path(current_vendor.contracts.find_by(couple_id: @couple.id)), method: :delete, class: 'btn white-text'
 
-              
     
   .w90
     = render(partial: 'info_form')

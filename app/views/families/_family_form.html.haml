@@ -1,4 +1,4 @@
-#family_form.w90
+#family_form.container
   = form_for [@couple, @family] do |f|
     .input-field
       = f.label :name, class: 'active'
@@ -6,17 +6,18 @@
 
     .input-field
       = f.label :relation, class: 'active'
-      = f.text_area :relation, class: 'materialize-textarea'
+      = f.text_field :relation
 
     .input-field
       = f.label :role, class: 'active'
-      = f.text_area :role, class: 'materialize-textarea'
+      = f.text_field :role
 
     .input-field
       = f.label :description, class: 'active'
-      = f.text_area :description, class: 'materialize-textarea'
+      = f.text_field :description
     .input-field
       = f.label :contact, class: 'active'
-      = f.text_area :contact, class: 'materialize-textarea'
+      = f.text_field :contact, class: 'materialize-textarea'
 
     = f.submit 'Submit', class: 'btn'
+    = link_to "Back", :back, class: 'btn'
