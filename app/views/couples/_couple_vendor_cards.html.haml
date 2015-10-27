@@ -21,7 +21,11 @@
             |
             = link_to 'Remove', couple_family_path(current_couple, family.id), method: :delete
   - if current_couple && current_couple.id == @couple.id
-    .center
-      = link_to 'New Family Role', new_couple_family_path(current_couple), class: 'btn white-text'
-  %br    
+    .row
+      .col.s8{style: "margin-top: 1%;"}
+        Family Member Contributing?
+      .col.s4{style: "margin-left: -45%; "}
+        = link_to 'New Family Role', new_couple_family_path(current_couple), class: 'btn white-text'
+
+  %br
   %hr
