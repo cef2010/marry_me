@@ -27,6 +27,7 @@ $(document).ready(function(){
   });
   $('.collapsible').collapsible();
   $(".button-collapse").sideNav();
+  $('.tooltipped').tooltip({delay: 50});
   // nav bar
  //  $(".nav_hover").hover(function(){
  //    $(this).css("background-color", "#B1AB6F;");
