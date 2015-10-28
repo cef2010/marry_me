@@ -32,7 +32,7 @@
 
   .w90
     = render(partial: 'info_form')
-    %hr
+    .divider
     = render(partial: 'couple_vendor_cards')
   -if current_couple && current_couple.id == @couple.id
     .w90
