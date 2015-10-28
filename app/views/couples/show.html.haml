@@ -16,8 +16,6 @@
           %p.reception_location
             The Reception:
             = @couple.try(:reception_location)
-          %p.couple_desc
-            = @couple.try(:description)
           - if current_couple && current_couple.id == @couple.id
             %p#open_couple_form.btn Edit Info
           - if current_vendor
@@ -28,11 +26,13 @@
                 = link_to 'Approve', add_approval_path(contract_id: current_vendor.contracts.find_by(couple_id: @couple.id))
               -elsif (current_vendor.contracts.find_by(couple_id: @couple.id).couple_pending && current_vendor.contracts.find_by(couple_id: @couple.id).vendor_pending) == false
                 = link_to 'Remove', contract_path(current_vendor.contracts.find_by(couple_id: @couple.id)), method: :delete, class: 'btn white-text'
+    %p.couple_desc
+      = @couple.try(:description)
 
-    
+
   .w90
     = render(partial: 'info_form')
-    %hr
+    .divider
     = render(partial: 'couple_vendor_cards')
   -if current_couple && current_couple.id == @couple.id
     .w90

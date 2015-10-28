@@ -1,12 +1,12 @@
 .couple_vendors
   %h3 Current Vendors
-  .couple_vendor_cards.z-depth-1
+  .couple_vendor_cards
     - @couple_active.each do |contract|
       = render(partial: 'layouts/vendor_card', locals: {contract: contract, vendor: contract.vendor})
     - if @couple.families.any?
       - @couple.families.each do |family|
         .family_div
-          .vendor_card_content
+          .vendor_card_content.hoverable
             = family.name
             |
             = family.relation
@@ -25,4 +25,4 @@
     .center
       = link_to 'Add Family Member', new_couple_family_path(current_couple), class: 'btn white-text tooltipped', data: {delay:  '50', position: 'left', tooltip: 'Have a Family Member involved with the wedding? Click Here!'}
     %br
-  %hr
+  .divider

@@ -1,6 +1,6 @@
 .container.z-depth-3
   %h1 Couples
-  %hr
+  .divider
   - if @couples.any?
     - @couples.each do |couple|
       = link_to couple.email, couple_path(couple)
