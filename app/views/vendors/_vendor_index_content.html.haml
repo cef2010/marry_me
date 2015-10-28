@@ -11,7 +11,7 @@
       #vendors.col.s12
         #vendors_card_loop
           - vendors.each do |vendor|
-            .vendor_card_content
+            .vendor_card_content.hoverable
               .row
                 .col.m2
                   %img{src: vendor.vendor_avatar.url(:thumb)}

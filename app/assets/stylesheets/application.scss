@@ -20,6 +20,10 @@ $primary-color: #2b2b2b !default;
 $secondary-color: #B1AB6F !default;
 @import 'materialize';
 
+a {
+	color: #B1AB6F;
+}
+
 .custom_nav {
 	width: 150px;
   text-align: left;
@@ -40,11 +44,11 @@ html, body {
   background: rgb(237, 229, 219);
 }
 
-a:link { 
+a:link {
   text-decoration: none;
 }
 
-a:visited { 
+a:visited {
   text-decoration: none;
 }
 
@@ -91,6 +95,5 @@ nav {
 }
 
 .waves-effect.waves-white .waves-ripple {
-
-      background-color: rgba(255, 255, 255, 1);
-    }
+  background-color: rgba(255, 255, 255, 1);
+}

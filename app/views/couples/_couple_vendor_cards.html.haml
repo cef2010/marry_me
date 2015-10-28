@@ -6,7 +6,7 @@
     - if @couple.families.any?
       - @couple.families.each do |family|
         .family_div
-          .vendor_card_content
+          .vendor_card_content.hoverable
             = family.name
             |
             = family.relation
