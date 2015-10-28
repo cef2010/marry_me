@@ -9,7 +9,7 @@
       %br
       %span #{vendor.city}, #{vendor.state}
       %br
-      = link_to 'See more', vendor_path(vendor)
+      = link_to 'Profile', vendor_path(vendor)
       - if contract
         - if current_couple && contract.couple.id == current_couple.id
           |

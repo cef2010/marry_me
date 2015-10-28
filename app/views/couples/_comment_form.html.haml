@@ -5,15 +5,17 @@
       connect with vendors for this event
   = form_for([@couple, @comment]) do |f|
     -if current_couple && current_couple.id == @couple.id
-      = f.hidden_field :author, {value: current_couple.name}
-      = f.text_area :body
-      = f.submit 'Add Comment', class: 'btn white-text tooltipped', data: {delay: '50', position: 'right', tooltip: 'Leave a message for everyone involved in the wedding.'}
-    -elsif current_vendor # check logic
-      = f.hidden_field :author, {value: current_vendor.name}
-      = f.hidden_field :vendor_id, {value: current_vendor.id}
-      = f.label :body
-      = f.text_area :body
-      = f.submit 'Add Comment' 
+      .form_fields
+        = f.hidden_field :author, {value: current_couple.name}
+        .input-field
+          = f.label :message
+          = f.text_area :body, class: 'textarea'
+        = f.submit 'Add Comment', class: 'btn white-text tooltipped', data: {delay: '50', position: 'right', tooltip: 'Leave a message for everyone involved in the wedding.'}
+    -elsif current_vendor 
+      .form_fields
+        = f.hidden_field :author, {value: current_vendor.name}
+        = f.hidden_field :vendor_id, {value: current_vendor.id}
+        = f.label :body
+        = f.text_area :body, class: 'textarea active'
+        = f.submit 'Add Comment', class: 'btn'
 
-
--# = link_to 'Add Family Member', new_couple_family_path(current_couple), class: 'btn white-text tooltipped', data: {delay: '50', position: 'left', tooltip: 'Have a Family Member involved with the wedding? Click Here!'}
