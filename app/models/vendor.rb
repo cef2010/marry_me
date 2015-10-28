@@ -62,6 +62,11 @@ class Vendor < ActiveRecord::Base
     where(category: sort_category)
   end
 
+  def self.categories
+    %w(Music Venue Florist Baker Caterer Photographer Videographer Photobooth
+       Invitation Rental Attire Other)
+  end
+
   # Omniauth
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |vendor|
@@ -84,57 +89,4 @@ class Vendor < ActiveRecord::Base
      'Washingoton', 'West Virginia', 'Wisconsin', 'Wyoming']
   end
 
-  # ex-STI stuff
-  def self.categories
-    %w(Music Venue Florist Baker Caterer Photographer Videographer Photobooth
-       Invitation Rental Attire Other)
-  end
-
-  def self.musics
-    where(category: 'Music')
-  end
-
-  def self.venues
-    where(category: 'Venue')
-  end
-
-  def self.florists
-    where(category: 'Florist')
-  end
-
-  def self.bakers
-    where(category: 'Baker')
-  end
-
-  def self.caterers
-    where(category: 'Caterer')
-  end
-
-  def self.photographers
-    where(category: 'Photographer')
-  end
-
-  def self.videographers
-    where(category: 'Videographer')
-  end
-
-  def self.photobooths
-    where(category: 'Photobooth')
-  end
-
-  def self.invitations
-    where(category: 'Invitation')
-  end
-
-  def self.attires
-    where(category: 'Attire')
-  end
-
-  def self.rentals
-    where(category: 'Rental')
-  end
-
-  def self.others
-    where(category: 'Other')
-  end
 end

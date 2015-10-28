@@ -1,12 +1,13 @@
 .row
-  .col.m10.offset-m1
+  .col.m10.offset-m1.s12
     .row
       .col.s12
-        %ul#tabs.tabs
-          %li.tab.col.s6
+        %ul#tabs.tabs{style: "margin-bottom: 5px;"}
+          %li.tab
             %a#vendor_info_link.active{href: '#vendors'}List View
-          %li.tab.col.s6
+          %li.tab.hide-on-small-only
             %a#vendor_map_link{style: 'cursor: pointer;', data: {map_hash: @hash.to_json}}Map View
+
       -# VENDOR CARDS RENDERING
       #vendors.col.s12
         #vendors_card_loop
@@ -26,5 +27,5 @@
 
 
       -# VENDORS MAP RENDERING
-      #map_vendors.col.s12.hide
+      #map_vendors.s12.hide
         #map{style: 'width: 100%; height: 400px;'}

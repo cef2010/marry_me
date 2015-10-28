@@ -7,10 +7,11 @@
 		.col.m4
 			= link_to 'Contact Us', contact_path, class: 'btn btn-flat waves-effect waves-white'
 
-.row.hide-on-med-and-up
-	.col.s4{style: "margin-top: 20%;"}
-		= link_to 'FAQ', faq_path, class: 'btn btn-flat waves-effect'
-	.col.s4{style: "margin-top: 20%;"}
-		= link_to 'Team', about_path, class: 'btn btn-flat waves-effect '
-	.col.s4{style: "margin-top: 20%;"}
-		= link_to 'Contact Us', contact_path, class: 'btn btn-flat waves-effect'
+.small-nav.hide-on-med-and-up{style: "background-color: #B1AB6F;"}
+	.row
+		.col.s4
+			= link_to 'FAQ', faq_path, class: 'btn btn-flat waves-effect'
+		.col.s4
+			= link_to 'Team', about_path, class: 'btn btn-flat waves-effect '
+		.col.s4
+			= link_to 'Contact Us', contact_path, class: 'btn btn-flat waves-effect'
