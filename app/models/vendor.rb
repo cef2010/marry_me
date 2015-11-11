@@ -33,6 +33,7 @@ class Vendor < ActiveRecord::Base
     "#{self.try(:address)}, #{self.try(:city)}, #{self.try(:state)}"
   end
 
+  # SQL search
   def self.search(query)
     results = where('name ilike ?
                      OR city ilike ?
@@ -86,7 +87,7 @@ class Vendor < ActiveRecord::Base
      'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
      'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
      'South Carolina', 'South Dakota', 'Tennesse', 'Texas', 'Utah', 'Vermont',
-     'Washingoton', 'West Virginia', 'Wisconsin', 'Wyoming']
+     'Washington', 'West Virginia', 'Wisconsin', 'Wyoming']
   end
 
 end

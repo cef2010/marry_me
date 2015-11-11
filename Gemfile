@@ -10,6 +10,8 @@ gem 'paperclip'
 gem 'owlcarousel-rails'
 gem 'sprig'
 gem "recaptcha", :require => "recaptcha/rails"
+gem 'capybara'
+gem 'selenium-webdriver'
 #AWS
 gem 'aws-sdk'
 gem 'fog'
