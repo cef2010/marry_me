@@ -10,8 +10,8 @@ gem 'paperclip'
 gem 'owlcarousel-rails'
 gem 'sprig'
 gem "recaptcha", :require => "recaptcha/rails"
-gem 'capybara'
-gem 'selenium-webdriver'
+gem 'database_cleaner'
+
 #AWS
 gem 'aws-sdk'
 gem 'fog'
@@ -68,6 +68,8 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'better_errors'
   gem 'simplecov', :require => false, :group => :test
+  gem 'capybara'
+  gem 'selenium-webdriver'
 end
 
 group :development do

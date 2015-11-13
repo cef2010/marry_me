@@ -1,6 +1,7 @@
 FactoryGirl.define do
+name_array = ['Bobs', 'Vendor']
   factory :vendor do
-    name 'Vendor'
+    name name_array.sample
     description 'Vendor'
     category 'Vendor'
     address 'Vendor'
@@ -11,7 +12,7 @@ FactoryGirl.define do
     phone 'Vendor'
     sequence(:email) { |n| "vendor#{n}@marryme.com" }
     password 'password'
-    latitude 1.0
-    longitude 1.0
+    latitude {rand(30..50)}
+    longitude {rand(70..120)* -1}
   end
 end

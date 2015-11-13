@@ -7,6 +7,8 @@ class VendorsController < ApplicationController
     if Vendor.search(params[:search])
       @vendors = Vendor.search(params[:search]).order('name DESC')
       @hash = hash_on_index(@vendors)
+    else
+      @vendors = []
     end
   end
 

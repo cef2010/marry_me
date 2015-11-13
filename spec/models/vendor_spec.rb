@@ -28,6 +28,7 @@ RSpec.describe Vendor, type: :model do
       @vendor = vendor
     end
 
+
     it 'returns full address' do
       vendor
       expect(vendor.full_address).to eq('Vendor, Vendor, Vendor')
