@@ -18,8 +18,13 @@
 
 			= f.label :couple_avatar
 			= f.file_field :couple_avatar
-		.form-buttons.center
+		.form-buttons.center.hide-on-small-only
 			= f.button :submit, class: 'btn-floating tooltipped', data: {delay: '30', position: 'left', tooltip: 'Submit Information'} do
 				<i class="material-icons">check</i>
 			%span#close_couple_form.btn-floating.tooltipped{style: 'cursor: pointer;', data: {delay: '30', position: 'right', tooltip: 'Close Form'}}
 				<i class="material-icons">close</i>
+		.hide-on-med-and-up{style: 'margin: 5%;'}
+			= f.button :submit, class: 'btn' 
+			%span#close_couple_form.btn.right
+				Close Form
+

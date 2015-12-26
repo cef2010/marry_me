@@ -10,7 +10,10 @@
         .input-field
           = f.label :message
           = f.text_area :body, class: 'textarea'
-        = f.submit 'Add Comment', class: 'btn white-text tooltipped', data: {delay: '50', position: 'right', tooltip: 'Leave a message for everyone involved in the wedding.'}
+        .hide-on-small-only
+          = f.submit 'Add Comment', class: 'btn white-text tooltipped', data: {delay: '50', position: 'right', tooltip: 'Leave a message for everyone involved in the wedding.'}
+        .hide-on-med-and-up.center
+          = f.submit 'Add Comment', class: 'btn white-text'
     -elsif current_vendor 
       .form_fields
         = f.hidden_field :author, {value: current_vendor.name}

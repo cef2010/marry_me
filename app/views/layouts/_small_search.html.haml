@@ -1,0 +1,6 @@
+.row.w90.z-depth-1{style: 'background-color: white;'}
+	.col.s12
+		.hide-on-med-and-up
+			= form_tag(vendors_path, :method => 'get') do
+				.input-field.center
+					= text_field_tag :search, params[:search], placeholder: 'Search Vendors'
